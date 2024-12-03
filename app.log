@@ -1,0 +1,808 @@
+2024-11-06 12:26:36,941 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-06 12:26:37,335 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 12:26:37,335 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 12:26:37,393 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 12:26:45,026 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-06 12:26:45,041 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 12:26:45,091 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 12:27:05,041 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 12:27:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-06 12:27:06,553 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 12:27:06] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-06 12:27:06,566 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 12:27:06] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-06 12:27:07,049 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 12:27:07] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=tcDg0MgGnf1jqeI1xQZv HTTP/1.1" 200 -
+2024-11-06 12:27:07,095 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 12:27:07] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-06 12:27:19,576 - werkzeug - INFO - 192.168.0.231 - - [06/Nov/2024 12:27:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-06 12:27:19,641 - werkzeug - INFO - 192.168.0.231 - - [06/Nov/2024 12:27:19] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-06 12:27:19,642 - werkzeug - INFO - 192.168.0.231 - - [06/Nov/2024 12:27:19] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-06 12:27:20,472 - werkzeug - INFO - 192.168.0.231 - - [06/Nov/2024 12:27:20] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-06 12:32:17,134 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-11-06 12:32:18,528 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 15:41:47,080 - app - ERROR - Error creating database tables: cannot import name 'Notifications' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 15:41:47,442 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 15:41:47,442 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 15:41:47,464 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 15:41:51,968 - app - ERROR - Error creating database tables: cannot import name 'Notifications' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 15:41:51,984 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 15:41:52,028 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 15:42:13,971 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 15:42:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-06 15:42:14,992 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 15:42:14] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-06 15:42:15,005 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 15:42:15] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-06 15:42:15,783 - werkzeug - INFO - 127.0.0.1 - - [06/Nov/2024 15:42:15] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=3MNQOtnlzcL3UwZh1MS9 HTTP/1.1" 200 -
+2024-11-06 15:47:09,830 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-06 15:47:10,926 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 15:52:42,196 - app - ERROR - Error creating database tables: cannot import name 'Notifications' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 15:52:42,415 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 15:52:42,415 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 15:52:42,426 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 15:52:45,542 - app - ERROR - Error creating database tables: cannot import name 'Notifications' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 15:52:45,560 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 15:52:45,567 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:00:19,806 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-11-06 16:00:20,354 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:00:22,578 - app - ERROR - Error creating database tables: cannot import name 'Notifications' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:00:22,591 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:00:22,595 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:03:27,391 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-06 16:03:27,990 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:03:47,594 - app - ERROR - Error creating database tables: cannot import name 'Transactions' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:03:47,635 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 16:03:47,635 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:03:47,638 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:03:51,290 - app - ERROR - Error creating database tables: cannot import name 'Transactions' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:03:51,309 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:03:51,316 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:04:11,690 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-06 16:04:12,240 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:04:15,391 - app - ERROR - Error creating database tables: cannot import name 'Transaction' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:04:15,406 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:04:15,413 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:04:24,803 - app - ERROR - Error creating database tables: cannot import name 'Transaction' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:04:24,840 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 16:04:24,840 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:04:24,844 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:04:28,278 - app - ERROR - Error creating database tables: cannot import name 'Transaction' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:04:28,304 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:04:28,309 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:06:59,954 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\models.py', reloading
+2024-11-06 16:07:00,858 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:07:09,195 - app - ERROR - Error creating database tables: cannot import name 'RequestHistory' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:07:09,408 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:07:09,414 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:07:52,056 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\models.py', reloading
+2024-11-06 16:07:52,329 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:08:54,931 - app - ERROR - Error creating database tables: cannot import name 'RequestHistory' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:08:54,981 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 16:08:54,981 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:08:54,984 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:08:59,091 - app - ERROR - Error creating database tables: cannot import name 'RequestHistory' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:08:59,121 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:08:59,125 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:20:02,789 - app - ERROR - Error creating database tables: cannot import name 'ExpenseApprovalWorkflow' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:20:03,164 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 16:20:03,164 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:20:03,175 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:20:06,420 - app - ERROR - Error creating database tables: cannot import name 'ExpenseApprovalWorkflow' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-11-06 16:20:06,444 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:20:06,448 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-06 16:26:49,371 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\models.py', reloading
+2024-11-06 16:26:50,896 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:27:30,180 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-06 16:27:30,394 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.231:5000
+2024-11-06 16:27:30,395 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:27:30,414 - werkzeug - INFO -  * Restarting with stat
+2024-11-06 16:27:37,381 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-06 16:27:37,429 - werkzeug - WARNING -  * Debugger is active!
+2024-11-06 16:27:37,433 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-08 15:30:28,628 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-08 15:30:53,486 - werkzeug - INFO -  * Restarting with stat
+2024-11-15 15:35:07,300 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-15 15:35:07,481 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-15 15:35:07,481 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 15:35:07,493 - werkzeug - INFO -  * Restarting with stat
+2024-11-15 15:35:25,456 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-15 15:35:25,540 - werkzeug - WARNING -  * Debugger is active!
+2024-11-15 15:35:25,556 - werkzeug - INFO -  * Debugger PIN: 350-243-250
+2024-11-15 15:35:30,166 - werkzeug - INFO - 192.168.0.138 - - [15/Nov/2024 15:35:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-15 15:35:30,503 - werkzeug - INFO - 192.168.0.138 - - [15/Nov/2024 15:35:30] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-15 15:35:30,527 - werkzeug - INFO - 192.168.0.138 - - [15/Nov/2024 15:35:30] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-15 15:35:31,017 - werkzeug - INFO - 192.168.0.138 - - [15/Nov/2024 15:35:31] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-15 15:36:05,085 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-15 15:36:06,106 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 14:16:25,314 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:16:25,664 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-22 14:16:25,666 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-22 14:16:25,688 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 14:16:35,168 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:16:35,187 - werkzeug - WARNING -  * Debugger is active!
+2024-11-22 14:16:35,280 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-22 14:17:01,652 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2024 14:17:01] "GET / HTTP/1.1" 200 -
+2024-11-22 14:17:03,432 - root - WARNING - Page not found: /favicon.ico
+2024-11-22 14:17:03,434 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2024 14:17:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-22 14:22:11,980 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-22 14:22:12,237 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 14:22:18,323 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:22:18,333 - werkzeug - WARNING -  * Debugger is active!
+2024-11-22 14:22:18,340 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-22 14:22:42,670 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:22:42,689 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-22 14:22:42,690 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-22 14:22:42,692 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 14:22:48,704 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:22:48,712 - werkzeug - WARNING -  * Debugger is active!
+2024-11-22 14:22:48,720 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-22 14:22:54,172 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2024 14:22:54] "GET / HTTP/1.1" 200 -
+2024-11-22 14:51:39,827 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:51:40,385 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-22 14:51:40,392 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-22 14:51:40,430 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 14:51:49,064 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 14:51:49,081 - werkzeug - WARNING -  * Debugger is active!
+2024-11-22 14:51:49,106 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-22 15:06:17,364 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 15:06:17,960 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-22 15:06:17,961 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-22 15:06:17,982 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 15:06:23,960 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 15:06:23,984 - werkzeug - WARNING -  * Debugger is active!
+2024-11-22 15:06:24,004 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-22 15:54:35,524 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 15:54:35,720 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-22 15:54:35,721 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-22 15:54:35,746 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 16:20:52,551 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 16:20:54,324 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-22 16:20:54,327 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-22 16:20:54,703 - werkzeug - INFO -  * Restarting with stat
+2024-11-22 16:21:01,371 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-22 16:21:01,389 - werkzeug - WARNING -  * Debugger is active!
+2024-11-22 16:21:01,448 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-22 16:21:18,296 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2024 16:21:18] "GET / HTTP/1.1" 200 -
+<<<<<<< HEAD
+2024-11-25 11:51:43,070 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-25 11:51:44,070 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-25 11:51:44,071 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-25 11:51:44,075 - werkzeug - INFO -  * Restarting with stat
+2024-11-25 11:51:49,981 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-25 11:51:49,998 - werkzeug - WARNING -  * Debugger is active!
+2024-11-25 11:51:50,018 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-25 12:33:10,699 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-25 12:33:11,669 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-25 12:33:11,670 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-25 12:33:11,676 - werkzeug - INFO -  * Restarting with stat
+2024-11-25 12:33:17,180 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-25 12:33:17,198 - werkzeug - WARNING -  * Debugger is active!
+2024-11-25 12:33:17,392 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-25 12:33:21,431 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2024 12:33:21] "GET / HTTP/1.1" 200 -
+2024-11-25 14:07:53,128 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-25 14:07:54,037 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-25 14:07:54,053 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-25 14:07:54,070 - werkzeug - INFO -  * Restarting with stat
+2024-11-25 14:07:59,917 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-25 14:07:59,955 - werkzeug - WARNING -  * Debugger is active!
+2024-11-25 14:08:00,108 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-26 09:32:33,128 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-26 09:32:33,507 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-26 09:32:33,509 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-26 09:32:33,512 - werkzeug - INFO -  * Restarting with stat
+2024-11-26 09:32:39,474 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-26 09:32:39,495 - werkzeug - WARNING -  * Debugger is active!
+2024-11-26 09:32:39,503 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-26 09:32:44,443 - werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 09:32:44] "GET / HTTP/1.1" 200 -
+2024-11-26 09:32:44,723 - root - WARNING - Page not found: /favicon.ico
+2024-11-26 09:32:44,726 - werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 09:32:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-27 15:13:54,064 - app - ERROR - Error creating database tables: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2024-11-27 15:13:54,142 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-27 15:13:54,143 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:16:00,909 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:16:00,917 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-27 15:16:00,918 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:19:40,020 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:19:40,358 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-27 15:19:40,360 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:19:40,390 - werkzeug - INFO -  * Restarting with stat
+2024-11-27 15:19:41,995 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:19:42,017 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 15:19:42,026 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-27 15:22:16,067 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\config.py', reloading
+2024-11-27 15:22:16,311 - werkzeug - INFO -  * Restarting with stat
+2024-11-27 15:22:17,928 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:22:17,952 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 15:22:17,962 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-27 15:24:22,623 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\config.py', reloading
+2024-11-27 15:24:22,823 - werkzeug - INFO -  * Restarting with stat
+2024-11-27 15:24:24,375 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:24:24,395 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 15:24:24,404 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-27 15:25:34,034 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\config.py', reloading
+2024-11-27 15:25:34,235 - werkzeug - INFO -  * Restarting with stat
+2024-11-27 15:25:35,801 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:25:35,822 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 15:25:35,831 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-27 15:28:11,236 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (1045, "Access denied for user 'ekondo_admin'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-27 15:28:11,245 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-27 15:28:11,245 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:35:33,654 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-27 15:35:33,656 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:35:49,756 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:49] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 15:35:49,820 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:49] code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+2024-11-27 15:35:49,823 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:49] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x17\x1eNl\x08¼\x0c-®2Ô\\j¿\x0f<^V\x10aÜÆä¢5÷u)sÛ>ã \x18Ýâ¡Di+L\x123 äÑ¡\x01YÁ4õ\x1b2ÒUÝGñsÞòº\\9\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S[0m" 400 -
+2024-11-27 15:35:49,825 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:49] code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00Di\x00\x05\x00\x03\x02h2\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04À·P{\x0fJ\x10i\x9a')
+2024-11-27 15:35:49,826 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:49] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03}\x10¾v·\x187¤\x84\x15Þús`¤&\x13ñnc\x9dc\\_ç\x95ãH&¹¹H ¡\x9e\x9aû@\x7f£%\x0c\x94ê3\x11¿ø\x12`\x81üÄ¾,Øä\x07itac\x97C´\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063úú\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01a\x00 É\x98ó\x17[1j\x87\x98\x9e-Ì{\x06Úº³þ\x99}¸\x98SæÖ9Æ«é\x9216\x00\x90=®¾\x98³Qù\x8c´$}\x8bÎáõ\x8eµp\x84ª^p\x9a»7\x8ak\x1aÊ·\x01¦=Wp\x92 Öeq7º\x08zâ\x0b\x08Á¼*PËÛ¹S÷°»\x81Ò1ì ¼Ò½?.(\x12 \x1b!5¾Ñ\x90¥RfSê\x1c\x93ù4¶ x ¶v¨@L±£ JhSl]\x9f8Ñq»§Õ\\ð\x9a\x87x\x8b5\x9b&ß.\x0b;Õ_ÏCÑÐÝFB>\x12Â\x11´X+-Ï\x01×ä\x00\x17\x00\x00\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1ÿ\x01\x00\x01\x00Di\x00\x05\x00\x03\x02h2\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04À·P{\x0fJ\x10i\x9a[0m" 400 -
+2024-11-27 15:35:53,217 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:53] code 400, message Bad request version ('XNßã\x9d\x88\x9b9Ë\x83{\x84')
+2024-11-27 15:35:53,223 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:53] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Ègñ\x92Ùº\x9eÑÍH>!«\x8aò÷·\x90ÃD\x91P¿r±\x80[\x1b¸\x84\x13i ëÈcÝlÒ\x01i>y\x1e\x18ðÜ¹d>\x894\x8c0çs\x9c\x05\x06±\x81ÿDÔ\x1b\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÊÊ\x00\x00\x00\x0b\x00\x02\x01\x00\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04ÀÄ×^á\x89Jâ\x10hó\x83hÁQ\x1bc¸\x19\x0cÙ\x12PôB"\x90*÷¨\x16\x89Õ\x06ì\x14Qù\x97´æ\x9c\x9dAZ\x81½é\x08z©\x0e&\x97·ç¥¨g<-*â)\x8ePpCL¶Zu\x95\x14J\x96FP³áú¥ØW#É4Qb\x04²/ÓE\x037Gnx\x92Ñu9Þ\x01D¹ñ|g\x07vÄ\x90Qo@\x15\\DW¬Ë¨±¥+\x8fº#Feo\x10r\x82/\x9b\x01pp:\x82r\x1a¤\x01~ë\x02ÁÉÐ¸\x80ø\x07"§¾\x0d\x91\x19zÉ\x0d\x88\x13\x873Ê\x895ÇCË,\x9e\x03\x9a]Ã\x8a½\x15¢\x09à\x15R%É\x89J$ZQÀK_´\x99ø²\x87\x1f\x98;õ¦¸Ö\x80£\x04ÄÏ#hSï\x92Fëc\x7fE»T\x928\x04rÛ\x9cã#£)Æ\x95Ï\x91\x05ÔÛo³\x18¿«ê $2´ÒxIôÙ9(dYÚµ¥YÐÄz\x93yÐ¬T\x07@}¤ Ã¹\x8c`Ù§|+6½ë\x9c/\x9bº\x82\x08f\x11ÜÚ)ÿ\x04T(Æ@°\x96_F´\x17°Ð3\x8f\x95«\x82ªaU¨LD[pÕÊ3Y×\x7fã¡§gl!±Ã#\x97KÈç\x91£°<z=ä.gFwè\x94\x7f­\x90C¢\x05\x85\\s|\x88 n©\x12M\x06\x85´\x83Y=\x06  \x87\x9bÏ¨\x95}¨l\x7f[´l\x9dQRM¦:¯Lº'Ù\x0e­L]~\x12\x1f3éÎ3q¶{²\x05Wúa\x92P\x8d\x86t¢\x1eë\x02y$.\x1b\x90.ÈD­D¬\x02¬Ög9Zc\x0bë\x9a\x0cd<\x92"\x07\x09XNßã\x9d\x88\x9b9Ë\x83{\x84[0m" 400 -
+2024-11-27 15:35:53,234 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:53] code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00\x12\x00\x00\x00')
+2024-11-27 15:35:53,237 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:53] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03õ¥T o\x8e×'tCã0\x92RÞÞ\x12>h\x92hê³þ\x8e\x8efà\x05â\x9a~ Í£ÅIÏJT\\\x0e¿\x0fÆô\x86\x1c·W\x00&g\x89a'\x92²^\x02ëU\x050¢\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063úú\x00\x00\x00-\x00\x02\x01\x01Di\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00\x12\x00\x00\x00[0m" 400 -
+2024-11-27 15:35:53,238 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:53] code 400, message Bad request version ('\x00\x02\x01\x00\x00+\x00\x07\x06JJ\x03\x04\x03\x03\x00\x17\x00\x00\x00')
+2024-11-27 15:35:53,239 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:53] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x12I\x1f\x1e¿\x8a\x12p~j^ïö\x1bêFLj\x15ßd­I#l\x0bQU¯».ð í±2ÐçÍ\x8cDT¶þYEþ\x0bÍ?» \x06²ye¨'\x97h\x06\x16Å}a\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sêê\x00\x00Di\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x0b\x00\x02\x01\x00\x00+\x00\x07\x06JJ\x03\x04\x03\x03\x00\x17\x00\x00\x00[0m" 400 -
+2024-11-27 15:35:53,240 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:53] code 400, message Bad request version ('@\x00')
+2024-11-27 15:35:53,241 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:53] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ê×7ls\x92Z#ñ\x80\x1eîÙ\x8a\x12\x9fÜ\x98¬?\x17Íg\x14T.9ÞV\x18\x9aÓ ÎÜ¶\x82\x8dr­q\x8bY\x18±Ù£í½7\x16×2À\x92\x02\x0f_­\x80²Ô\x19\x1c@\x00 [0m" 400 -
+2024-11-27 15:35:55,545 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:55] code 400, message Bad request version ('\x10')
+2024-11-27 15:35:55,546 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:55] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ËÐOæ\x9d«¸\x13^Ä"\x0b}ÝUJý¢¢¿¯å\x17#±5n\x92\x02ìeï õp<Z\x8f×T9\x8ao\x19í]z\x8eÒ\x82pµÏa£;\x97Jx&o\x08\x1c~'\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x8a\x8a\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x07\x06\x9a\x9a\x03\x04\x03\x03\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1þ\x0d\x00º\x00\x00\x01\x00\x01ò\x00 dÖs`<\x01à\x0f *7ðýsmêìÆ\x94ª$«íD\x92k;²\x18\x1c\x10[0m" 400 -
+2024-11-27 15:35:55,554 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:55] code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00\x00')
+2024-11-27 15:35:55,555 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:55] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03-æ\x91e£ãLn\x12Ó¥%Ü\x9c\x99\x00Ù\x05eéce¾\x8fÐú®2ój?­ wV\x8c\x8añÔ\x07ëýÄ\x00\x069mûT|È\x91âÈG\x09¿\x0b¡\x82r¥³\x84u\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00\x00[0m" 400 -
+2024-11-27 15:35:55,564 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:55] code 400, message Bad request version ('Î½%ÓQ¸¾Å+Çß\x15énJ:\x02ì0ßjn1m)NûV\x00%¯Þx³ú')
+2024-11-27 15:35:55,567 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:55] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Ýô\x8a´+?\x92ruRS\x0ddÃúÄ¬;}v\x07U\x1d|Pn\x96kÐæ7ö #\x9dõÏR\x08ð2Uù\x10Ok\x810Rß\x12Ô«Ã´cß[D·#¡ \x0bD\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x1a\x1a\x00\x00\x00\x17\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x12\x00\x00\x00\x0b\x00\x02\x01\x00þ\x0d\x00ú\x00\x00\x01\x00\x01õ\x00 ×\x8d6ìf\x16rYébþ7\x8304\x16z¨EÈä¬£z\x1fwÄü%Ü@\x05\x00Ð\x82\x0d\x88õ\\\x86ý8û\x14Û\x15ïü÷K\x91Îè\x86¡\x7fhT Î½%ÓQ¸¾Å+Çß\x15énJ:\x02ì0ßjn1m)NûV\x00%¯Þx³ú[0m" 400 -
+2024-11-27 15:35:55,571 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:55] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x12\x00\x00\x00')
+2024-11-27 15:35:55,572 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:55] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03í\x07:\x84\x7f3 %´ëy\x1d\x14´w\x09²_ð-c±\x80<½t¡A\x0cejn $_D*WÖ\x1a¾±2ýÀ,ì|\x1b\x8bÀ\x8eíi\x81©\x99\x14`sNµèõ¹\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x12\x00\x00\x00[0m" 400 -
+2024-11-27 15:35:58,096 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:58] code 400, message Bad request version ('H\x00,Í0')
+2024-11-27 15:35:58,098 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:58] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03à\x9a\x00¯í¤=Ï·\x86%5\x82Ã9§\\?EÐr\x8b\x12³YOJ_\\þýÉ iíäO\x7f½_B¥ÝLä,)É\x8aå½\x0f"È@Ê¤/\x99\x84\x02Ì©õ\x88\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s**\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x17\x00\x00\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00\x1b\x00\x03\x02\x00\x02Di\x00\x05\x00\x03\x02h2þ\x0d\x00ú\x00\x00\x01\x00\x01Ò\x00 H\x00,Í0[0m" 400 -
+2024-11-27 15:35:58,108 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:58] code 400, message Bad request version ('À\x93ë¿å\x9c\x80üé\x00')
+2024-11-27 15:35:58,108 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:58] code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00Di\x00\x05\x00\x03\x02h2\x00')
+2024-11-27 15:35:58,108 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:58] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03á\x86\x02tH\x7f\x81\x83Ã[\x1a­±ËT^"`0.\x8e\x05\x0beF\x80±\x98 ô\x12N |Ø{¡\x84§Èß9y\x06\x1c\x14ìà\x8cn³Ï\x11×«\x1dÀ\x93ë¿å\x9c\x80üé\x00 [0m" 400 -
+2024-11-27 15:35:58,109 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:58] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03.ñ\x91Ócº<¨\x9aý\x87*³8\x96°¡u¢5s\x1bz9\x8f-\x14\x102\x8d}4 \x0f\x1eW~nÆß6«Ða\x0b;¢u\x8a|\x9bà|@¿ÿP¼\x8a¤\x16·\x80à\x02\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00Di\x00\x05\x00\x03\x02h2\x00[0m" 400 -
+2024-11-27 15:35:58,120 - werkzeug - ERROR - 127.0.0.1 - - [27/Nov/2024 15:35:58] code 400, message Bad request version ("³\x16B\x18\x01\x9a\x14xÆ\x91n\x12\x88Âº\x8c?üÎ\x9dÂ<\x8eTnç¤Ê04'[£@eõ=´)ÀÊµ")
+2024-11-27 15:35:58,121 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:35:58] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03RìÒ*äîMüVË¤Î\x05â\x9bCY$ä\x8dö\x1c°§\x0cøºo\x975çº '¡]._\x9c\x99íºÙæJ[¸9?ªùQ\x9c¥«Ë"ÉÍ@w\x9dþF"\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SZZ\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00\x12\x00\x00\x003\x04ï\x04í**\x00\x01\x00\x11ì\x04À\x94 \x10þ\x05,ÕW\x1f \x924ô°\x8b\x1ay?Ù25D²n\x1dä\x0dÔ¬#z\x98º\x95\x88\x1bo, \x93ô¡ß\x18§\x9b\x8bB]\x88\x8e Ë?DÇ\x02r\x818¿p¬/\x1b\x82\x11XÈ\x94Ðl°ë½¦ëX\x14\x10\x84uDc«'\x1a\x9d\x8aV\x8a4H7L!\x8dã}ï<\x1dîëÎ\x9d9;£è\x05\x1bê\x84\x90ê\x19\x83Ytta¤«\x99Uq°\x18_YÃ\x08\x14\x0eD31\x8dà\x8dª¢lÛÃ7\x998\x06°6¶A«\x9cëÜ\x11\x88:\x0fJ\x869õx¿ü\x05\x96A%@^Ì\x88\x8a\x03¹\x96s¦\x0d\x86m¤*6XÛh©{\x95WÖ].È\x12ë\x8b£îú´k\x14\x96¿l\x0f©\x1b\x8d\x90k\x80¦k¼\x82åE§ña-K\x881¨\x8e\x0b\x16\x9a_Ð*\x16aÃ\x7fá{Å8\x81\x043\x85ÌQ\x1bPq\x19>\x1c³\x16B\x18\x01\x9a\x14xÆ\x91n\x12\x88Âº\x8c?üÎ\x9dÂ<\x8eTnç¤Ê04'[£@eõ=´)ÀÊµ[0m" 400 -
+2024-11-27 15:39:49,201 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-27 15:39:49,202 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:39:49,205 - werkzeug - INFO -  * Restarting with stat
+2024-11-27 15:39:50,681 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 15:39:50,689 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-27 15:40:00,415 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:40:00] "GET / HTTP/1.1" 200 -
+2024-11-27 15:40:00,470 - root - WARNING - Page not found: /favicon.ico
+2024-11-27 15:40:00,471 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 15:40:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-28 10:57:10,894 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-28 10:57:10,974 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 10:57:11,025 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 10:57:13,129 - werkzeug - WARNING -  * Debugger is active!
+2024-11-28 10:57:13,337 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-28 11:42:31,471 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-28 11:42:31,477 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 11:42:31,480 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 11:42:33,171 - werkzeug - WARNING -  * Debugger is active!
+2024-11-28 11:42:33,178 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-28 11:46:01,959 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-28 11:46:02,190 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 14:53:16,286 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-28 14:53:16,314 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 14:53:16,317 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 14:53:18,204 - werkzeug - WARNING -  * Debugger is active!
+2024-11-28 14:53:18,297 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-28 14:53:33,902 - werkzeug - INFO - 127.0.0.1 - - [28/Nov/2024 14:53:33] "GET / HTTP/1.1" 200 -
+2024-11-28 15:27:20,605 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\models.py', reloading
+2024-11-28 15:27:20,991 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 15:27:36,734 - werkzeug - WARNING -  * Debugger is active!
+2024-11-28 15:27:36,765 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-28 15:30:21,362 - flask_migrate - ERROR - Error: Path doesn't exist: 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\migrations'.  Please use the 'init' command to create a new scripts folder.
+2024-11-28 15:30:23,428 - flask_migrate - ERROR - Error: Path doesn't exist: 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\migrations'.  Please use the 'init' command to create a new scripts folder.
+2024-11-28 15:44:58,170 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-28 15:44:58,215 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 15:44:58,220 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 15:45:00,174 - werkzeug - WARNING -  * Debugger is active!
+2024-11-28 15:45:00,189 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-28 16:01:51,245 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-28 16:01:51,688 - werkzeug - INFO -  * Restarting with stat
+2024-11-28 16:02:01,469 - werkzeug - WARNING -  * Debugger is active!
+2024-11-28 16:02:01,495 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+=======
+2024-11-23 14:35:01,550 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 14:35:02,318 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-23 14:35:02,423 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 14:35:02,492 - werkzeug - INFO -  * Restarting with stat
+2024-11-23 14:35:09,542 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 14:35:09,553 - werkzeug - WARNING -  * Debugger is active!
+2024-11-23 14:35:09,682 - werkzeug - INFO -  * Debugger PIN: 512-110-243
+2024-11-23 14:35:38,587 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 14:35:38] "GET / HTTP/1.1" 200 -
+2024-11-23 17:14:09,746 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 17:14:10,091 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.138:8000
+2024-11-23 17:14:10,099 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 17:14:30,010 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:30] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-23 17:14:33,971 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:33] code 400, message Bad request version ('Q\x16èA')
+2024-11-23 17:14:34,212 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:34] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x16õ³¶Üà*ð.â\x84É\x1e\x826N#ÐÍî|`æaÙÞ\x95®¯<H± é¯\x89Þ¼\x054®oïõ`\x8f\x9a¸Kd\x98Õàq\x0f=SÞ|Û\x87²\x9d·\x7f\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93zz\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x003\x04ï\x04íúú\x00\x01\x00\x11ì\x04ÀÐÒ«M\x05q&ã5H\x16¨\x87Óc¹D/Ôa\x19\x8eÊ·®\x92.§\x0c\x93ÿÒ\x1d~\x9bE÷è\x85\x0bá\x9b\x09àaÜ0\x1arXHRæ¿°Ç\x96Ô\x8a¬gõAÎ§uJ¡=løjÒº3¦£0\x8c:\x0cÀá<´Ð^-à½ý\x9c¼»ê`a\x90·ªìhE\x0cQ\x16èA[0m" 400 -
+2024-11-23 17:14:34,230 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:34] code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00')
+2024-11-23 17:14:34,233 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:34] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03H\x07\x0d\x18×\x9cfÎ\x96/\x9e\x13¢¶û~ð\x05¸Þ¶\\ª\x14\x8c]^e+cÿ| w[`ény\x8e\x91\x0búì=¥1V\x18w:ûÅ\x1f\x13ÐÇU\x03#¯\x04égú\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sªª\x00\x00\x00#\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00\x17\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00[0m" 400 -
+2024-11-23 17:14:47,076 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:47] code 400, message Bad request version ('R#P=òXÈJ\x8bÝÆð\x9d½\x92Â©OMZ¡\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+2024-11-23 17:14:47,077 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:47] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03³JÓk¤DuÈ\x01\x85b½½2æ0Ë¨\x19Ká\x87ý\x8f­ö6,è\x18õc &­½'/F\x07T¤<\x84?wu\x90£$\x8a¬?Ið-Ë\x9d\x17j¨\x13Æ2\x84\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S::\x00\x00\x00\x17\x00\x00þ\x0d\x00Ú\x00\x00\x01\x00\x01²\x00 Rw¶üÝÂè\x15Î\x9daNå\x82\x14¯>Õ\x95¶Ë\x19»ðÐü¿ô\x80:Äe\x00°Ñ\x93Pì\x9cÀ¸Ûr\x01þýIã{D¨&Dá\x12´±Åð)\x1f\x8dì§"\x9eEÉ\x9aa³\x14\x18ú\x01T¢vè\x9e\x80Õ\x9d|IwÔ­­\x9d\x15\x0c\x11³\x13¯ç\x1d©\x88\x0eóº$÷þp`\x96#²yy#c·Jªa<Õ}×\x15f\x12ú©øü\x85ûb\x101å¹×ï\x92¼Ò°(\x86@²ÿ_ÔàÜg\x10\x9e×!\x92\x95È\x7f_}\x9a\x8eÀD\x12rjLwúdäÄãÍ\x12ÉÏiv×\x03\x1báâ\x0dR#P=òXÈJ\x8bÝÆð\x9d½\x92Â©OMZ¡\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00[0m" 400 -
+2024-11-23 17:14:47,081 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:47] code 400, message Bad request version ('ç\x88¤\x94\x92ðSZ\x03ÓPOgFv\\\x9e\x9a#=\x84ÐX\x07')
+2024-11-23 17:14:47,183 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:47] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03mK´Þ¢i\x11\x97\x88ÐT\x86>îE\x8d¦Á°\x9e9\x85ú¨\x85è¸{ÕtkP u\x8cÿÚÿJ\x15«¹<\x1buë28n \x895\x8aÆÌïuÅ\x9a\x8cå¡\x8db\x98\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063zz\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x12\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01þ\x0d\x00º\x00\x00\x01\x00\x01\x17\x00 ©éÄôPjá\x8bÀ­{\x08\x1e\x8e»®õ\x8br9fô£b_þ}×É½ \x0e\x00\x90´¾\x8bÇ\x05\x02ºÈ5àZW\x89Îµø´\x1c%\x8c^Å¡\\\x99\x84\x9e\x08ÛB9pIÚ\x9fãWÏ\x07:õß\x889[Wg0J\x8c:?n`\x94\x06-ß\x99¶¬«6}4¼¶\x06cD¶\x1fÙþ;üÌ8@ ëðhì\x890)\x88´=wÞÚò·\x11î³mµ¹\x14þa§Ð\x12ë\x9e_@Aùa\x0eE&\x91ä\x9bnp$»í+\x98ôÏÊ»×¦ì%þÏÆ\x05g\x8dO>v\x00\x17\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04À\x9d\x80´h·fµú¿]ë%\x86ZÀª»\x03°\x947°9aâWM¼\x03Î«:X'\x00}áS\\LË)ò¹\x13Ò\x93²\x9biÊý\x951g\x09qA¹\x0d¢\x174qÚ_c¢3|Q\x8bãT\x81\\ÒZ4óC¢:Oì³!_×ÅÒ«F\x18*\x14,\x85Í\x1c¸D¢\x0cMÿ!½\x8d\x88|ç¸\x18Q\x135ÄÈ$\x05Ñ¨¢ùqh3%¸Æµ÷G­\x14H(ø\x18¬{tF²`~~\x0bk\x09I¢q\x1b»«y¶ùW\x05ÿT\x90+&X\x11ÑmãU¶Æh>\x9eá'¨\x19»¤2®©\x16(J¸¥,`x\x7f\x98\x0fAÅº\x14Z\x8aÅ\x17Ä\x0cç\x88¤\x94\x92ðSZ\x03ÓPOgFv\\\x9e\x9a#=\x84ÐX\x07[0m" 400 -
+2024-11-23 17:14:47,679 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:47] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x17\x866§³cé¹')
+2024-11-23 17:14:47,682 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:47] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x17\x866§³cé¹\x0d\x88Ó\x19¸;\x003Ü[0m" 400 -
+2024-11-23 17:14:47,683 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:47] code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03')
+2024-11-23 17:14:47,686 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:47] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03[0m" 400 -
+2024-11-23 17:14:47,705 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:47] code 400, message Bad request version ('â\x11ç%\x00ðÌ')
+2024-11-23 17:14:47,706 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:47] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x13&\x05ü\x1aÃ&\x02iè<ú°Ï¸ÿÿ.ÄWã\x83\x12ÿ£Ä!¾÷\x01Z> lÿA\x95R¥S§\x1dâ\x86xå½t¾ÇÊrÚ\x13\x91\x11¸ÒI\x81iÀ~4i\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93JJ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00ÿ\x01\x00\x01\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01\x0b\x00 á\x15\x1dë:Î\x88£\x8f2\x8a±\x84)øà\x11mãÄR\x9cÐÉaÒ\x8c\x1câ\x11ç%\x00ðÌ[0m" 400 -
+2024-11-23 17:14:47,706 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:14:47] code 400, message Bad request version ('ÁúÚ½oòÖ½')
+2024-11-23 17:14:47,715 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:14:47] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Æï+\x08-\x18õ~»à\x95tX¥mÍ»\x97\x9c\x0eÁrà\x04ª{¬Jè\x13í\x1d D5­\x85\x91\x0bÁúÚ½oòÖ½[0m" 400 -
+2024-11-23 17:19:22,936 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 17:19:23,353 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-23 17:19:23,354 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 17:19:32,511 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:19:32] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-23 17:19:32,563 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:19:32] code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063JJ\x00\x00\x00')
+2024-11-23 17:19:32,563 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:19:32] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ú\x8dKa\x0bñöür\x80£3\x09}\x08\x98ð\x9f\x0be!ÅH\x1d\x06\x7fhuôÙó[ \x84{\x18öN\x10eý\x9e\x8c4­ã¯2\x02R\x0b°/«7cD]b3º\x844Eâ\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063JJ\x00\x00\x00[0m" 400 -
+2024-11-23 17:19:32,565 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:19:32] code 400, message Bad request version ("ñú\x0fÂ]À\x0eçe'M\x1bYeã?`\x1aïäWo\x91¯¢")
+2024-11-23 17:19:32,566 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:19:32] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03¹h8øVZqJ[\x85Ô¶µ2¼Â\x9c;¥_´±j\x83¢Ï\x9c\x06-È¶Ã ñú\x0fÂ]À\x0eçe'M\x1bYeã?`\x1aïäWo\x91¯¢[0m" 400 -
+2024-11-23 17:24:11,795 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 17:24:12,054 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-23 17:24:12,059 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 17:24:18,632 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:24:18] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-23 17:24:19,027 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:24:19] code 400, message Bad request version ('\x0eK]_')
+2024-11-23 17:24:19,029 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:24:19] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03E\x91\x04s¸Äª¬ºVUyö`\x8dJÄ\x1d\x06O0¢\x1d$\x06ªUéÒËë© \x0bU\x8aiY\x1cµrÁ£¶y æÌFy\x19«Bk\x86\x91?%¶Y¤åË¦Ã\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00\x00#\x00\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04Àå\x1c+P\x06\x1e\x0eK]_[0m" 400 -
+2024-11-23 17:24:19,176 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:24:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03A')
+2024-11-23 17:24:19,193 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:24:19] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03A ªVó¯ðö/ß[0m" 400 -
+2024-11-23 17:24:43,880 - werkzeug - INFO - 192.168.0.138 - - [23/Nov/2024 17:24:43] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-23 17:24:44,291 - werkzeug - ERROR - 192.168.0.138 - - [23/Nov/2024 17:24:44] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x033¶\x1a')
+2024-11-23 17:24:44,313 - werkzeug - INFO - 192.168.0.138 - - [23/Nov/2024 17:24:44] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x033¶\x1a\x1e¦Û*¥QU[0m" 400 -
+2024-11-23 17:24:44,614 - werkzeug - ERROR - 192.168.0.138 - - [23/Nov/2024 17:24:44] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00')
+2024-11-23 17:24:44,629 - werkzeug - INFO - 192.168.0.138 - - [23/Nov/2024 17:24:44] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ðí´d8+~ãQ=\x0eÚ;\x1cIKô]<à8ß®L\x9bþ\x81\x0f\x0b¤´) Ò5\x0dyTÅl¸\x15\x12\x8eV\x1aJ\x0c­º\x15%Ç\x03^\x86Å\x8e­ô÷wë\x8fD\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sêê\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00[0m" 400 -
+2024-11-23 17:27:37,957 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 17:27:38,026 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-23 17:27:38,028 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 17:27:43,290 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:43] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-23 17:27:45,539 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:45] code 400, message Bad request version ('#/\x07õ¤\x82d_Ì\x913úõÀ\x80úg\x14X')
+2024-11-23 17:27:45,540 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:45] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03-}³ámÏ-¡#ßR\x89þÜ¹Z.\x91o\x7fG\x94Þõrø½\x86×\x1a\x11\x1d R³ÄÏ\x0d2¡Ç\\æ\x0f\x94Qù§\x91h¶)ÐÁÔT\x03'\x96y\x0d\x14|cÍ\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Di\x00\x05\x00\x03\x02h2\x003\x04ï\x04íJJ\x00\x01\x00\x11ì\x04À \x80Î[\x17|\x0dC¥ãv37\x15ÆE°\x16:(Z\x9eYrIçhP\x15Mt°5Tr|\x00vw*Ö\x94ó\x94\x1ao²\x8dª\x06;M·\x9fÛ\x82G)\x90~\x18ãÈÀ8}ÇÕ¼¶\x8a.)<\x93\x1a\x19$¾\x81%\x98dg C£\x0d#¢¡´\x0fjÚ\\q¢\x08\x8c\x07^9û\x01"'B\x8fK¾-È\x19ga§Ì;wÃG\x8d\x15ÑoI\x989\x06¼N5¬n\x1c#/\x07õ¤\x82d_Ì\x913úõÀ\x80úg\x14X[0m" 400 -
+2024-11-23 17:27:45,545 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:45] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00#\x00\x00\x00')
+2024-11-23 17:27:45,546 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:45] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03R\x87ï\x9a·ß2¤x2Ì\x14æa?ç,¾©ÈX{ämu\x0bµ\x8c\x05Íü² 3£ÖÂKö t/Ñ¢\x8aJ´1nP»\x13y¾\x8d\x9a3U\x04´\x0b7\x01I[\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sjj\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00#\x00\x00\x00[0m" 400 -
+2024-11-23 17:27:49,108 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:49] code 400, message Bad request version ('EK')
+2024-11-23 17:27:49,110 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:49] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x0c|hjÎö¶*Ñ[Y\x0eH\x96\x04¿È¸8Q?g\x87¿%`^\x00¬-Z1 EK[0m" 400 -
+2024-11-23 17:27:49,127 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:49] code 400, message Bad request version ("ü\x10\x14'SG¥ÒV@Às\x9eÌ|{õz©o")
+2024-11-23 17:27:49,128 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:49] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03µ èñd'þÅ{¡È\x80\x06(}ÖK¦\x02]Í8¶F\x97c+0Ó"\x9aG 3<3\x83k=¾þ\x05I*b\x9b\x89/Éî\x82\x13À\x8dS¯\x98x\x05kSä\x88tN\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00\x00\x1b\x00\x03\x02\x00\x02þ\x0d\x00ú\x00\x00\x01\x00\x01è\x00 ?ãKb\x83G\x9d\x1eü\x10\x14'SG¥ÒV@Às\x9eÌ|{õz©o[0m" 400 -
+2024-11-23 17:27:49,128 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:49] code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ºº\x00\x00\x00')
+2024-11-23 17:27:49,129 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:49] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\x8eIâ]\x9aì\x07ø9gÒ£\x0bÍò¬Ì§ '\x8a\x09SâÕ\x13\x9fÌà¹À\x80 \x00ÔûGxôNûEÃã´)\x9a]óÉa\x1f|Î%:\x81k\x15,Ú<Ë\x0f\x0e\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ºº\x00\x00\x00[0m" 400 -
+2024-11-23 17:27:49,132 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:49] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+2024-11-23 17:27:49,160 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:49] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03[0m" 400 -
+2024-11-23 17:27:50,893 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:50] code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03vn\x81â\x89Yj>WaZ"\x92k)\x8b¡t¸ª')
+2024-11-23 17:27:50,903 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:50] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03vn\x81â\x89Yj>WaZ"\x92k)\x8b¡t¸ª[0m" 400 -
+2024-11-23 17:27:50,911 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:50] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ý¹\xad\xad\x8f7d$g\x05Å)Üí]õä,ûà')
+2024-11-23 17:27:50,914 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:50] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ý¹­­\x8f7d$g\x05Å)Üí]õä,ûà\x0dµ÷Z¥ß+óÄ\x97([0m" 400 -
+2024-11-23 17:27:50,941 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:50] code 400, message Bad request version ('î¡8§F\x19QÉ*s\x91·Ü|\x04ç©º+_\x92Àðé\x01ÿ\x86ÊÂSÔ1\x00Ð(Ö\xad©\x96\x11N*\x8eS«0U6PmF')
+2024-11-23 17:27:50,945 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:50] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Óñù\x9e\x19,\x1c­Ô¬ùNn<W¹\x8eg\x9bõ\x8du\x1c\x03H\x1b}\x8e2j\x11Ã \x85j§é\x12¬ónó\x8fµ?Ñ\x11\x12\x0e"\x1dF\x0b\x81Ø½\x7f¨xïz)Z\x9a\x8f\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00þ\x0d\x00ú\x00\x00\x01\x00\x01\x18\x00 î¡8§F\x19QÉ*s\x91·Ü|\x04ç©º+_\x92Àðé\x01ÿ\x86ÊÂSÔ1\x00Ð(Ö­©\x96\x11N*\x8eS«0U6PmF[0m" 400 -
+2024-11-23 17:27:51,079 - werkzeug - ERROR - 127.0.0.1 - - [23/Nov/2024 17:27:51] code 400, message Bad request version ('8\\R/éXs(L\x0fò\x1b')
+2024-11-23 17:27:51,082 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:27:51] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03-\x15-õ\x12LÍ]W\x16÷~§ÒÉ¯ìÒ¹$Ùf"yö\x8e\x86=@HW\x92 ´\x1f,é\x19~Z\x02ª\x18ø\x8aöÜF|\x10Sº\x06O\x0eÉE½Ü\x12XE\x9a\x8d¿\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063úú\x00\x00\x00#\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x17\x00\x00\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À\x00Á\x8bC\x9aD>ÌiÅrzj¬Há*7ùFT¤\x82O\x8f±\x9bL9dÂøH'B\x89¸ö\x04îH\x11\x12TM4Èd¡\x82j\x8b95OA,µ:g?¤\x80\x0dz\x8dÎ:\x9aâ<\x153Y\x17u²¿¬\x98»\x14é\x98Ü(7\x8a&r\x0cêu\x7fL_\x1e\x05gç%¯\x87\x1b\x13Õèf>\x97d|2\x86UÖ\x0d*¡È\x8b´K\x8fZ\x0fã¼ÂÛÖ0\x8cY§B\x92ÌÒÕ\x04¦¼\x8dÌ2,d@z°ZExÁi\x91\x86(N\x92\x9aK\x97¢½A\x00¬¡A!Åµfyzó§.6¶\\\x8e\x96\x9bcÃEw\x18=õv³Ì*\x9b±f§ûR\x08ÒÅ\x09æË@m÷~´ÇÌ±4i¤×Ê2VÆ¹\x02\x0cV±Ê¸ÑUâZ\x19°â 8\\R/éXs(L\x0fò\x1b[0m" 400 -
+2024-11-23 17:30:59,891 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 17:31:00,618 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-23 17:31:00,619 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 17:31:00,656 - werkzeug - INFO -  * Restarting with stat
+2024-11-23 17:31:09,743 - app - ERROR - Error creating database tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-11-23 17:31:09,828 - werkzeug - WARNING -  * Debugger is active!
+2024-11-23 17:31:10,085 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-23 17:31:11,286 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2024 17:31:11] "GET / HTTP/1.1" 200 -
+>>>>>>> 38f69efbd336a4a61663701fc0fd6a3271cec254
+2024-11-29 14:56:23,441 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-29 14:56:23,475 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 14:56:23,477 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 14:56:26,093 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 14:56:26,098 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 14:56:49,984 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 14:56:49] "GET / HTTP/1.1" 200 -
+2024-11-29 14:57:33,500 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 14:57:33] "GET / HTTP/1.1" 200 -
+2024-11-29 14:57:33,503 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 14:57:33] "GET / HTTP/1.1" 200 -
+2024-11-29 14:57:33,785 - root - WARNING - Page not found: /favicon.ico
+2024-11-29 14:57:33,786 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 14:57:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-29 14:57:33,795 - root - WARNING - Page not found: /favicon.ico
+2024-11-29 14:57:33,796 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 14:57:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-29 15:04:36,368 - flask_migrate - ERROR - Error: Path doesn't exist: 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\migrations'.  Please use the 'init' command to create a new scripts folder.
+2024-11-29 15:04:38,407 - flask_migrate - ERROR - Error: Path doesn't exist: 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\migrations'.  Please use the 'init' command to create a new scripts folder.
+2024-11-29 15:09:37,390 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\models.py', reloading
+2024-11-29 15:09:37,777 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:09:39,778 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:09:39,783 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:09:42,269 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\models.py', reloading
+2024-11-29 15:09:42,547 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:09:44,364 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:09:44,370 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:25:36,681 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-29 15:25:36,938 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:25:39,546 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:25:39,558 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:27:03,266 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-29 15:27:03,572 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:27:05,320 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:27:05,325 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:42:13,593 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\migrations\\test_mysql_connection.py', reloading
+2024-11-29 15:42:13,818 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:42:16,318 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:42:16,323 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:45:15,802 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\test_mysql_connection.py', reloading
+2024-11-29 15:45:16,031 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:45:18,038 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:45:18,052 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:48:52,541 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\test_db_connection.py', reloading
+2024-11-29 15:48:52,787 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:48:55,555 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:48:55,562 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 15:49:40,338 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-29 15:49:40,339 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 15:49:40,341 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 15:49:42,181 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 15:49:42,186 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-11-29 16:01:16,059 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-11-29 16:01:16,410 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 16:01:28,957 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-29 16:01:28,958 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 16:03:59,084 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-29 16:03:59,085 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 16:11:30,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-11-29 16:11:30,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 12:10:53,929 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 12:10:53,982 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 12:11:11,523 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 12:11:11,525 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 12:42:42,742 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 12:42:42,743 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 12:43:11,155 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:11] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 12:43:11,830 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:11] code 400, message Bad request version ('LÌ\\4ã\x12ì`\x9c¸ÊiW¼\x996')
+2024-12-02 12:43:11,831 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:11] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x172©®\x04>\x13e\x9e\x1c·LaAÀ\x13¹í¼\x11Ñ\x80a9ÝK\x08\x0b\x12Ôú\x1e ¨í{\x0dáw+9<^±¥\x12Ë\x99õ\\ \x06\x96\x07XæwÛ³\x942µY°B\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sZZ\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1Di\x00\x05\x00\x03\x02h2\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04ÀµE\x9f@\x80$<°\x88\x094K÷·¶­ZH\x02xB¾ë±í\x02\x92§Ò\x95Î<\x9bu\x07W6g/ÿtsò¸»Y¼¤¸*h±(]°\x12ajó\x97t\x03º;Á%*i¨z\x91)T\x11\x0fµ\x12½R5-\x1a!\x84l\x0c^{Ü\x1e,¶\x0cLÌ\\4ã\x12ì`\x9c¸ÊiW¼\x996[0m" 400 -
+2024-12-02 12:43:11,834 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:11] code 400, message Bad request version ('Ðv¸')
+2024-12-02 12:43:11,836 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:11] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x034\x19U;G÷l\x00ÊÄB\x1c\x92"\x09<Æh*\x19\x00»£ÂÀ*cÇ\x1eòµ\x8f Ô\x8a4@´ËÞ²~Æ\x16\x88o\x83\x08ðBD9~Ê}\x0b:·e\x15áÔxZ\x17\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÊÊ\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x003\x04ï\x04íÚÚ\x00\x01\x00\x11ì\x04À·°\x81\x0bµ½)U^\x99\x14\x9cÅq²\x8c³V¹ø6\x9fp\x1bÂë\x94?$h\x0fZlË\x83lhä\x14ù@\x02ÆÜ¨Ø\x19\x14q!Â\x95\x95\x87}'m(ú¡lËÏzâ¡møU¬æ_·úk½\x99f\x033\x97>Ü9»6¼\x8a:9#)(·©1ô\x89I?\x9c\x80¿ä[Óf\x1bÏ\x04Møì{ÒJF³õ1\x83\x02O7(X8¶IÿCy\x17·=hFI\x8fò¦·Û\x8c¨i\x98u¦t>ÅX\x93I7\x83ç\x9f\x81\x1b$Z\x83\x07ÑµfO\x07\x04\x93[\x81C\x86"\x82Ly\x09¸È|àA^é»\x1aL= ÷\x80\x07\x063\x8e´c:;:\x84Ü\x16F¦Å\x06\x04\x0f-ç.¨\x94/\x1b\x08A\x9dS¬³SmÇ\x0cu\x9fô0\x1fÑ\x03Ò7\x8a\x0b'\x9b0\x85,°Ô`@TuTÇoYiÇò [æT5\x96»¨Uì µºx£Ê¸gè\x96\x10\x88\x09\x0c\x1aÅ\x7f¶\x16y¢\x13#¤\x1bÍ£ ¤d5¶d°2\x972nc&\x94à\x8a.z\x15y\x03@*¢µ\x86¦;ñç<®÷b~¥$~V»ñµHpe\x81å\x929\x9d\\É|õ\x14=R\x06]ñL;R\x94\x8f\x87¢\x03s\x9cR¡`á\x08Ård\x14\x1e±\x89\x05\x93µ\x12\x9cJ\x06¤\x83\x90\x02tÌ\x04{þBÌ\x06\x96ÃÝ\x11^æKOZ\x1a\x0f\x8f&¸\x08Õ©\x8b,(88\x9aÖ\x82\x90Rlab8\x0c/2*àÚk ÚÀY¼¾\x9e4Uðê\x9d¨S=\x0f\\\x9f\x92¹Íia(\x98A\x8cDB\x19ÚôÎ\x01\x87²\x1d\x18\x1c\x98\x047\x1dü\x1a:L\x9ahj\x92\x14äZ_ó\x91[ã*\x9aw\x1c1ò\x82hÅ´áQ\x11Ú\x97&ñc\x85\x90q\x0d£$\x8cÁD>;\x1c1¢\x80\x08$\x9cÅ=\x8c\x90\x0d\x96T)¼*8¤ ½8!®s\x02oÀV,$» ð>\x9b¥«Vd¼\x1fT\x03}²aàG\x10;ü`äq0Tl\x16?lÁ?A\x11ìú9c\x10\\¦È.rè\x0eÔh\x0f0ª¶j\x84x.È\x03ÑG \x89\x85:±f¢\x0fç<ÞÂ\x8aD¶møiD-\x04g\x97\x18\x8d-ç\x9bR×\x90©\x82z\x1fÐv¸[0m" 400 -
+2024-12-02 12:43:17,482 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:17] code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sºº\x00\x00\x00\x17\x00\x00\x00')
+2024-12-02 12:43:17,491 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:17] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x89l\x89.%ãe-1¦(j\x07¤0È_\x85H#D\x0b:£Ì-(æ×2Û\x13 \x9f"-ávsÜ\x83\x91üDU·tD5èU-o7-ß\x14\x19\x19»hzL\x89\x91\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sºº\x00\x00\x00\x17\x00\x00\x00[0m" 400 -
+2024-12-02 12:43:17,508 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:17] code 400, message Bad request version ('\x92\x83')
+2024-12-02 12:43:17,509 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:17] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03~+²{/\x02d\x162næ\x87ó'6«\x97ofrte\x84\x06\x91êlk5É£{ Úà§\x82k\x1fÀ²Lé\x9d¾Õ\x89\x14\x0bµ@ç\x7fd3\x03\x08nîZ\x15"l\x09ï\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93jj\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01¾\x00 \x14mö,Â\x04 \x82_´ÁÁw?\x18i\x87JÂÁ\x1et?4ãÐ\x0b4Yº­L\x00ð\x06\x86\x9d#\x97Ô~\x9f\x98v\x18\x14Iò\x85\x0cOaNJé¥k\x8cJ¬w±¦ï+\x90<ûøº(\x1f/ä\x82¯_ÖÀj\x92ÊÍm·ÿ\x01¥\x90\x91Aa_Çòj'°\x09\x92\x83[0m" 400 -
+2024-12-02 12:43:17,509 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:17] code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03,/$ÒÑßù\x98ÇAí°Y§\x98¿üÅ*Ò\x1e')
+2024-12-02 12:43:17,512 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:17] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03,/$ÒÑßù\x98ÇAí°Y§\x98¿üÅ*Ò\x1e[0m" 400 -
+2024-12-02 12:43:17,512 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:17] code 400, message Bad request version ('\x00\x02\x01\x00\x00\x12\x00\x00\x00')
+2024-12-02 12:43:17,515 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:17] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x09u¡:\x80akEußª>UA}<p0L-\x06¾l3å r\x0ehÇ5Ñ ó0Ñ÷\x03ñ8F`\x84¨\x96O\x15\x18r;ÜM¢Ìã\x84\x187\x89íÈ(%\x00{\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sêê\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x0b\x00\x02\x01\x00\x00\x12\x00\x00\x00[0m" 400 -
+2024-12-02 12:43:19,429 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:19] code 400, message Bad request version ('\x80¼\x8dAÀW\x96\x83\x15ã²ºHØÊ\x11\x9aµËÔ\x98=¢P\x93R7\x12ôo\x88{\x81\x19\x9b6')
+2024-12-02 12:43:19,431 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:19] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x037ÿ`\x16ñ9â\x9bOiÏâÍÉyd@h¡\x0f\x19\x87î\x15D\x01÷\x16D×ó\x0e >Íp¸Rv'óÓ\x1c\x8f>\x89EcR{«`\x15Iz\x09Á\x9cSè\x81øð\x95¨\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s**\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00#\x00\x00\x003\x04ï\x04íúú\x00\x01\x00\x11ì\x04Àú¹\x89Hf\x8d\x88á5\x09)\x98>L[õð\x90\x13äN\x00\x83/\x9e\x86.xR«ù·\x13\x9b\x92Z0F£ÝØj\x84F¿\x102W;±F£9¯\x010\x87}S:\x96K>¼é8~#\x1f\x80¼\x8dAÀW\x96\x83\x15ã²ºHØÊ\x11\x9aµËÔ\x98=¢P\x93R7\x12ôo\x88{\x81\x19\x9b6[0m" 400 -
+2024-12-02 12:43:19,465 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:19] code 400, message Bad request version ('¿\x970UÿÅB\x98\x9dw7;¢óOº·©ä[,\x9d^J\\H')
+2024-12-02 12:43:19,471 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:19] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03öQ¬\x82¦B|~\x92Ð^Å%\x97Cþ\x1e\x19ËSÄªfVà×ÏÊå¶ðß \x1fûÛL\x89Û\x9f]Z\x9e¿&BIé"']kEià+wT\x80è\x8aüÃCý\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00\x00-\x00\x02\x01\x01\x00\x12\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01\x02\x00 Î\x13L|\x10\x0fÿ\x0dÚ&Pü\x0eòFò\x17\x9bb\x1d²^\x16\x11\x84\x84´Uoøêv\x00\x90\x1cxrÕ\x94j\x1f¿\x970UÿÅB\x98\x9dw7;¢óOº·©ä[,\x9d^J\\H[0m" 400 -
+2024-12-02 12:43:19,478 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:19] code 400, message Bad request version ('\x1ak\x02Ká¸WuB')
+2024-12-02 12:43:19,480 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:19] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03&hÁa[ì\x95ù:Ç\x18\x0bëAM\x83)mÓSIM\x01nL\x02®ù&\x9c®\x88 ³ÜFb4\x15r6\x83$9y9·Õ\x05&Ímò\x98,ë,z¨\x1c0Û\x0d\x8b"\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sªª\x00\x00þ\x0d\x00Ú\x00\x00\x01\x00\x01/\x00 WNL\x10\x99÷¡¼¼\x9cg³\x8c\x9eWo\x0d(\x8eu*J\x18\x09ïFÚ*qã\x97,\x00°\x1cz\x0e ùX#¨£L\x8aä(ýý@ª\x97Þ{ÿ\x0engnYÙýw0\x85\x1ak\x02Ká¸WuB[0m" 400 -
+2024-12-02 12:43:19,480 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:19] code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063')
+2024-12-02 12:43:19,483 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:19] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03è[\x8bÈ\x0b#Y2¸M1 QN/¤$Þ\x04§\x15D\x14Àô\x1a\x80V\x1f\x1b\x1d\x97 ¼\x88ÁWµL(åñmååGx÷÷N<ma÷©q,î\x88Î\x0cøÑx\x0d\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063[0m" 400 -
+2024-12-02 12:43:29,647 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:43:29] code 400, message Bad request syntax ('\x16\x03\x03\x00«\x01\x00\x00§\x03\x03gM\x9dax\x04\x98QË1Ô¬\x1b60Ð\x88ð')
+2024-12-02 12:43:29,648 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:43:29] "[31m[1m\x16\x03\x03\x00«\x01\x00\x00§\x03\x03gM\x9dax\x04\x98QË1Ô¬\x1b60Ð\x88ð[0m" 400 -
+2024-12-02 12:56:57,849 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 12:56:57,851 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 12:57:03,582 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:57:03] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 12:57:03,661 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:57:03] code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03+ÌÈfâç\x88,l9·')
+2024-12-02 12:57:03,665 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:57:03] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03+ÌÈfâç\x88,l9·[0m" 400 -
+2024-12-02 12:57:03,696 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 12:57:03] code 400, message Bad request version ('\x02h2\x08http/1.1\x00#\x00\x00\x00\x12\x00\x00\x00')
+2024-12-02 12:57:03,697 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 12:57:03] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Èm\x0d÷elP§w5â³\x94¼µÀ´~G>1£çä\x15åýC­\x82¡¯ â{\x96\x94^ÊRßb\x08¾R\x0d¼ uã\x87±èeä§Üìì ïý=9#\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sJJ\x00\x00ÿ\x01\x00\x01\x00\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00#\x00\x00\x00\x12\x00\x00\x00[0m" 400 -
+2024-12-02 13:04:08,769 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 13:04:08,770 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 13:04:08,833 - werkzeug - INFO -  * Restarting with stat
+2024-12-02 13:04:12,391 - werkzeug - WARNING -  * Debugger is active!
+2024-12-02 13:04:12,418 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-02 13:05:08,227 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:05:08] "GET / HTTP/1.1" 200 -
+2024-12-02 13:05:10,094 - app - WARNING - Page not found: /favicon.ico
+2024-12-02 13:05:10,095 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:05:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-02 13:05:45,053 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 13:05:45,054 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 13:06:02,922 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:06:02] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 13:06:03,033 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:06:03] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03-i')
+2024-12-02 13:06:03,034 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:06:03] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03-i\x0cK®Ó\x17Ôø\x9bOÃ\x02\x8d¯s<lIQ[0m" 400 -
+2024-12-02 13:06:03,036 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:06:03] code 400, message Bad request version ('\x01¼G\x9b\x96¯áìÅ¬ëJ7éé\x8dlpZ\x10`\x8eª{º\x81*\x05d=8Íª\x11H¨aÎK¨1¬~#\x03\x8fÂFïT\x13\x08©e\x96Ï')
+2024-12-02 13:06:03,037 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:06:03] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03í[ÅWäs\x99ïé¦\x08\x1f\x8dÇ )¨àVG(û®UßuÑÓÁ\x91ß± \x0c\x0fâëÕ©\x9eÞõàÍ¥uL\x8a"Ý\x8aßµTª[\x03\x92¨zÆ<q}\x97\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ºº\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01Ä\x00 Ë\x94\x97ZÊ-ìC@ÄB~\x84¼WR\x04I®\x81ã\x14Z\x18T\x00¨(9\x0f®O\x00ðh\x1cSK#£\x02k,¯âÛ\x92Òy°w\x02¯P\x16C\x05KÀ³\x05\x18\x95\x8ekºÖ­á®?l\x9dG\x18­K\x87é5-\x88ÃDÇ6\x1e\x01¼G\x9b\x96¯áìÅ¬ëJ7éé\x8dlpZ\x10`\x8eª{º\x81*\x05d=8Íª\x11H¨aÎK¨1¬~#\x03\x8fÂFïT\x13\x08©e\x96Ï[0m" 400 -
+2024-12-02 13:17:47,802 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 13:17:47,806 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 13:19:31,017 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:19:31] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 13:19:31,104 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:19:31] code 400, message Bad request version ('Ð\x9aSí\x13$\x1bü¿\x9bV¼?#\x05')
+2024-12-02 13:19:31,109 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:19:31] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ë5\x90|h»æ´\x91|&=ÌÛÏÎß_\x0bê\x95\x00WÂ\x1dú+¦\x01$\x16\x87 ßÇæèÂàÝ<¡ÃÒ©\x0bø\x05Ä[õ\x03ª\x926$R«0ãÈ\x9eÊ4!\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x8a\x8a\x00\x00\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x07\x06zz\x03\x04\x03\x03\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04À²\x86:!\x9c\x18Ô\x92B\x86eSÄF\x87 ÒDxÔ\x08\x1cÁL=Ê>a\x86¸>\x98\x161i\x91N¥l\x8f¶@ÿ\x13>½\x99jå·Z¦CÃ\x88\x9c\x072\x16ÄÇA¿ã\x01ºh\x99sØõ»sù¥\x96\x08lºDWt\x91Lh\x10\x88\x1cã`UB\x95k\x13U.\x1aSñ·4ò@©aUU0»ih\x1cIrÓ\x18\x1fÑV@±Î²à\x11\x07P\x90¶2\x92l\x82\x19\x10µkáã0Ó6\x99_q\x1e\x9e['H9R\x07øl«\x03\x03\x92Ãs\\Á"rG\x99\x9a\x81Ji1²ðÔ\x0dîôËø¸\x1f+¡\x0dÐ\x9aSí\x13$\x1bü¿\x9bV¼?#\x05[0m" 400 -
+2024-12-02 13:19:31,121 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:19:31] code 400, message Bad request version ('¥SE8#')
+2024-12-02 13:19:31,127 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:19:31] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x031\x8e¼sÑÓAðEyJKóÇ÷fË\x97ÛJµÍ\x9e¾\x17\x87\x90\x7f\x7f;bá `YER\x85ü®ú¥v/&Ê!Ü6j$k¯\x96;iD÷÷{a+°Lµ\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93êê\x00\x00\x00-\x00\x02\x01\x01\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00\x17\x00\x00\x003\x04ï\x04í**\x00\x01\x00\x11ì\x04Àq\x9b¯\x97G\x10òµ\x7f¿\x83\x1b²2Kr[ªLI?\x1dá\x1dm"\x13\x03\x87\x87uð\x97pi´ÒëGã\x96dNr\x84\x05\x1c+\x05µ$ëü§{I\\¦2»`\x86v\x05ç½$²Kªú~Ùò\x18+b3\x1ca7¿\x19:ÒwÌëb*Ä\x99,\x05\x01dßõ°\x7f°=Ê\x8c\x947å)F×e@Q\x1fwqÃ{)Â_A+ó¢».×)SÃ]'ÈjãÉ\x17Ü:3\x0f2\x94ãrqhU\x91\x00\x09qH\x1by\x1e\x91¼ªø3Ü\x84dÞ\x0c \x06XÃ%Ð\x13\x9c\x0c`veWÖ\x8c\x83î²\x966\x09Kf\x87\x0e\x87\x065$Ôª8X^\x9fðO¸°Ì\x95\x9a<³Ò\x1e@\x9c\x10e{m ¥SE8#[0m" 400 -
+2024-12-02 13:31:47,126 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 13:31:47,128 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 13:32:01,551 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:32:01] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 13:32:01,629 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:32:01] code 400, message Bad request version ('*\x07?a$')
+2024-12-02 13:32:01,630 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:32:01] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03¨¸±ô¨6\x9fEä,\x9eúJ\x8aç\x1e,ùt\x02ö9\x00ïÒ£l½ü­I\x08 *\x07?a$[0m" 400 -
+2024-12-02 13:32:01,636 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:32:01] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x11Ô\x15XÁÒçÓÎnè:C¸\x07\x0fh%')
+2024-12-02 13:32:01,637 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:32:01] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x11Ô\x15XÁÒçÓÎnè:C¸\x07\x0fh%\x1eo\x1bJ\x8a½nm[0m" 400 -
+2024-12-02 13:34:01,101 - werkzeug - INFO - 192.168.0.138 - - [02/Dec/2024 13:34:01] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 13:34:01,219 - werkzeug - ERROR - 192.168.0.138 - - [02/Dec/2024 13:34:01] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+2024-12-02 13:34:01,220 - werkzeug - INFO - 192.168.0.138 - - [02/Dec/2024 13:34:01] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x8dðOk\x9d¬v/¹\x90ú~þoì¬#\x87_1µ\x9a4?)K\x8a»\x87\x00ÀÀ Ùÿ\x0e\x1d\x81ÑÒCÎ\x949ä7Íß`K\x16\x84\x1c\x11å.\x1f]½F4Ëà;T\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93[0m" 400 -
+2024-12-02 13:34:01,222 - werkzeug - ERROR - 192.168.0.138 - - [02/Dec/2024 13:34:01] code 400, message Bad request version ('ü\x8aKM\x15¹õ\\ã³')
+2024-12-02 13:34:01,223 - werkzeug - INFO - 192.168.0.138 - - [02/Dec/2024 13:34:01] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x039\x93Ó\x0bàö!\x03ÂO9\x89\x80cÃ\x16\x1d¨×ü\x06Ç\x84ó\x16ß­4Ö|â\x15 (\x9dl\x8dcíZ°\x14M/wÛ79¬&7s\x15¯L3q\x8eÁfB%îÆ\x84\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sêê\x00\x00þ\x0d\x00ú\x00\x00\x01\x00\x01¦\x00 ü\x8aKM\x15¹õ\\ã³[0m" 400 -
+2024-12-02 13:43:08,720 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 13:43:08,720 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 13:43:15,887 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:15] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 13:43:15,956 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:15] code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+2024-12-02 13:43:15,956 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:15] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03îAtrðº\x1c\x85g¾÷S¢e\x009\x9bs]²ô\x83Å\x95åÀAÀ \x98ðÄ u\x9f ð\x8cÊ\x94êØÖèÒ\x88áåÅ\x9d\x9eÙª+\x8fÉ\x1c\x9b ä¤e\x89\x00ù\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93[0m" 400 -
+2024-12-02 13:43:15,959 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:15] code 400, message Bad request version ('\x82\x07K\x9b\x97¾|»74>èÙ\x9fÉdÆýÂÍ')
+2024-12-02 13:43:15,961 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:15] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x91ñ{Õ\x03;\x95\x0f\x91°Sø\x9f\x91\x1cÆKÐ¼È?\x92Ns\x99\x14ùV¿Cw\x91 [p\x13ìf\x14\x14\x0d7fÓÖ¬¹9Ý¢â\x0d¨ZDè\x15¿.Z\x913øV8\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SJJ\x00\x00\x003\x04ï\x04íªª\x00\x01\x00\x11ì\x04À\x03c¢\x0b\x82\x07K\x9b\x97¾|»74>èÙ\x9fÉdÆýÂÍ[0m" 400 -
+2024-12-02 13:43:38,241 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.138:5000
+2024-12-02 13:43:38,242 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 13:43:40,974 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:40] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-02 13:43:40,988 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:40] code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03·+C©')
+2024-12-02 13:43:40,989 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:40] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03·+C©[0m" 400 -
+2024-12-02 13:43:40,995 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:40] code 400, message Bad request version ('r\x01=ò\x19ÓIÂ$Õ{\x98³\x15®æ\x18\x1bq?\x0eÅSåå°\x8f')
+2024-12-02 13:43:41,012 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:41] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Qdôú¼ýÞê$ò\x01´\x8aÌ\x8f*'X9\x93¨÷È¦m°\x93@Í\x94¯£ \x08\\CÍ\x0d }ÜåÄÇ\x92\x94TÜ\x93\x87Ámõ¯\x0d¼\x16ìÎ\x01\x93@l£Y\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sJJ\x00\x00\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À\x82ÙA\x1dÄ\x85½Â K\x8aQ\x00x\x10ñx\x804Ê\x03Ç%;7\x8c¤FÀ2ÚV\x10p²)Ï+L\x1fI;\x9cÖVoÉX[\x04Ì\\¥\x98ßÔ7äÅ%è\x03¶LkR^\x05`FÛ\x92V\x89b¹¨W\x8a\x013IE¥ r\x01=ò\x19ÓIÂ$Õ{\x98³\x15®æ\x18\x1bq?\x0eÅSåå°\x8f[0m" 400 -
+2024-12-02 13:43:51,359 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:51] code 400, message Bad request version ('\x11Wâ\x8d\xad\x00')
+2024-12-02 13:43:51,370 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:51] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ð1Ï\x91ËÕ2Úó²sCÄ\x83(ÈRI0\x0fQ\x98¼×ðW¸ý\\ÄðÊ +÷\x1fïn\x04Â\x89W½E*D\x97¶\x81¶xÉ.Ðc?F\x13×\x0c\x11Wâ\x8d­\x00 [0m" 400 -
+2024-12-02 13:43:51,388 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:51] code 400, message Bad request version ('\x0fL¸ìðD§ø\x81')
+2024-12-02 13:43:51,392 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:51] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x033¬XÃ©´gÁmæ\x06(\x85ÓuùïÒrT­a0\x86\x87t&ÏÃÁi¢ Ô\x9d \x0fL¸ìðD§ø\x81[0m" 400 -
+2024-12-02 13:43:51,393 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:51] code 400, message Bad request version ('ù')
+2024-12-02 13:43:51,403 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:51] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03{\x15sï\x19ª\x06)Îå·\x0c \x9ef\x86£à\x96~,Q¦D¤¶"Þ\x83EÍS j\x8aN\x00BOAåx\x84\x1ac²5,±}ü@2rÇ2ÃúÐs£\x0b\x84XÛ\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93zz\x00\x00\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x003\x04ï\x04íJJ\x00\x01\x00\x11ì\x04ÀÕñ$À\x08*\x12Ð!ÞôÍ°\x05«Xõ5\x87èÇ\x85vÅ\x9f\x85Æ\x9c\x82qî\x10-M\x05\x92\x8ba\x0d-hp\x9bÄu\x1fù[0m" 400 -
+2024-12-02 13:43:51,407 - werkzeug - ERROR - 127.0.0.1 - - [02/Dec/2024 13:43:51] code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SJJ\x00\x00\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00')
+2024-12-02 13:43:51,409 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 13:43:51] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Þ6ü\x887Îf\x1ff¶O¹Iwf?¨<£Ö1nd\x7f\x80Â®\x05\x1d\x12\\¸ ÕÏ^Ûãëx¿Ìô\x9aíÑ\x1cÊyé\x04¡Ä U¶\x83z}A²\x1e\\Â¸\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SJJ\x00\x00\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00[0m" 400 -
+2024-12-02 15:51:16,964 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-02 15:51:16,981 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 17:11:37,692 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+        lambda: self._connect(), lambda error: self.disconnect(error)
+    )
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\retry.py", line 62, in call_with_retry
+    return do()
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ~~~~~~~~~~~~~^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\connection.py", line 730, in _connect
+    raise err
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\connection.py", line 718, in _connect
+    sock.connect(socket_address)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask\app.py", line 915, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask\app.py", line 1291, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask_limiter\extension.py", line 1176, in _check_request_limit
+    raise e
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask_limiter\extension.py", line 1157, in _check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\flask_limiter\extension.py", line 1094, in __evaluate_limits
+    if not method(lim.limit, *args, **kwargs):
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\limits\strategies.py", line 140, in hit
+    self.storage.incr(
+    ~~~~~~~~~~~~~~~~~^
+        item.key_for(*identifiers),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        amount=cost,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\limits\storage\base.py", line 27, in inner
+    return fn(*args, **kwargs)
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\limits\storage\redis.py", line 209, in incr
+    return int(self.lua_incr_expire([key], [expiry, amount]))
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\commands\core.py", line 5501, in __call__
+    return client.evalsha(self.sha, len(keys), *args)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\commands\core.py", line 5710, in evalsha
+    return self._evalsha("EVALSHA", sha, numkeys, *keys_and_args)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\commands\core.py", line 5694, in _evalsha
+    return self.execute_command(command, sha, numkeys, *keys_and_args)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\IT\PycharmProjects\ekondo_expense_mgt\venv\Lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.
+2024-12-02 17:11:38,158 - app - ERROR - Internal error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-02 17:11:38,232 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 17:11:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-02 18:01:47,010 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-02 18:01:47,144 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 18:05:46,887 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 18:05:46] "GET / HTTP/1.1" 200 -
+2024-12-02 18:05:46,962 - app - WARNING - Page not found: /favicon.ico
+2024-12-02 18:05:46,970 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 18:05:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-02 18:05:56,453 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 18:05:56] "GET / HTTP/1.1" 200 -
+2024-12-02 18:07:36,069 - werkzeug - INFO - 127.0.0.1 - - [02/Dec/2024 18:07:36] "GET / HTTP/1.1" 200 -
+2024-12-03 09:39:46,179 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-03 09:39:46,194 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-03 09:45:30,180 - werkzeug - INFO - 127.0.0.1 - - [03/Dec/2024 09:45:30] "GET / HTTP/1.1" 200 -
+2024-12-03 09:45:30,256 - app - WARNING - Page not found: /favicon.ico
+2024-12-03 09:45:30,260 - werkzeug - INFO - 127.0.0.1 - - [03/Dec/2024 09:45:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
