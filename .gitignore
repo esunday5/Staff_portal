@@ -1,0 +1,8 @@
+__pycache__/
+.idea/
+.pytest_cache/
+.vscode/
+migrations/__pycache__/
+venv/
+.env
+app.log

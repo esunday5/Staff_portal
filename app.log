@@ -806,3 +806,16 @@ redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No c
 2024-12-03 09:45:30,180 - werkzeug - INFO - 127.0.0.1 - - [03/Dec/2024 09:45:30] "GET / HTTP/1.1" 200 -
 2024-12-03 09:45:30,256 - app - WARNING - Page not found: /favicon.ico
 2024-12-03 09:45:30,260 - werkzeug - INFO - 127.0.0.1 - - [03/Dec/2024 09:45:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-03 10:11:53,440 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-03 10:23:46,529 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-03 10:23:46,531 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-03 10:23:51,649 - werkzeug - INFO - 127.0.0.1 - - [03/Dec/2024 10:23:51] "GET / HTTP/1.1" 200 -
+2024-12-03 10:26:05,864 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-03 20:46:55,252 - app - ERROR - Error creating database tables: cannot import name 'DocumentUploads' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-12-05 13:32:43,994 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-05 21:36:46,712 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-06 10:42:12,585 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-06 10:49:16,855 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty

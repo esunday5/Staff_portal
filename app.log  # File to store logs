@@ -1,0 +1,65 @@
+2024-12-06 12:20:40,988 - app - ERROR - Error creating database tables: Foreign key associated with column 'notifications.user_id' could not find table 'users' with which to generate a foreign key to target column 'id'
+2024-12-06 12:20:41,277 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-06 12:20:41,277 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-06 12:20:58,607 - werkzeug - INFO - 127.0.0.1 - - [06/Dec/2024 12:20:58] "GET / HTTP/1.1" 200 -
+2024-12-06 12:20:58,678 - app - WARNING - Page not found: /favicon.ico
+2024-12-06 12:20:58,683 - werkzeug - INFO - 127.0.0.1 - - [06/Dec/2024 12:20:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-06 12:29:52,112 - app - ERROR - Error creating database tables: Foreign key associated with column 'expense.last_modified_by' could not find table 'user' with which to generate a foreign key to target column 'id'
+2024-12-06 12:29:52,131 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-06 12:29:52,131 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-06 12:35:04,197 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-06 12:35:04,197 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-06 12:35:40,530 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-06 14:27:41,777 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-06 15:02:47,799 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-06 15:32:21,896 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-06 15:32:21,896 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-06 15:59:54,428 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-06 16:02:50,552 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-09 09:54:15,268 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-09 09:54:15,304 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 12:23:07,293 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-09 12:23:07,395 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 12:23:58,130 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 12:23:58] "GET / HTTP/1.1" 200 -
+2024-12-09 12:23:58,311 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 12:23:58] "GET / HTTP/1.1" 200 -
+2024-12-09 12:44:31,099 - app - ERROR - Error creating database tables: Foreign key associated with column 'cash__advance.officer_id' could not find table 'user' with which to generate a foreign key to target column 'id'
+2024-12-09 13:48:35,172 - app - ERROR - Error creating database tables: cannot import name 'Cash_Advance' from 'models' (C:\Users\IT\PycharmProjects\ekondo_expense_mgt\models.py)
+2024-12-09 13:48:35,188 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-09 13:49:29,619 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-09 18:13:17,213 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-09 18:33:39,437 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-09 19:33:37,499 - flask_migrate - ERROR - Error: Directory migrations already exists and is not empty
+2024-12-09 20:15:25,128 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-09 20:15:25,138 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 20:15:44,518 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 20:15:44] "GET / HTTP/1.1" 200 -
+2024-12-09 20:15:49,761 - werkzeug - ERROR - 127.0.0.1 - - [09/Dec/2024 20:15:49] code 400, message Bad request version ('Øý¨.é<¸\x00')
+2024-12-09 20:15:49,837 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 20:15:49] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x978¦\x19})þ\x09\x0eD@/b\x19»Ýã\x1dXrcäAîÕlTâËþD( $\x0eÁêÕ\x95«´«L;ØÛ\x83kÞ\x12Ezr\x7ft\x95s£ E\x7fÂ>%\x93\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sºº\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x00#\x00\x00ÿ\x01\x00\x01\x00\x00-\x00\x02\x01\x01\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1þ\x0d\x00Ú\x00\x00\x01\x00\x01æ\x00 ]B)M1ïU¿èºáyÚ£\x80Hezh\x03ý\x10÷Ú=ë7\x88G@\x15U\x00°ZQ\x9f\x0eºëÅ|\x8d1\x0bá\x1f\x0f\x19&\x90d¬3\x8ev,|7\x17¯ï¨\x06A\x9cÌÉ\x13\x9f#âÝººð\x95T\x81Q\x02\x12\x9cÜ=¼8$ùQ\x93\x12w\x11Îl¦\x8e\x0e\x0báh\x15¢rßçß\x1c,ë½\x89\\\x7fâ\x9375}Tþ/FìJ#Õã\x9csà4pînï\x01»§p\x03\x13X¶5\x15â\x92\x8c±c`Û#\x16P\x0eÊÑ²Æëï/\x0f@N3\x02D"Üø|\x88ß&²\x94\x97\x1dÎ\x13­\x8b\x9e\x14q\x06TX#\x0cXnÍ©\x03Ú7 \x09Øý¨.é<¸\x00[0m" 400 -
+2024-12-09 20:15:49,912 - werkzeug - ERROR - 127.0.0.1 - - [09/Dec/2024 20:15:49] code 400, message Bad request version ('\x00')
+2024-12-09 20:15:49,913 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 20:15:49] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03|üØÜ¶-w2}ò®Zò0\x1cíóO\x181=\x91\x8eáÿ±nT³ÖuÌ òfÍ\x14\x954í,\x96\x0f³ÁêDz^®ö\x01\x81\x81øõãuá©6DÓ\x14\x82\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÚÚ\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06zz\x03\x04\x03\x03þ\x0d\x01\x1a\x00\x00\x01\x00\x01-\x00 u\x90\x1d\x93\x80¢d\x11ðÌÿ\x8eÀPËÿ»fOí\x92\x01\x89\x8cË\x82;\x06\x1fÝ\x02-\x00ð\x84£®%M\x91UY²YàÄð¯7úè½yÎXhi\x9fÖ+Li,ÄÀ\x90ì\x1a\x82þ\x8e\x06ôI\x9a¬ÝB\x97î\x80TU\x8d\x8f6x7\x03Áï!Ð_î S¦\x1be\x0e½æ}t^jî\x09\x89{\x93s¯¬\x96¾ÿçð²u\x1dÝI\x8a£ó ìöÊ¸-ÝÕ\x88Ó%5±j\x1a\x9e·(-!n\x82Âû\x1d\x82\x1bÉ7\x19`Áé°Ñ*\x91\x06ó`A!\x16G\x0cÙÍs[\x019\x8b-\x0cT\x05O6\x9b´8öæò\x8eeUüTÛ6\x1b\x90æ/ð:\x9a\x92ù\x0f\x81Q\x01.cüÒ¥b÷*\x0ek\x93\x11;¬|,Ow¾,ã@c«(\x9c÷?A!\x94Dt÷WÄ}Ye\x19\x80µØ\x87(Ç0ÏD²*\x8d\x8b\x1aú©T¦ú\\!\x1e\x00[0m" 400 -
+2024-12-09 20:15:51,707 - app - WARNING - Page not found: /favicon.ico
+2024-12-09 20:15:51,708 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 20:15:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-10 16:44:43,908 - flask_migrate - ERROR - Error: A 'SQLAlchemy' instance has already been registered on this Flask app. Import and use that instance instead.
+2024-12-11 19:19:31,284 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.138:5000
+2024-12-11 19:19:31,306 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

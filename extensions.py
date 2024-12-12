@@ -1,22 +1,39 @@
 # extensions.py
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from flask_migrate import Migrate
+from flask_migrate import Migrate 
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flasgger import Swagger
 from flask_wtf.csrf import CSRFProtect
 
-# Initialize extensions here
+# Initialize extensions
 db = SQLAlchemy()
 login_manager = LoginManager()
 migrate = Migrate()
-limiter = Limiter(key_func=get_remote_address)
+
+def init_app(app):
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+limiter = Limiter(
+    key_func=get_remote_address,  # Use IP address for rate-limiting
+    default_limits=["2000 per day", "500 per hour"]  # Default rate limits
+)
 swagger = Swagger()
 csrf = CSRFProtect()
 
-# Set up the login manager user loader (you can import your User model here if needed)
+# Configure the login manager
+login_manager.login_view = "auth.login"  # Redirect unauthenticated users to 'auth.login'
+login_manager.login_message = "Please log in to access this page."
+login_manager.login_message_category = "info"
+
+# Set up the login manager user loader
 @login_manager.user_loader
 def load_user(user_id):
-    from models import User  # Import your user model here
-    return User.query.get(int(user_id))
+    from models import User  # Import the User model here
+    try:
+        return User.query.get(int(user_id))  # Load user by ID
+    except Exception as e:
+        db.session.rollback()
+        return None

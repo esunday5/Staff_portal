@@ -1,4 +1,3 @@
-import flask
 from flask import Blueprint, render_template, redirect, url_for, flash, request, jsonify, send_file
 from flask_login import login_user, login_required, current_user
 from flask_wtf.csrf import CSRFProtect
@@ -13,7 +12,7 @@ from utils import convert_pdf_to_image, allowed_file, resize_image, populate_bra
 from models import (
     User, Role, Expense, CashAdvance, OpexCapexRetirement,
     PettyCashAdvance, PettyCashRetirement, StationaryRequest, Notification
-)  # Ensure all models are defined in models.py
+)
 
 # Import forms
 from forms import (
@@ -24,7 +23,7 @@ from forms import (
     PettyCashAdvanceForm,
     PettyCashRetirementForm,
     StationaryRequestForm
-)  # Ensure all forms are defined in forms.py
+)
 
 # Import additional modules
 from PIL import Image
@@ -58,19 +57,18 @@ def populate_branches_and_departments_route():
         populate_branches_and_departments()
         return jsonify({"message": "Branches and departments added successfully!"}), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-# Set up the main Blueprint
-main_bp = Blueprint('main', __name__)
+        logging.error(f"Error populating branches and departments: {str(e)}")
+        return jsonify({"error": "Failed to populate branches and departments."}), 500
 
 # User registration route with form validation
-@main_bp.route('/register', methods=['GET', 'POST'])
+@main_blueprint.route('/register', methods=['GET', 'POST'])
 @csrf.exempt  # Apply CSRF protection
 @limiter.limit("5 per minute")  # Rate limit for security
 def register_user():
     form = UserRegistrationForm()
     if form.validate_on_submit():
-        if User.query.filter((User.username == form.username.data) | (User.email == form.email.data)).first():
+        existing_user = User.query.filter((User.username == form.username.data) | (User.email == form.email.data)).first()
+        if existing_user:
             flash("User already exists", "error")
             return redirect(url_for('main.register_user'))
 
@@ -87,7 +85,7 @@ def register_user():
     return render_template('register.html', form=form)
 
 # User login route with form validation
-@main_bp.route('/login', methods=['GET', 'POST'])
+@main_blueprint.route('/login', methods=['GET', 'POST'])
 @csrf.exempt  # Apply CSRF protection
 @limiter.limit("10 per minute")  # Rate limit for security
 def login_user():
@@ -102,13 +100,13 @@ def login_user():
     return render_template('login.html', form=form)
 
 # Dashboard route
-@main_bp.route('/dashboard')
+@main_blueprint.route('/dashboard')
 @login_required
 def dashboard():
     return render_template('dashboard.html', user=current_user)
 
 # Route to handle cash advance request using form
-@main_bp.route('/cash_advance', methods=['GET', 'POST'])
+@main_blueprint.route('/cash_advance', methods=['GET', 'POST'])
 @login_required
 @csrf.exempt  # CSRF protection
 @limiter.limit("5 per minute")
@@ -128,7 +126,7 @@ def raise_cash_advance():
     return render_template('cash_advance.html', form=form)
 
 # Route to upload and process files
-@main_bp.route('/upload', methods=['POST'])
+@main_blueprint.route('/upload', methods=['POST'])
 @csrf.exempt
 @limiter.limit("3 per minute")
 def upload_file():
@@ -144,25 +142,30 @@ def upload_file():
 
         # Process file if it's a PDF (convert to image)
         if filename.lower().endswith('.pdf'):
-            image_path = convert_pdf_to_image(filepath)
-            flash("File uploaded and processed successfully!", "success")
-            return send_file(image_path, as_attachment=True)
-
-    flash("Invalid file type", "error")
+            try:
+                image_path = convert_pdf_to_image(filepath)
+                flash("File uploaded and processed successfully!", "success")
+                return send_file(image_path, as_attachment=True)
+            except Exception as e:
+                flash(f"Error processing PDF: {str(e)}", "error")
+        else:
+            flash("Uploaded file is not a PDF", "error")
+    else:
+        flash("Invalid file type", "error")
     return redirect(request.url)
 
 # Error handler examples
-@main_bp.errorhandler(404)
+@main_blueprint.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
 
-@main_bp.errorhandler(500)
+@main_blueprint.errorhandler(500)
 def internal_error(e):
     db.session.rollback()  # Ensure any incomplete transactions are rolled back
     return render_template('500.html'), 500
 
 # Route for OPEX/CAPEX/Retirement requests
-@main_bp.route('/opex_capex_retirement', methods=['GET', 'POST'])
+@main_blueprint.route('/opex_capex_retirement', methods=['GET', 'POST'])
 @login_required
 @csrf.exempt
 @limiter.limit("5 per minute")
@@ -184,7 +187,7 @@ def raise_opex_capex_retirement():
     return render_template('opex_capex_retirement.html', form=form)
 
 # Route for petty cash advance requests
-@main_bp.route('/petty_cash_advance', methods=['GET', 'POST'])
+@main_blueprint.route('/petty_cash_advance', methods=['GET', 'POST'])
 @login_required
 @csrf.exempt
 @limiter.limit("5 per minute")
@@ -205,7 +208,7 @@ def raise_petty_cash_advance():
     return render_template('petty_cash_advance.html', form=form)
 
 # Route for petty cash retirement requests
-@main_bp.route('/petty_cash_retirement', methods=['GET', 'POST'])
+@main_blueprint.route('/petty_cash_retirement', methods=['GET', 'POST'])
 @login_required
 @csrf.exempt
 @limiter.limit("5 per minute")
@@ -226,7 +229,7 @@ def raise_petty_cash_retirement():
     return render_template('petty_cash_retirement.html', form=form)
 
 # Route for stationery requests
-@main_bp.route('/stationery_request', methods=['GET', 'POST'])
+@main_blueprint.route('/stationery_request', methods=['GET', 'POST'])
 @login_required
 @csrf.exempt
 @limiter.limit("5 per minute")
@@ -246,8 +249,16 @@ def raise_stationery_request():
     return render_template('stationery_request.html', form=form)
 
 # Route for notifications (example to fetch unread notifications for a user)
-@main_bp.route('/notifications/<int:user_id>', methods=['GET'])
+@main_blueprint.route('/notifications/<int:user_id>', methods=['GET'])
 @login_required
 def get_notifications(user_id):
+    # Ensure that the user requesting notifications is authorized to view them
+    if current_user.id != user_id:
+        flash("You are not authorized to view these notifications.", "error")
+        return redirect(url_for('main.dashboard'))
+
     notifications = Notification.query.filter_by(user_id=user_id, is_read=False).all()
-    return jsonify([notification.to_dict() for notification in notifications])  # Assume to_dict method exists
+    if notifications:
+        return jsonify([notification.to_dict() for notification in notifications])  # Assume to_dict method exists
+    else:
+        return jsonify({"message": "No unread notifications."}), 404

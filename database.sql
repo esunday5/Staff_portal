@@ -1,25 +1,105 @@
--- Database and schema setup
+-- Drop the procedure for foreign key check after running it once
+DROP PROCEDURE IF EXISTS DropForeignKeyIfExists;
+
+DELIMITER $$
+CREATE PROCEDURE DropForeignKeyIfExists(
+    IN tbl_name VARCHAR(255),
+    IN fk_constraint_name VARCHAR(255)
+)
+BEGIN
+    DECLARE constraint_exists INT;
+
+    SET constraint_exists = (SELECT COUNT(*) FROM information_schema.TABLE_CONSTRAINTS
+                             WHERE TABLE_NAME = tbl_name
+                             AND CONSTRAINT_NAME = fk_constraint_name);
+
+    IF constraint_exists > 0 THEN
+        ALTER TABLE tbl_name DROP FOREIGN KEY fk_constraint_name;
+    END IF;
+END $$
+DELIMITER ;
+
+-- Database Setup
 USE ekondo_db;
 
--- Drop foreign key constraints first
-ALTER TABLE users DROP FOREIGN KEY users_ibfk_1;
+-- Disable foreign key checks to avoid errors during table modifications
+SET FOREIGN_KEY_CHECKS = 0;
 
--- Drop existing tables to prevent conflicts
-DROP TABLE IF EXISTS users, roles, departments, statuses, expenses, cash_advance, opex_capex_retirement, petty_cash_advance, petty_cash_retirement, stationary_request, audit_log, document_uploads, notifications, transactions, request_history, notification_settings, file_metadata, expense_approval_workflow, flask_limiter, rate_limit;
+-- Drop existing tables if any to avoid conflicts
+DROP TABLE IF EXISTS users, roles, departments, branches, statuses, expenses, cash_advance, opex_capex_retirement, 
+    petty_cash_advance, petty_cash_retirement, stationary_request, audit_log, document_uploads, notifications, 
+    transactions, request_history, notification_settings, file_metadata, expense_approval_workflow, flask_limiter, rate_limit; 
 
--- Table for roles
+-- Enable foreign key checks again
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- Create the branches table
+CREATE TABLE branches (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE
+);
+
+-- Insert default branches
+INSERT INTO branches (name) VALUES
+    ('Head Office'),
+    ('Corporate'),
+    ('Effio-Ette'),
+    ('Chamley'),
+    ('Ekpo-Abasi'),
+    ('Etim-Edem'),
+    ('Watt'),
+    ('Ika Ika'),
+    ('Ikang'),
+    ('Ikot Nakanda'),
+    ('Mile 8'),
+    ('Oban'),
+    ('Odukpani'),
+    ('Uyanga'),
+    ('Ugep'),
+    ('Obubra'),
+    ('Ikom'),
+    ('Ogoja');
+
+-- Create the roles table
 CREATE TABLE roles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL UNIQUE
 );
 
--- Table for departments
+-- Insert default roles
+INSERT INTO roles (name) VALUES
+    ('officer'),
+    ('approver'),
+    ('reviewer'),
+    ('supervisor'),
+    ('admin'),
+    ('super_admin');
+
+-- Create departments table
 CREATE TABLE departments (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL UNIQUE
+    name VARCHAR(50) NOT NULL UNIQUE,
+    branch_id INT,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
 );
 
--- Table for users with relationships
+-- Insert default departments
+INSERT INTO departments (name, branch_id) VALUES
+    ('HR/Admin', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Account', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Risk/Compliance', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('IT', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Audit', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Funds Transfer', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Credit', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Recovery', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('E-Business', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Legal', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Strategic Branding / Communication', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Business Development', (SELECT id FROM branches WHERE name = 'Head Office')),
+    ('Managing Director', (SELECT id FROM branches WHERE name = 'Head Office'));
+
+-- Create users table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL UNIQUE,
@@ -29,14 +109,27 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     role_id INT,
     department_id INT,
+    branch_id INT,
     is_active BOOLEAN DEFAULT TRUE,
     email_verified BOOLEAN DEFAULT FALSE,
     is_deleted BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE SET NULL,
-    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE SET NULL
+    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
 );
+
+-- Insert users with assigned roles
+INSERT INTO users (first_name, last_name, username, email, password, role_id, branch_id, department_id) VALUES
+    ('Hyacinth', 'Sunday', 'hyman', 'hyacinth.sunday@ekondomfbank.com', '11229012', (SELECT id FROM roles WHERE name = 'officer'), (SELECT id FROM branches WHERE name = 'Head Office'), (SELECT id FROM departments WHERE name = 'IT')),
+    ('Ekuere', 'Akpan', 'ekuere', 'ekuere.akpan@ekondomfbank.com', '11223344', (SELECT id FROM roles WHERE name = 'approver'), (SELECT id FROM branches WHERE name = 'Head Office'), (SELECT id FROM departments WHERE name = 'Managing Director')),
+    ('Henry', 'Ikpeme', 'henzie', 'henry.etim@ekondomfbank.com', '22446688', (SELECT id FROM roles WHERE name = 'reviewer'), (SELECT id FROM branches WHERE name = 'Head Office'), (SELECT id FROM departments WHERE name = 'Risk/Compliance')),
+    ('Ubong', 'Wilson', 'wilson', 'ubong.wilson@ekondomfbank.com', '44556677', (SELECT id FROM roles WHERE name = 'supervisor'), (SELECT id FROM branches WHERE name = 'Head Office'), (SELECT id FROM departments WHERE name = 'IT')),
+    ('Emmanuel', 'Sunday', 'emmanate', 'emmyblaq3@gmail.com', 'admin@it', (SELECT id FROM roles WHERE name = 'admin'), (SELECT id FROM branches WHERE name = 'Head Office'), (SELECT id FROM departments WHERE name = 'IT'));
+
+-- Verify insertion
+SELECT * FROM users;
 
 -- Table for statuses
 CREATE TABLE statuses (
@@ -54,6 +147,7 @@ CREATE TABLE expenses (
     status_id INT,
     created_by INT NOT NULL,
     department_id INT,
+    branch_id INT,
     management_approval_document VARCHAR(255),
     proforma_invoice_document VARCHAR(255),
     is_deleted BOOLEAN DEFAULT FALSE,
@@ -61,13 +155,14 @@ CREATE TABLE expenses (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (status_id) REFERENCES statuses(id) ON DELETE SET NULL,
     FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE SET NULL
+    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
 );
 
 -- Table for cash advances
 CREATE TABLE cash_advance (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    branch VARCHAR(255) NOT NULL,
+    branch_id INT,
     officer_id INT,
     request_date DATE DEFAULT (CURRENT_DATE),
     approval_date DATE,
@@ -77,14 +172,15 @@ CREATE TABLE cash_advance (
     management_approval_doc BLOB,
     proforma_invoice BLOB,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL
+    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
 );
 
 -- Table for OPEX/CAPEX/RETIREMENT
 CREATE TABLE opex_capex_retirement (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    branch VARCHAR(50) NOT NULL,
-    department VARCHAR(50),
+    branch_id INT,  -- Remove NOT NULL here
+    department_id INT,
     payee_name VARCHAR(100) NOT NULL,
     payee_account_number VARCHAR(20) NOT NULL,
     invoice_amount DECIMAL(10, 2) NOT NULL,
@@ -97,40 +193,43 @@ CREATE TABLE opex_capex_retirement (
     officer_id INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL
+    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL,  -- This is allowed now
+    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE SET NULL
 );
 
 -- Table for petty cash advances
 CREATE TABLE petty_cash_advance (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    branch VARCHAR(255) NOT NULL,
+    branch_id INT, -- Allow NULL values here
     officer_id INT,
     request_date DATE DEFAULT (CURRENT_DATE),
     amount NUMERIC(10, 2) NOT NULL,
     purpose TEXT,
     status VARCHAR(50) DEFAULT 'Pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL
+    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL -- Set to NULL on delete
 );
 
 -- Table for petty cash retirements
 CREATE TABLE petty_cash_retirement (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    branch VARCHAR(255) NOT NULL,
+    branch_id INT, -- Allow NULL values here
     officer_id INT,
     retirement_date DATE DEFAULT (CURRENT_DATE),
-    retired_amount NUMERIC(10, 2) NOT NULL,
-    details TEXT,
-    receipt BLOB,
+    amount NUMERIC(10, 2) NOT NULL,
+    reason TEXT,
     status VARCHAR(50) DEFAULT 'Pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL
+    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL -- Set to NULL on delete
 );
 
 -- Table for stationary requests
 CREATE TABLE stationary_request (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    branch VARCHAR(255) NOT NULL,
+    branch_id INT NULL,  -- Allow NULL values for branch_id
     officer_id INT,
     request_date DATE DEFAULT (CURRENT_DATE),
     item_name VARCHAR(255) NOT NULL,
@@ -138,7 +237,8 @@ CREATE TABLE stationary_request (
     justification TEXT,
     status VARCHAR(50) DEFAULT 'Pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL
+    FOREIGN KEY (officer_id) REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
 );
 
 -- Table for audit logs
@@ -179,24 +279,46 @@ CREATE TABLE notifications (
 CREATE TABLE transactions (
     id INT PRIMARY KEY AUTO_INCREMENT,
     request_type VARCHAR(50) NOT NULL,
-    request_id INT NOT NULL,
+    request_id INT NOT NULL, 
     amount DECIMAL(10, 2) NOT NULL,
     transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    status VARCHAR(50) DEFAULT 'Pending'
+    status VARCHAR(50) DEFAULT 'Pending',
+    CHECK (request_type IN ('expense', 'cash_advance')), 
+    CONSTRAINT fk_transactions_expense 
+        FOREIGN KEY (request_id) 
+        REFERENCES expenses(id) 
+        ON DELETE CASCADE,
+    CONSTRAINT fk_transactions_cash_advance 
+        FOREIGN KEY (request_id) 
+        REFERENCES cash_advance(id) 
+        ON DELETE CASCADE 
 );
 
--- History/versioning table for request updates
+-- History/versioning table for request updates 
 CREATE TABLE request_history (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    request_id INT NOT NULL,
+    request_id INT NOT NULL, 
     change_type VARCHAR(50) NOT NULL,
-    changed_by INT,  -- Make this nullable to work with 'ON DELETE SET NULL'
+    changed_by INT, 
     change_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     previous_value JSON,
     new_value JSON,
-    FOREIGN KEY (changed_by) REFERENCES users(id) ON DELETE SET NULL,  -- Foreign key with SET NULL
-    FOREIGN KEY (request_id) REFERENCES expenses(id) ON DELETE CASCADE
+    FOREIGN KEY (changed_by) REFERENCES users(id) ON DELETE SET NULL
 );
+
+DELIMITER $$
+CREATE TRIGGER trg_request_history_before_insert
+BEFORE INSERT ON request_history
+FOR EACH ROW
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM expenses WHERE id = NEW.request_id) 
+       AND NOT EXISTS (SELECT 1 FROM cash_advance WHERE id = NEW.request_id) 
+    THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Invalid request_id. Must exist in expenses, cash_advance, or other relevant tables.';
+    END IF;
+END $$
+DELIMITER ;
 
 -- Notification settings table
 CREATE TABLE notification_settings (
@@ -220,35 +342,29 @@ CREATE TABLE file_metadata (
 CREATE TABLE expense_approval_workflow (
     id INT PRIMARY KEY AUTO_INCREMENT,
     expense_id INT NOT NULL,
-    approver_id INT,  -- Changed this to nullable (removed NOT NULL)
-    approval_status VARCHAR(50) DEFAULT 'Pending',
-    approval_date TIMESTAMP,
+    approver_id INT NOT NULL,
+    approval_status VARCHAR(50) NOT NULL,
+    approval_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (expense_id) REFERENCES expenses(id) ON DELETE CASCADE,
-    FOREIGN KEY (approver_id) REFERENCES users(id) ON DELETE SET NULL  -- Allow approver_id to be NULL on DELETE
+    FOREIGN KEY (approver_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Corrected table for Flask limiter
+-- Flask rate limiter table for request limiting
 CREATE TABLE flask_limiter (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    `key` VARCHAR(255) NOT NULL,  -- Corrected column data type
-    `value` VARCHAR(255) NOT NULL,  -- Corrected column data type
-    `expiry` INT NOT NULL  -- Corrected column data type
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    ip_address VARCHAR(255),
+    request_count INT DEFAULT 0,
+    last_request_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Table for rate limit
-CREATE TABLE IF NOT EXISTS rate_limit (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    `key` VARCHAR(255) NOT NULL,
-    `value` INT NOT NULL,
-    `expiry` INT NOT NULL,
-    UNIQUE KEY unique_key (`key`)
+-- Rate limit data for users
+CREATE TABLE rate_limit (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    request_limit INT DEFAULT 1000,
+    reset_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Insert default roles
-INSERT INTO roles (name) VALUES
-    ('Officer'),
-    ('Supervisor'),
-    ('Reviewer'),
-    ('Approver'),
-    ('Admin'),
-    ('Super Admin');

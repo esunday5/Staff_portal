@@ -1,4 +1,5 @@
-from models import User, Role, Branch, Department
+from models import User, Role, Branch, Department, Notification, AuditLog
+from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
 import logging
 from flask_caching import Cache
@@ -6,6 +7,8 @@ from PIL import Image
 import pdf2image
 import os
 from extensions import db  # Import db from extensions.py
+from models import User  # Only import models you need
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -53,8 +56,7 @@ def get_supervisor(department_id):
         User: The supervisor User object or None if not found.
     """
     try:
-        # Fetching supervisor role ID dynamically
-        SUPERVISOR_ROLE_ID = get_role_id_by_name('Supervisor')  # Assuming this function exists
+        SUPERVISOR_ROLE_ID = get_role_id_by_name('Supervisor')
         supervisor = User.query.filter_by(department_id=department_id, role_id=SUPERVISOR_ROLE_ID).first()
         if supervisor:
             logging.info(f"Supervisor found for department {department_id}: {supervisor.username}")
@@ -80,15 +82,12 @@ def send_notification(user_id, message, notification_type='email'):
 
     try:
         if notification_type == 'email':
-            # Logic to send email notification
             subject = "Important Notification"
             # Implement email sending logic using Flask-Mail or similar
             logging.info(f"Email sent to {user.email}: {message}")
         elif notification_type == 'sms':
-            # Logic to send SMS notification
             logging.info(f"SMS sent to {user.phone_number}: {message}")  # Assuming phone_number exists in User
         elif notification_type == 'in-app':
-            # Logic for in-app notifications
             logging.info(f"In-app notification sent to {user.username}: {message}")
         else:
             logging.warning(f"Unknown notification type: {notification_type}. No action taken.")
@@ -106,6 +105,30 @@ def get_role_id_by_name(role_name):
     """
     role = Role.query.filter_by(name=role_name).first()
     return role.id if role else None
+
+def get_officer_role_id():
+    """Fetch the Officer role ID."""
+    return get_role_id_by_name('Officer')
+
+def get_supervisor_role_id():
+    """Fetch the Supervisor role ID."""
+    return get_role_id_by_name('Supervisor')
+
+def get_reviewer_role_id():
+    """Fetch the Reviewer role ID."""
+    return get_role_id_by_name('Reviewer')
+
+def get_approver_role_id():
+    """Fetch the Approver role ID."""
+    return get_role_id_by_name('Approver')
+
+def get_admin_role_id():
+    """Fetch the Admin role ID."""
+    return get_role_id_by_name('Admin')
+
+def get_super_admin_role_id():
+    """Fetch the Super Admin role ID."""
+    return get_role_id_by_name('Super Admin')
 
 def convert_pdf_to_image_v2(pdf_path):
     """Convert PDF to images and return paths of the images.""" 

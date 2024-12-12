@@ -4,10 +4,11 @@ from wtforms import (
     SubmitField, FloatField, BooleanField, DateField, FileField
 )
 from wtforms.validators import (
-    DataRequired, Email, EqualTo, Length, NumberRange, Optional, ValidationError
+    DataRequired, Email, EqualTo, Length, NumberRange, Optional, ValidationError, equal_to
 )
 from datetime import datetime
 from models import Role, Department  # Ensure correct model imports
+from werkzeug.utils import secure_filename
 
 # User Registration Form
 class UserRegistrationForm(FlaskForm):
@@ -102,3 +103,8 @@ class RegisterForm(FlaskForm):
         super(RegisterForm, self).__init__(*args, **kwargs)
         self.role.choices = [(role.id, role.name) for role in Role.query.all()]
         self.department.choices = [(department.id, department.name) for department in Department.query.all()]
+
+
+class ReceiptUploadForm(FlaskForm):
+    receipt = FileField('Receipt', validators=[DataRequired()])
+    submit = SubmitField('Upload')

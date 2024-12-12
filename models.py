@@ -20,7 +20,7 @@ class ExpenseStatus(enum.Enum):
 # Branch Model
 class Branch(db.Model):
     __tablename__ = 'branches'
-    
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), unique=True, nullable=False)
 
@@ -29,7 +29,6 @@ class Branch(db.Model):
 
     def __repr__(self):
         return f"<Branch {self.name}>"
-
 
 # Department Model for Head Office
 class Department(db.Model):
@@ -46,8 +45,7 @@ class Department(db.Model):
 
     def __repr__(self):
         return f"<Department {self.name}>"
-    
-    
+
 # Role Model
 class Role(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -58,16 +56,43 @@ class Role(db.Model):
         return f"<Role {self.name}>"
 
 
+# Expense Model with improved validations
+class Expense(db.Model):
+    __tablename__ = 'expenses'  # Add __tablename__
+    id = db.Column(db.Integer, primary_key=True)
+    description = db.Column(db.String(255), nullable=False)
+    amount = db.Column(db.Numeric(10, 2), nullable=False)
+    status = db.Column(Enum(ExpenseStatus), default=ExpenseStatus.PENDING)
+    created_by = db.Column(db.Integer, db.ForeignKey('users.id'))
+    department_id = db.Column(db.Integer, db.ForeignKey('departments.id'))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = db.Column(db.DateTime, onupdate=datetime.utcnow)
+
+    # Relationships
+    created_by_user = db.relationship('User', backref='expenses_created') 
+    department = db.relationship('Department', backref='expenses')
+
+    @validates('amount')
+    def validate_amount(self, key, amount):
+        if amount <= 0:
+            raise ValueError("Amount must be a positive number.")
+        return amount
+
+    def __repr__(self):
+        return f"<Expense(description={self.description}, amount={self.amount})>"
+
 # User Model
 class User(db.Model, UserMixin):
+    __tablename__ = 'users'
+
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100), unique=True, nullable=False)
-    email = db.Column(db.String(100), unique=True, nullable=False)
+    username = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
     first_name = db.Column(db.String(100), nullable=False)
     last_name = db.Column(db.String(100), nullable=False)
     password = db.Column(db.String(255), nullable=False)
     role_id = db.Column(db.Integer, db.ForeignKey('role.id'), nullable=True)
-    department_id = db.Column(db.Integer, db.ForeignKey('department.id'), nullable=True)
+    department_id = db.Column(db.Integer, db.ForeignKey('departments.id'), nullable=True)
     is_active = db.Column(db.Boolean, default=True)
     email_verified = db.Column(db.Boolean, default=False)
     is_deleted = db.Column(db.Boolean, default=False)
@@ -76,6 +101,10 @@ class User(db.Model, UserMixin):
 
     role = db.relationship('Role', back_populates='users')
     department = db.relationship('Department', back_populates='users')
+
+    # Relationship to notifications
+    notifications = db.relationship('Notification', backref='user', lazy=True)
+    expenses_created = db.relationship('Expense', backref='created_by_user', foreign_keys=[Expense.created_by]) 
 
     def __repr__(self):
         return f"<User {self.username}>"
@@ -93,35 +122,10 @@ class User(db.Model, UserMixin):
         return check_password_hash(self.password, password)
 
 
-# Expense Model
-class Expense(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    description = db.Column(db.String(255), nullable=False)
-    amount = db.Column(db.Numeric(10, 2), nullable=False)
-    status = db.Column(Enum(ExpenseStatus), default=ExpenseStatus.PENDING)
-    created_by = db.Column(db.Integer, db.ForeignKey('user.id'))
-    department_id = db.Column(db.Integer, db.ForeignKey('department.id'))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, onupdate=datetime.utcnow)
-    last_modified_by = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
-
-    created_by_user = db.relationship('User', foreign_keys=[created_by])
-    department = db.relationship('Department', backref='expenses')
-
-    def __repr__(self):
-        return f"<Expense {self.description}, Amount: {self.amount}>"
-
-    @validates('amount')
-    def validate_amount(self, key, amount):
-        if amount <= 0:
-            raise ValueError("Amount must be positive")
-        return amount
-
-
 # Cash Advance Model
 class CashAdvance(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    officer_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    officer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False) 
     amount = db.Column(db.Numeric(10, 2), nullable=False)
     purpose = db.Column(db.Text, nullable=False)
     status = db.Column(db.String(50), default='Pending')
@@ -141,7 +145,7 @@ class OpexCapexRetirement(db.Model):
     description = db.Column(db.Text, nullable=True)
     total_amount = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(50), default='Pending')
-    created_by = db.Column(db.Integer, db.ForeignKey('user.id'))
+    created_by = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     created_by_user = db.relationship('User', foreign_keys=[created_by])
 
@@ -158,7 +162,7 @@ class PettyCashAdvance(db.Model):
     items = db.Column(db.JSON, nullable=False)
     total_amount = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(50), default='Pending')
-    created_by = db.Column(db.Integer, db.ForeignKey('user.id'))
+    created_by = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     created_by_user = db.relationship('User', foreign_keys=[created_by])
 
@@ -175,7 +179,7 @@ class PettyCashRetirement(db.Model):
     items = db.Column(db.JSON, nullable=False)
     total_amount = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(50), default='Pending')
-    created_by = db.Column(db.Integer, db.ForeignKey('user.id'))
+    created_by = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     created_by_user = db.relationship('User', foreign_keys=[created_by])
 
@@ -191,7 +195,7 @@ class StationaryRequest(db.Model):
     items = db.Column(db.JSON, nullable=False)
     total_amount = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(50), default='Pending')
-    created_by = db.Column(db.Integer, db.ForeignKey('user.id'))
+    created_by = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     created_by_user = db.relationship('User', foreign_keys=[created_by])
 
@@ -201,15 +205,22 @@ class StationaryRequest(db.Model):
 
 # Notification Model
 class Notification(db.Model):
+    __tablename__ = 'notifications'
+
     id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     message = db.Column(db.String(255), nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    is_read = db.Column(db.Boolean, default=False, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
-    user = db.relationship('User', backref='notifications')
-
-    def __repr__(self):
-        return f"<Notification {self.message}>"
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'user_id': self.user_id,
+            'message': self.message,
+            'is_read': self.is_read,
+            'created_at': self.created_at.isoformat()
+        }
 
 
 # Document Uploads Model (for tracking uploaded files)
@@ -218,53 +229,58 @@ class DocumentUploads(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     file_name = db.Column(db.String(255), nullable=False)
     file_path = db.Column(db.String(255), nullable=False)
-    file_type = db.Column(db.String(50), nullable=False)  # e.g., PDF, Image
-    uploaded_by = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)  # Correct foreign key reference
-    created_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
+    uploaded_by = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    uploaded_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-    uploader = db.relationship('User', backref='documents')
+    user = db.relationship('User', backref='documents')
 
     def __repr__(self):
-        return f"<DocumentUploads {self.file_name}, Uploaded By: {self.uploaded_by}>"
+        return f'<DocumentUpload {self.file_name}>'
 
 
+# Transaction Model
 class Transaction(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     amount = db.Column(db.Numeric(10, 2), nullable=False)
     type = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(255), nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id')) 
 
-    user = db.relationship('User', backref='transactions')
+    user = db.relationship('User', backref='transactions') 
 
     def __repr__(self):
         return f"<Transaction {self.type}, Amount: {self.amount}>"
 
+
+# Request History Model
 class RequestHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     request_type = db.Column(db.String(50), nullable=False)  # E.g., 'cash advance', 'expense'
     status = db.Column(db.String(50), nullable=False)  # E.g., 'approved', 'pending'
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-
     user = db.relationship('User', backref='request_histories')
 
     def __repr__(self):
         return f"<RequestHistory {self.request_type}, Status: {self.status}>"
 
+
+# Notification Settings Model
 class NotificationSettings(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id')) 
     email_notifications_enabled = db.Column(db.Boolean, default=True)
     sms_notifications_enabled = db.Column(db.Boolean, default=False)
     push_notifications_enabled = db.Column(db.Boolean, default=True)
 
-    user = db.relationship('User', backref='notification_settings')
+    user = db.relationship('User', backref='notification_settings') 
 
     def __repr__(self):
         return f"<NotificationSettings User ID: {self.user_id}>"
 
+
+# File Metadata Model
 class FileMetadata(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     file_name = db.Column(db.String(255), nullable=False)
@@ -279,38 +295,57 @@ class FileMetadata(db.Model):
         return f"<FileMetadata {self.file_name}, Size: {self.file_size} bytes>"
 
 
+# Expense Approval Workflow Model
 class ExpenseApprovalWorkflow(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    expense_id = db.Column(db.Integer, db.ForeignKey('expense.id'), nullable=False)
-    officer_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    supervisor_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
-    reviewer_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
-    approver_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
-    status = db.Column(db.String(50), default='Pending')  # Workflow status (e.g. Pending, Approved)
+    # Removed expense_id as it's no longer needed
+    officer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    supervisor_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
+    reviewer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True) 
+    approver_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
+    status = db.Column(db.String(50), default='Pending') 
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, onupdate=datetime.utcnow)
 
-    expense = db.relationship('Expense', backref='approval_workflow')
+    # Remove the expense relationship
+    # expense = db.relationship('Expense', backref='approval_workflow') 
     officer = db.relationship('User', foreign_keys=[officer_id], backref='expense_workflows_officer')
     supervisor = db.relationship('User', foreign_keys=[supervisor_id], backref='expense_workflows_supervisor')
-    reviewer = db.relationship('User', foreign_keys=[reviewer_id], backref='expense_workflows_reviewer')
+    reviewer = db.relationship('User', foreign_keys=[reviewer_id], backref='expense_workflows_reviewer') 
     approver = db.relationship('User', foreign_keys=[approver_id], backref='expense_workflows_approver')
 
     def __repr__(self):
-        return f"<ExpenseApprovalWorkflow Expense ID: {self.expense_id}, Status: {self.status}>"
+        # Remove the expense_id from the representation 
+        return f"<ExpenseApprovalWorkflow Officer ID: {self.officer_id}, Status: {self.status}>"
 
 
 # Audit Log Model
 class AuditLog(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    action = db.Column(db.String(255), nullable=False)
-    performed_by = db.Column(db.Integer, db.ForeignKey('user.id'))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    __tablename__ = 'audit_logs'
 
-    user = db.relationship('User', backref='audit_logs')
+    id = db.Column(db.Integer, primary_key=True)
+    action = db.Column(db.String(255), nullable=False)  # Description of the action performed
+    entity_type = db.Column(db.String(100), nullable=False)  # E.g., 'User', 'Expense', etc.
+    entity_id = db.Column(db.Integer, nullable=True)  # ID of the affected entity (if applicable)
+    performed_by = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    performed_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)  # Timestamp of the action
+
+    # Relationship to the user who performed the action
+    user = db.relationship('User', backref=db.backref('audit_logs', lazy='dynamic'))
 
     def __repr__(self):
-        return f"<AuditLog {self.action}>"
+        return f"<AuditLog Action: {self.action}, Entity: {self.entity_type}, Performed By: {self.performed_by}>"
+
+    def to_dict(self):
+        """Convert the AuditLog instance to a dictionary for easy serialization."""
+        return {
+            "id": self.id,
+            "action": self.action,
+            "entity_type": self.entity_type,
+            "entity_id": self.entity_id,
+            "performed_by": self.performed_by,
+            "performed_at": self.performed_at.isoformat()
+        }
 
 
 # Event listener to automatically set timestamps
