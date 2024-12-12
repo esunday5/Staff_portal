@@ -3,7 +3,7 @@ services:
     name: ekondo-expense-mgt
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn app.app:app
     envVars:
       - key: FLASK_APP
         value: app.py

@@ -18,6 +18,10 @@ from datetime import datetime
 import redis  # Import redis for rate limiting storage
 from waitress import serve  # Import waitress for production-ready server
 
+
+app = Flask(__name__)
+
+
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -81,6 +85,10 @@ def create_app():
     def get_data():
         """Example API route to send data to the frontend."""
         return jsonify({"message": "Hello from Flask!"})
+
+    @app.route('/')
+    def hello_world():
+        return 'Hello, World!'
 
     # Create the database tables if they don't exist
     with app.app_context():
