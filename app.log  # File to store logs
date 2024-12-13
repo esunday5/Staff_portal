@@ -139,3 +139,5 @@
  * Running on https://192.168.0.123:5000
 2024-12-13 20:53:29,797 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
 2024-12-13 20:54:08,133 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:54:08] "GET / HTTP/1.1" 200 -
+2024-12-13 21:31:20,772 - app - INFO - Database connection successful and tables created.
+2024-12-13 21:31:20,773 - app - ERROR - SSL certificate or key file not found. Ensure paths are correct.

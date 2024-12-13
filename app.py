@@ -28,24 +28,31 @@ app = Flask(__name__)
 # Load environment variables
 load_dotenv()
 
+# Redis URL from environment
+redis_url = os.getenv("REDIS_URL")
+
 # Redis client configuration
-try:
-    redis_client = redis.StrictRedis.from_url(os.environ.get("REDIS_URL", "redis://localhost:6379/0"), decode_responses=True)
-    redis_client.ping()
-except redis.ConnectionError as e:
-    app.logger.error(f"Redis connection failed: {e}")
+if redis_url:
+    try:
+        redis_client = redis.StrictRedis.from_url(redis_url, decode_responses=True)
+        redis_client.ping()  # Test Redis connection
+    except redis.ConnectionError as e:
+        app.logger.error(f"Redis connection failed: {e}")
+        redis_client = None
+else:
     redis_client = None
 
-# Flask-Limiter with Redis storage
+# Flask-Limiter with Redis storage if available
 limiter = Limiter(
     key_func=get_remote_address,
-    default_limits=["200 per day", "50 per hour"],
-    storage_uri=os.environ.get("REDIS_URL", "redis://localhost:6379/0") if redis_client else None
+    default_limits=["200 per day", "50 per hour"]
 )
 
-if not redis_client:
-    app.logger.warning("Rate limiting is disabled due to Redis connection failure.")
-    limiter.enabled = False
+# Use Redis for rate limiting in production, fallback to in-memory if Redis isn't available
+if redis_client:
+    limiter.init_app(app, storage=redis_client)
+else:
+    limiter.init_app(app)  # Fallback to in-memory rate limiting
 
 def create_app():
     """Application Factory Pattern for creating the Flask application."""
@@ -99,6 +106,12 @@ def create_app():
         """Example API route to send data to the frontend."""
         return jsonify({"message": "Hello from Flask!"})
 
+    # Sample route to demonstrate rate limiting
+    @app.route("/some-endpoint")
+    @limiter.limit("5 per minute")  # Rate limit: 5 requests per minute
+    def some_endpoint():
+        return "This is a rate-limited endpoint."
+
     # Create the database tables if they don't exist
     with app.app_context():
         try:
@@ -150,4 +163,3 @@ if __name__ == "__main__":
         context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
         context.load_cert_chain(certfile=cert_path, keyfile=key_path)
         app.run(ssl_context=context, host='0.0.0.0', port=5000)
-
