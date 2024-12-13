@@ -71,3 +71,71 @@
 2024-12-13 18:38:13,057 - waitress - INFO - Serving on http://[::1]:5000
 2024-12-13 18:38:13,058 - waitress - INFO - Serving on http://127.0.0.1:5000
 2024-12-13 18:38:24,113 - app - WARNING - Page not found: /favicon.ico
+2024-12-13 20:22:34,229 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:22:34,294 - waitress - INFO - Serving on http://[::1]:5000
+2024-12-13 20:22:34,294 - waitress - INFO - Serving on http://127.0.0.1:5000
+2024-12-13 20:35:39,395 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:35:39,477 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-13 20:35:39,478 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-13 20:35:45,456 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:45] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-13 20:35:45,489 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:35:45] code 400, message Bad request version ('\x12\x05¦Q4ÍôuGâ©\x11EÖ+0Ïß\x9acÇ\x80m\x9cLíÅýIÈ\x04S\x00\x90ÏCPÓ\x00¯ºÙi:Oië¡@Í©èØ·+Të=¡ßàæ\x16`ÈË°?a')
+2024-12-13 20:35:45,489 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:45] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03¢ÆvL/\x01S­¯\x10ÓÃ®\x17ø\x9eðÓ\x16}ó)\x99\x90\x0ej5\x9d\x13ä(ß \x85Ý\x1a\x1dÎ\x13¯\\ÿ\x8f\x18¥â×û¬¼&)£§\x93\x16x\x1b\x8aÉï\x02^\x0b$\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063JJ\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01\x19\x00 \x12\x05¦Q4ÍôuGâ©\x11EÖ+0Ïß\x9acÇ\x80m\x9cLíÅýIÈ\x04S\x00\x90ÏCPÓ\x00¯ºÙi:Oië¡@Í©èØ·+Të=¡ßàæ\x16`ÈË°?a\x1e[0m" 400 -
+2024-12-13 20:35:45,493 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:35:45] code 400, message Bad request version ('z¬ü')
+2024-12-13 20:35:45,495 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:45] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03|Ëµt\x0f\x0b1\x15\x09|ÍÛ\x9aqÏÁ\x16QÆæ\x1fÒ¿£xé+âî~|\x13 `<°°äf\x9eL\x94\x87DË\x88(æ\x17!*!x¥J"¡\x7f\x02x´N¶\x81\x1a\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sjj\x00\x00\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00#\x00\x00\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04ÀH\x12\x13È¤|y\\l(@\\hØ\x8b÷ä\x15:3\x15\x94Ç·7¨®l\x87\x17ÕL\x083Ù,d\x88\x9fa\x87\x12\x8bé¸ùb\x8fúI¬6\x10¦óK\x92\x18b\x06\x04$r±t¤\x06´MxÌ\x1ew±\x9d\x06Ð+l[p½â\x1dÅ´Å\x9cD\x7f¨»}¹ººuÓ+\x9c\x9ac\x02\x9cÂ\x04\x80\x8dõ\x95oV$\x9b0Ù&F³\x95\x92uQö\x95!d\x19\x869¼¯Ð\x9a\x1anKv\x9cÁ\x88\x85ã:Âè¬Ý\x15\x05\x9fò*?\x8agÍ\x1a¹|\x08Ç\x9cq\x1cëÆª*h\x04y\x88I\x83\x15I\x98ÐH@\x9a \x1a ÃQën\x0f\x96®)7~ \x02\x08Ï¨VxÜ½ß5sN70yÈ_±Ó<Ã\x92\x8aß\x06´3j\x84É\x86*\x12au\x81Ñ{\x80à=\x8a\x91\x90êjÌ\x94&\x0bJá3d\x9a\x15\x16I/\x08%r»\x91m\x02Æo£U\x86\x0f\x95/Ö6o»|z\x0el(@1\x8a±\x86®á:R-õ\x11c\x00dzÄ\x92\x0dz¬ü[0m" 400 -
+2024-12-13 20:35:49,683 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:35:49] code 400, message Bad request version ('ð')
+2024-12-13 20:35:49,693 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:49] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ûXgÙ~RÒ¸\x0f^ÿ=x7Pd\x9adøÍlÜé×O\x19\x9fq;\x08dR 0ÓÐÕÓ\x8e\x9cs·\x19$ãCËú\x19\x9bÁ¸jïö'C\x8eáiy\x83Ï\x81¡\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÊÊ\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00-\x00\x02\x01\x01þ\x0d\x00Ú\x00\x00\x01\x00\x01w\x00 Ê\x1cÕJ±M\\ªç\x94Q\x00|\x0eA"û'Y(ÝÉ\x1e}\x0b`G\x89Çz "\x00°\x0d)n\x16þå\\hä\x181Ó\x16ua\x0fÅ\x15\x82Ú\x9e¦õ\x87\x80Â\x89\x1f\x81\x8dÅ¡%D\x02uË|að\x9eü\x86ô4ÕZ~{æoz7ù·\x85ð[0m" 400 -
+2024-12-13 20:35:49,704 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:35:49] code 400, message Bad request version ('\x02*\x9aÄ]')
+2024-12-13 20:35:49,705 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:49] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03Àf>ÛPXËm\x9b\x1dTKh\x9b\x07\x11 \x1c\x90jQ\x93Ù®ìLí6Yº¬É \x84\x81¨_)úöËûþò\x04 ÷ \x02*\x9aÄ][0m" 400 -
+2024-12-13 20:35:49,708 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:35:49] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063jj\x00\x00\x00\x12\x00\x00\x00')
+2024-12-13 20:35:49,710 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:49] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03àó\x9b,\x8a³\x93Ð\x9e&\x1a\x98RÖ\x00:_êK3\x8f\x9f-V\x0e\x1fâ\x14v\x05T{ ÅP\x9b"\x125Ó(t]ä\x9cuQ8M³t:;Íu:ãVÂíË\x0d\x93\x8b¬\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063jj\x00\x00\x00\x12\x00\x00\x00[0m" 400 -
+2024-12-13 20:35:49,735 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:35:49] code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00')
+2024-12-13 20:35:49,737 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:35:49] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x02\x0d\x8d#w|È2\x08\x19z$\x80«\x0f9ñð¸\x1fÍï¹çÄ\x99}\x09¥\x91\x90\x02 L@øóW½ \x1d \x94Ç÷\x13£d,)®\x1bûàI¥ä2AD\x00èËuZ\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00[0m" 400 -
+2024-12-13 20:36:03,514 - werkzeug - INFO - 192.168.0.123 - - [13/Dec/2024 20:36:03] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-13 20:36:03,665 - werkzeug - ERROR - 192.168.0.123 - - [13/Dec/2024 20:36:03] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00')
+2024-12-13 20:36:03,674 - werkzeug - INFO - 192.168.0.123 - - [13/Dec/2024 20:36:03] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03>À\x8bÄ§¿Øi\x82î1Õâ£c\x9eí -\x13-å'Ì¨éà\x82BC\x11] \x8aýqëê®aâ_p\x8bßq\x0cR«å\x9fG©¥\x05\x18vx\x85üfÐ\x86\x83f\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00Di\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00[0m" 400 -
+2024-12-13 20:36:03,681 - werkzeug - ERROR - 192.168.0.123 - - [13/Dec/2024 20:36:03] code 400, message Bad request version ('ìæ0Ò\x02{HC¤K\x7f')
+2024-12-13 20:36:03,682 - werkzeug - INFO - 192.168.0.123 - - [13/Dec/2024 20:36:03] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03È\x1d\x12\x85{\x01\x0bñ)¹ü=\x00½\x8c\x03:\x12Ñ-¨Ý"ê\x01ÕÂ¦ü²\x94þ ìæ0Ò\x02{HC¤K\x7f[0m" 400 -
+2024-12-13 20:40:43,630 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:40:43,642 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-13 20:40:43,642 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-13 20:40:48,490 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:40:48] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-13 20:40:48,529 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:40:48] code 400, message Bad request version ('\x8dX#à')
+2024-12-13 20:40:48,529 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:40:48] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03ÈEÆ¡&\x84\x89½\x8aêgvY ½³c\x92\x87ã½\x81\x11\x12-O\x18ç\x94È"® .A>\x9c\x7f7¸é\x15JNë~H[é\\¤©Î>AGs\x83ñ´\x16\x9dÝ\x1dS\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ªª\x00\x00\x003\x04ï\x04íJJ\x00\x01\x00\x11ì\x04À°åb´V¡U,\x87»õ*[\x9cI\x8b\x83°yìwOB·\x9bPw\x10\x8bÆ\x83\x18\x1f\x8dX#à[0m" 400 -
+2024-12-13 20:40:48,532 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:40:48] code 400, message Bad request version ('¬â°·Æ\x83»\x00ÅÍl\x97±:¤n»Á\x11\x17µ«Z\x136R¿:³k\x1b;\x89Ûð±|B¼')
+2024-12-13 20:40:48,533 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:40:48] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03$ò\x1c\x19£\x88+\x88\x93ß\x14\x10®<,Ó\x82\x96\x14ÑÇ7\x1fiutt\x9ay¢{\x0b ³* Îgi@ÐO\x81§¯xw×\x11pY\x8bdM|åøs\x16þ£¤\x9d\x0c,\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s::\x00\x00\x003\x04ï\x04íÊÊ\x00\x01\x00\x11ì\x04À\x80ÕË\x8ahyä37aµ\x89R\x9b\x0eõ'x\x03i:!ÅP\x02dÏ\x0c&Y\x8eq\x93\x06ú\x9dçy\x1e\x98Ô%ºl!?77C\x10qñè¹B\x84]\x86Æ\x9d)ò\x95y¬g\x1a3¦\x03CË-Ðµb\x84Kþô\x1a$\x99\x9d·ÉL£Ôº\x84lQ\x9cì\x00à\x03Vkµ\x12¿\x86V\x7fZ¢³g¦¹ª\x1e\x13L\\ÊÖ²\x84\x92iñ\x09¯èæ\x9f7¸\x0b¬â°·Æ\x83»\x00ÅÍl\x97±:¤n»Á\x11\x17µ«Z\x136R¿:³k\x1b;\x89Ûð±|B¼[0m" 400 -
+2024-12-13 20:42:36,094 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:42:36,096 - app - ERROR - SSL certificate or key file not found. Ensure paths are correct.
+2024-12-13 20:46:27,961 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:46:27,962 - app - ERROR - SSL certificate or key file not found. Ensure paths are correct.
+2024-12-13 20:48:27,576 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:48:27,588 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-13 20:48:27,588 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-13 20:48:30,339 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:48:30] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-13 20:48:30,411 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:48:30] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01ÿ\x01\x00\x01\x00\x00\x12\x00\x00\x00')
+2024-12-13 20:48:30,413 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:48:30] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Tc#ûA?Ñ«¥YÀ\x83\x9c\x83~¹ï \x0c\x88Áú£¦XÃÙ²bj¾> .\x95V®\x05Ûáîüê¼Öö\x95\x8f\x81hìÛ*]\x8b{\x9c¯\x1dJ^\x06É\x13õ\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x9a\x9a\x00\x00\x00\x1b\x00\x03\x02\x00\x02Di\x00\x05\x00\x03\x02h2\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01ÿ\x01\x00\x01\x00\x00\x12\x00\x00\x00[0m" 400 -
+2024-12-13 20:48:30,429 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:48:30] code 400, message Bad request version ('¬|\x08é\x97ã!')
+2024-12-13 20:48:30,433 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:48:30] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x84Fúa¢äYô­\x8d}\x99¥ú}\x92%I_Z­gÿ,n\x02¡*»pÔy 1R\x0c\x1aj\x8cá\x1b@\x03\x9a@)¬ Bñ\x07\x03 Mq«Ò\x8f8©qßc§\x14\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04À\x97Ø\x96Áè-ÿ\x9c\x12­²D\x0eÇÇ.\x99\x86Ã0\x10ÅL\x14õ{\x9c¬ì¹\x8b#\x01Ew\x19[W\x88{{w®j{¢\x98¼á\x10g¯Ð«vv&\x99\x09\x8f·uÂ\x05\x117ñ6±õ¸M¸©Y\x8e\x13j÷¼Á\x97ìW\x8bu I: VDDkE@à\x80\x85\x9dÅ\x18©Û¬Uw\x18òµ òè3\x02q\x04EÌ.Yw\\4§5ÕØ«ñ\x07\x02\x16¨Lª©\x8c\x1f¬|\x08é\x97ã![0m" 400 -
+2024-12-13 20:48:40,652 - werkzeug - ERROR - 127.0.0.1 - - [13/Dec/2024 20:48:40] code 400, message Bad request version ("n?\x8csldÒ\x05\x00\x00&À,À+À0À/À$À#À(À'À")
+2024-12-13 20:48:40,653 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:48:40] "[31m[1m\x16\x03\x03\x00«\x01\x00\x00§\x03\x03g\\\x8f\x98åÀX¢Ã¸7Ñ£ÕGÍ\x85$ãð"¸9\x85n?\x8csldÒ\x05\x00\x00&À,À+À0À/À$À#À(À'À[0m" 400 -
+2024-12-13 20:51:24,847 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:51:24,864 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.123:5000
+2024-12-13 20:51:24,864 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-13 20:53:29,779 - app - INFO - Database connection successful and tables created.
+2024-12-13 20:53:29,796 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.0.123:5000
+2024-12-13 20:53:29,797 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-13 20:54:08,133 - werkzeug - INFO - 127.0.0.1 - - [13/Dec/2024 20:54:08] "GET / HTTP/1.1" 200 -

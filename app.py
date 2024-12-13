@@ -81,6 +81,12 @@ def create_app():
     # Register error handlers
     register_error_handlers(app)
 
+    # Root route (home page)
+    @app.route('/')
+    def home():
+        """Home Route."""
+        return jsonify({"message": "Welcome to the Ekondo Expense Management System!"})
+
     # Health check route
     @app.route('/health', methods=['GET'])
     def health_check():
@@ -130,11 +136,12 @@ def register_error_handlers(app):
 if __name__ == "__main__":
     app = create_app()
 
-    # Deployment consideration for Render: SSL configuration handled by Render
-    # Therefore, SSL configuration and manual certificate loading is not required for Render
-    if os.environ.get("RENDER") != "True":
-        cert_path = 'C:/Users/IT/PycharmProjects/ekondo_expense_mgt/ssl/cert.pem'
-        key_path = 'C:/Users/IT/PycharmProjects/ekondo_expense_mgt/ssl/key.pem'
+    if os.getenv('FLASK_ENV') == 'development':  # Only use SSL locally in development
+        app.run(host='0.0.0.0', port=5000)  # No SSL in development
+    else:
+        # For production use, handle SSL separately (e.g., via a reverse proxy like Nginx)
+        cert_path = r'C:\path\to\cert.pem'
+        key_path = r'C:\path\to\key.pem'
 
         if not os.path.exists(cert_path) or not os.path.exists(key_path):
             app.logger.error("SSL certificate or key file not found. Ensure paths are correct.")
@@ -142,10 +149,5 @@ if __name__ == "__main__":
 
         context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
         context.load_cert_chain(certfile=cert_path, keyfile=key_path)
+        app.run(ssl_context=context, host='0.0.0.0', port=5000)
 
-        # Run the app with Waitress for production
-        serve(app, host='localhost', port=5000, url_scheme='https')
-    else:
-        # For Render deployment, Waitress and SSL are automatically handled by Render.
-        # You can remove the SSL section above.
-        app.run(host='0.0.0.0', port=5000)
