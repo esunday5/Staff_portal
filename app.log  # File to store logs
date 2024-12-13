@@ -63,3 +63,11 @@
  * Running on https://127.0.0.1:5000
  * Running on https://192.168.0.138:5000
 2024-12-11 19:19:31,306 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-13 18:18:22,408 - app - ERROR - Error creating database tables: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2024-12-13 18:18:22,456 - waitress - INFO - Serving on http://0.0.0.0:5000
+2024-12-13 18:31:59,836 - app - INFO - Database connection successful and tables created.
+2024-12-13 18:31:59,843 - waitress - INFO - Serving on http://0.0.0.0:5000
+2024-12-13 18:38:13,048 - app - INFO - Database connection successful and tables created.
+2024-12-13 18:38:13,057 - waitress - INFO - Serving on http://[::1]:5000
+2024-12-13 18:38:13,058 - waitress - INFO - Serving on http://127.0.0.1:5000
+2024-12-13 18:38:24,113 - app - WARNING - Page not found: /favicon.ico

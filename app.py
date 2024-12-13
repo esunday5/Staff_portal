@@ -22,6 +22,7 @@ from sqlalchemy.sql import text  # Import text for SQLAlchemy
 # Initialize logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Initialize app
 app = Flask(__name__)
 
 # Load environment variables
@@ -29,7 +30,7 @@ load_dotenv()
 
 # Redis client configuration
 try:
-    redis_client = redis.StrictRedis.from_url("redis://localhost:6379/0", decode_responses=True)
+    redis_client = redis.StrictRedis.from_url(os.environ.get("REDIS_URL", "redis://localhost:6379/0"), decode_responses=True)
     redis_client.ping()
 except redis.ConnectionError as e:
     app.logger.error(f"Redis connection failed: {e}")
@@ -39,7 +40,7 @@ except redis.ConnectionError as e:
 limiter = Limiter(
     key_func=get_remote_address,
     default_limits=["200 per day", "50 per hour"],
-    storage_uri="redis://localhost:6379/0" if redis_client else None
+    storage_uri=os.environ.get("REDIS_URL", "redis://localhost:6379/0") if redis_client else None
 )
 
 if not redis_client:
@@ -51,7 +52,7 @@ def create_app():
     app = Flask(__name__)
 
     # Load configuration from Config class
-    app.config.from_object('config.Config')
+    app.config.from_object(Config)
 
     # Initialize extensions with the app
     db.init_app(app)
@@ -92,10 +93,6 @@ def create_app():
         """Example API route to send data to the frontend."""
         return jsonify({"message": "Hello from Flask!"})
 
-    @app.route('/')
-    def hello_world():
-        return 'Hello, World!'
-
     # Create the database tables if they don't exist
     with app.app_context():
         try:
@@ -133,17 +130,22 @@ def register_error_handlers(app):
 if __name__ == "__main__":
     app = create_app()
 
-    # SSL Configuration for HTTPS
-    cert_path = 'C:/Users/IT/PycharmProjects/ekondo_expense_mgt/ssl/cert.pem'
-    key_path = 'C:/Users/IT/PycharmProjects/ekondo_expense_mgt/ssl/key.pem'
+    # Deployment consideration for Render: SSL configuration handled by Render
+    # Therefore, SSL configuration and manual certificate loading is not required for Render
+    if os.environ.get("RENDER") != "True":
+        cert_path = 'C:/Users/IT/PycharmProjects/ekondo_expense_mgt/ssl/cert.pem'
+        key_path = 'C:/Users/IT/PycharmProjects/ekondo_expense_mgt/ssl/key.pem'
 
-    if not os.path.exists(cert_path) or not os.path.exists(key_path):
-        app.logger.error("SSL certificate or key file not found. Ensure paths are correct.")
-        exit(1)
+        if not os.path.exists(cert_path) or not os.path.exists(key_path):
+            app.logger.error("SSL certificate or key file not found. Ensure paths are correct.")
+            exit(1)
 
-    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    context.load_cert_chain(certfile=cert_path, keyfile=key_path)
+        context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        context.load_cert_chain(certfile=cert_path, keyfile=key_path)
 
-    # Run the app with Waitress for production
-    serve(app, host='localhost', port=5000, url_scheme='https')
-
+        # Run the app with Waitress for production
+        serve(app, host='localhost', port=5000, url_scheme='https')
+    else:
+        # For Render deployment, Waitress and SSL are automatically handled by Render.
+        # You can remove the SSL section above.
+        app.run(host='0.0.0.0', port=5000)

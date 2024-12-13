@@ -36,19 +36,21 @@ main_blueprint = Blueprint('main', __name__)
 # Define the authentication blueprint
 auth_blueprint = Blueprint('auth', __name__)
 
-# Sample routes for demonstration
+# Route for the homepage
 @main_blueprint.route('/')
 def home():
-    return "Welcome to the Ekondo Expense Management System"
+    return jsonify({"message": "Welcome to the Ekondo Expense Management System"})
 
+# Route to test database (returns all users)
 @main_blueprint.route('/test_db')
 def test_db():
     users = User.query.all()
     return jsonify([{'username': user.username, 'email': user.email} for user in users])
 
+# User login page route
 @auth_blueprint.route('/login')
 def login():
-    return "User login page"
+    return jsonify({"message": "User login page"})
 
 # Add the route for populating branches and departments
 @main_blueprint.route('/populate/branches_departments', methods=['POST'])
@@ -99,13 +101,13 @@ def login_user():
         flash("Invalid username or password", "error")
     return render_template('login.html', form=form)
 
-# Dashboard route
+# Dashboard route (renders dashboard page)
 @main_blueprint.route('/dashboard')
 @login_required
 def dashboard():
     return render_template('dashboard.html', user=current_user)
 
-# Route to handle cash advance request using form
+# Route to handle cash advance request
 @main_blueprint.route('/cash_advance', methods=['GET', 'POST'])
 @login_required
 @csrf.exempt  # CSRF protection
@@ -154,15 +156,16 @@ def upload_file():
         flash("Invalid file type", "error")
     return redirect(request.url)
 
-# Error handler examples
+# Error handler for 404 errors (Page Not Found)
 @main_blueprint.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return jsonify({"error": "Page not found"}), 404
 
+# Error handler for 500 errors (Internal Server Error)
 @main_blueprint.errorhandler(500)
 def internal_error(e):
     db.session.rollback()  # Ensure any incomplete transactions are rolled back
-    return render_template('500.html'), 500
+    return jsonify({"error": "Internal server error"}), 500
 
 # Route for OPEX/CAPEX/Retirement requests
 @main_blueprint.route('/opex_capex_retirement', methods=['GET', 'POST'])
@@ -259,6 +262,6 @@ def get_notifications(user_id):
 
     notifications = Notification.query.filter_by(user_id=user_id, is_read=False).all()
     if notifications:
-        return jsonify([notification.to_dict() for notification in notifications])  # Assume to_dict method exists
+        return jsonify([notification.to_dict() for notification in notifications])  # Assuming you have a to_dict method on Notification
     else:
-        return jsonify({"message": "No unread notifications."}), 404
+        return jsonify({"message": "No unread notifications."})
