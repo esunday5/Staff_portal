@@ -125,10 +125,14 @@ class User(db.Model, UserMixin):
 # Cash Advance Model
 class CashAdvance(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    officer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False) 
+    officer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    branch = db.Column(db.String(100), nullable=False)
+    department = db.Column(db.String(100), nullable=True)
     amount = db.Column(db.Numeric(10, 2), nullable=False)
     purpose = db.Column(db.Text, nullable=False)
     status = db.Column(db.String(50), default='Pending')
+    management_board_approval_path = db.Column(db.String(255), nullable=True)
+    proforma_invoice_path = db.Column(db.String(255), nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     officer = db.relationship('User', backref='cash_advances')
@@ -156,18 +160,16 @@ class OpexCapexRetirement(db.Model):
 # Petty Cash Advance Model
 class PettyCashAdvance(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    officer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     branch = db.Column(db.String(100), nullable=False)
     department = db.Column(db.String(100), nullable=True)
     description = db.Column(db.Text, nullable=True)
     items = db.Column(db.JSON, nullable=False)
     total_amount = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(50), default='Pending')
-    created_by = db.Column(db.Integer, db.ForeignKey('users.id'))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-    created_by_user = db.relationship('User', foreign_keys=[created_by])
-
-    def __repr__(self):
-        return f'<PettyCashAdvance {self.branch}>'
+    officer = db.relationship('User', backref='petty_cash_advances')
 
 
 # Petty Cash Retirement Model

@@ -54,3 +54,10 @@ logging.basicConfig(
 )
 
 
+MAIL_SERVER = 'smtp.example.com'  # Replace with your email server
+MAIL_PORT = 587  # Default port for SMTP
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
+MAIL_USERNAME = 'your_email@example.com'  # Your email address
+MAIL_PASSWORD = 'your_email_password'    # Your email password
+MAIL_DEFAULT_SENDER = 'your_email@example.com'

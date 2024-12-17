@@ -1,19 +1,14 @@
-from flask import Blueprint, render_template, redirect, url_for, flash, request, jsonify, send_file
+from flask import Blueprint, jsonify, request
 from flask_login import login_user, login_required, current_user
-from flask_wtf.csrf import CSRFProtect
 from werkzeug.security import generate_password_hash, check_password_hash
-from werkzeug.utils import secure_filename
-
-# Import extensions and utilities
-from extensions import db, csrf, limiter  # Importing db, CSRF, and rate limiter
-from utils import convert_pdf_to_image, allowed_file, resize_image, populate_branches_and_departments  # Import utility functions
-
-# Import models
+from flask_mail import Mail, Message
+from extensions import db, csrf, limiter, mail
 from models import (
-    User, Role, Expense, CashAdvance, OpexCapexRetirement,
-    PettyCashAdvance, PettyCashRetirement, StationaryRequest, Notification
+    User, CashAdvance, OpexCapexRetirement, PettyCashAdvance, 
+    PettyCashRetirement, StationaryRequest, Notification, Role
 )
-
+from werkzeug.utils import secure_filename
+from utils import convert_pdf_to_image, allowed_file, resize_image, populate_branches_and_departments  # Import utility functions
 # Import forms
 from forms import (
     UserRegistrationForm,
@@ -24,244 +19,285 @@ from forms import (
     PettyCashRetirementForm,
     StationaryRequestForm
 )
-
 # Import additional modules
 from PIL import Image
 import os
 import logging
 
-# Define the main blueprint
-main_blueprint = Blueprint('main', __name__)
+def send_email(subject, recipients, body):
+    """Send an email notification."""
+    try:
+        msg = Message(subject, recipients=recipients, body=body)
+        mail.send(msg)
+    except Exception as e:
+        print(f"Error sending email: {e}")
 
-# Define the authentication blueprint
+# Blueprints
+main_blueprint = Blueprint('main', __name__)
 auth_blueprint = Blueprint('auth', __name__)
 
-# Route for the homepage
 @main_blueprint.route('/')
 def home():
-    return jsonify({"message": "Welcome to the Ekondo Expense Management System"})
+    return jsonify({"message": "Welcome to the Expense Management System"})
 
-# Route to test database (returns all users)
-@main_blueprint.route('/test_db')
-def test_db():
-    users = User.query.all()
-    return jsonify([{'username': user.username, 'email': user.email} for user in users])
+@auth_blueprint.route('/login', methods=['POST', 'GET'])  # Removed extra '/api'
+def login_user_api():
+    data = request.get_json()
+    login_input = data.get('login')  # Can be username or email
+    password = data.get('password')
 
-# User login page route
-@auth_blueprint.route('/login')
-def login():
-    return jsonify({"message": "User login page"})
+    user = User.query.filter((User.username == login_input) | (User.email == login_input)).first()
+    if user and check_password_hash(user.password, password):
+        login_user(user)
+        return jsonify({"message": "Login successful", "user": {"username": user.username, "email": user.email, "role": user.role.name}}), 200
+    return jsonify({"error": "Invalid login credentials"}), 401
 
-# Add the route for populating branches and departments
-@main_blueprint.route('/populate/branches_departments', methods=['POST'])
-def populate_branches_and_departments_route():
-    try:
-        populate_branches_and_departments()
-        return jsonify({"message": "Branches and departments added successfully!"}), 200
-    except Exception as e:
-        logging.error(f"Error populating branches and departments: {str(e)}")
-        return jsonify({"error": "Failed to populate branches and departments."}), 500
-
-# User registration route with form validation
-@main_blueprint.route('/register', methods=['GET', 'POST'])
-@csrf.exempt  # Apply CSRF protection
-@limiter.limit("5 per minute")  # Rate limit for security
-def register_user():
-    form = UserRegistrationForm()
-    if form.validate_on_submit():
-        existing_user = User.query.filter((User.username == form.username.data) | (User.email == form.email.data)).first()
-        if existing_user:
-            flash("User already exists", "error")
-            return redirect(url_for('main.register_user'))
-
-        new_user = User(
-            username=form.username.data,
-            email=form.email.data,
-            role_id=form.role_id.data,
-            password=generate_password_hash(form.password.data)
-        )
-        db.session.add(new_user)
-        db.session.commit()
-        flash("User registered successfully!", "success")
-        return redirect(url_for('main.login_user'))
-    return render_template('register.html', form=form)
-
-# User login route with form validation
-@main_blueprint.route('/login', methods=['GET', 'POST'])
-@csrf.exempt  # Apply CSRF protection
-@limiter.limit("10 per minute")  # Rate limit for security
-def login_user():
-    form = UserLoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user and check_password_hash(user.password, form.password.data):
-            login_user(user)
-            flash("Logged in successfully!", "success")
-            return redirect(url_for('main.dashboard'))
-        flash("Invalid username or password", "error")
-    return render_template('login.html', form=form)
-
-# Dashboard route (renders dashboard page)
-@main_blueprint.route('/dashboard')
+# Petty Cash Advance Request
+@main_blueprint.route('/petty_cash_advance', methods=['POST'])
 @login_required
-def dashboard():
-    return render_template('dashboard.html', user=current_user)
-
-# Route to handle cash advance request
-@main_blueprint.route('/cash_advance', methods=['GET', 'POST'])
-@login_required
-@csrf.exempt  # CSRF protection
-@limiter.limit("5 per minute")
-def raise_cash_advance():
-    form = CashAdvanceForm()
-    if form.validate_on_submit():
-        cash_advance = CashAdvance(
-            officer_id=current_user.id,
-            amount=form.amount.data,
-            purpose=form.purpose.data,
-            status="Pending"
-        )
-        db.session.add(cash_advance)
-        db.session.commit()
-        flash("Cash advance request submitted successfully!", "success")
-        return redirect(url_for('main.dashboard'))
-    return render_template('cash_advance.html', form=form)
-
-# Route to upload and process files
-@main_blueprint.route('/upload', methods=['POST'])
 @csrf.exempt
-@limiter.limit("3 per minute")
-def upload_file():
-    if 'file' not in request.files:
-        flash("No file part", "error")
-        return redirect(request.url)
+def petty_cash_advance():
+    data = request.get_json()
+    branch = data.get('branch')
+    department = data.get('department')
+    name = data.get('name')
+    account = data.get('account')
+    items = data.get('items')
+    description = data.get('description')
+    total_amount = data.get('total_amount')
 
-    file = request.files['file']
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        filepath = os.path.join('uploads', filename)
-        file.save(filepath)
+    if not all([branch, department, name, account, items, description, total_amount]):
+        return jsonify({"error": "All fields are required"}), 400
 
-        # Process file if it's a PDF (convert to image)
-        if filename.lower().endswith('.pdf'):
-            try:
-                image_path = convert_pdf_to_image(filepath)
-                flash("File uploaded and processed successfully!", "success")
-                return send_file(image_path, as_attachment=True)
-            except Exception as e:
-                flash(f"Error processing PDF: {str(e)}", "error")
-        else:
-            flash("Uploaded file is not a PDF", "error")
-    else:
-        flash("Invalid file type", "error")
-    return redirect(request.url)
+    petty_cash = PettyCashAdvance(
+        officer_id=current_user.id,
+        branch=branch,
+        department=department,
+        name=name,
+        account=account,
+        items=items,
+        description=description,
+        total_amount=total_amount,
+        status="Pending"
+    )
+    db.session.add(petty_cash)
+    db.session.commit()
 
-# Error handler for 404 errors (Page Not Found)
+    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
+    if supervisor:
+        send_email(
+            "New Petty Cash Advance Request",
+            [supervisor.email],
+            f"A new petty cash advance request has been raised by {current_user.username}."
+        )
+    
+    return jsonify({"message": "Petty cash advance request submitted successfully!", "id": petty_cash.id}), 201
+
+# Petty Cash Retirement Request
+@main_blueprint.route('/petty_cash_retirement', methods=['POST'])
+@login_required
+@csrf.exempt
+def petty_cash_retirement():
+    data = request.form
+    branch = data.get('branch')
+    name = data.get('name')
+    items = data.get('items')
+    amount = data.get('amount')
+    department = data.get('department')
+    account = data.get('account')
+    description = data.get('description')
+    total_amount = data.get('total_amount')
+    receipt = request.files.get('receipt')
+
+    if not all([branch, name, items, amount, department, account, description, total_amount, receipt]):
+        return jsonify({"error": "All fields and receipt are required"}), 400
+
+    receipt_path = f"uploads/receipts/{receipt.filename}"
+    receipt.save(receipt_path)
+
+    petty_cash_ret = PettyCashRetirement(
+        officer_id=current_user.id,
+        branch=branch,
+        name=name,
+        items=items,
+        amount=amount,
+        department=department,
+        account=account,
+        description=description,
+        total_amount=total_amount,
+        status="Pending"
+    )
+    db.session.add(petty_cash_ret)
+    db.session.commit()
+
+    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
+    if supervisor:
+        send_email(
+            "New Petty Cash Retirement Request",
+            [supervisor.email],
+            f"A new petty cash retirement request has been raised by {current_user.username}."
+        )
+
+    return jsonify({"message": "Petty cash retirement request submitted successfully!", "id": petty_cash_ret.id}), 201
+
+# Cash Advance Request
+@main_blueprint.route('/cash_advance', methods=['POST'])
+@login_required
+@csrf.exempt
+def cash_advance_request():
+    data = request.form
+    branch = data.get('branch')
+    department = data.get('department')
+    name = data.get('name')
+    account = data.get('account')
+    invoice_amount = data.get('invoice_amount')
+    cash_advance = data.get('cash_advance')
+    narration = data.get('narration')
+    less_what = data.get('less_what')
+    amount = data.get('amount')
+    management_board_approval = request.files.get('management_board_approval')
+    proforma_invoice = request.files.get('proforma_invoice')
+
+    if not all([branch, department, name, account, invoice_amount, cash_advance, narration, less_what, amount, management_board_approval, proforma_invoice]):
+        return jsonify({"error": "All fields and required documents are mandatory"}), 400
+
+    approval_path = f"uploads/docs/{management_board_approval.filename}"
+    invoice_path = f"uploads/docs/{proforma_invoice.filename}"
+    management_board_approval.save(approval_path)
+    proforma_invoice.save(invoice_path)
+
+    cash_advance = CashAdvance(
+        officer_id=current_user.id,
+        branch=branch,
+        department=department,
+        name=name,
+        account=account,
+        invoice_amount=invoice_amount,
+        cash_advance=cash_advance,
+        narration=narration,
+        less_what=less_what,
+        amount=amount,
+        status="Pending"
+    )
+    db.session.add(cash_advance)
+    db.session.commit()
+
+    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
+    if supervisor:
+        send_email(
+            "New Cash Advance Request",
+            [supervisor.email],
+            f"A new cash advance request has been raised by {current_user.username}."
+        )
+
+    return jsonify({"message": "Cash advance request submitted successfully!", "id": cash_advance.id}), 201
+
+# OPEX/CAPEX Retirement Request
+@main_blueprint.route('/opex_capex_retirement', methods=['POST'])
+@login_required
+@csrf.exempt
+def opex_capex_retirement():
+    data = request.form
+    branch = data.get('branch')
+    department = data.get('department')
+    name = data.get('name')
+    account = data.get('account')
+    invoice_amount = data.get('invoice_amount')
+    cash_advance = data.get('cash_advance')
+    narration = data.get('narration')
+    refund_reimbursement = data.get('refund_reimbursement')
+    less_what = data.get('less_what')
+    amount = data.get('amount')
+    receipt = request.files.get('receipt')
+
+    if not all([branch, department, name, account, invoice_amount, cash_advance, narration, refund_reimbursement, less_what, amount, receipt]):
+        return jsonify({"error": "All fields and receipt are required"}), 400
+
+    receipt_path = f"uploads/receipts/{receipt.filename}"
+    receipt.save(receipt_path)
+
+    opex_retirement = OpexCapexRetirement(
+        officer_id=current_user.id,
+        branch=branch,
+        department=department,
+        name=name,
+        account=account,
+        invoice_amount=invoice_amount,
+        cash_advance=cash_advance,
+        narration=narration,
+        refund_reimbursement=refund_reimbursement,
+        less_what=less_what,
+        amount=amount,
+        status="Pending"
+    )
+    db.session.add(opex_retirement)
+    db.session.commit()
+
+    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
+    if supervisor:
+        send_email(
+            "New OPEX/CAPEX Retirement Request",
+            [supervisor.email],
+            f"A new OPEX/CAPEX retirement request has been raised by {current_user.username}."
+        )
+
+    return jsonify({"message": "OPEX/CAPEX retirement request submitted successfully!", "id": opex_retirement.id}), 201
+
+# Stationery Request
+@main_blueprint.route('/stationery_request', methods=['POST'])
+@login_required
+@csrf.exempt
+def stationery_request():
+    data = request.get_json()
+    branch = data.get('branch')
+    department = data.get('department')
+    description = data.get('description')
+    quantity = data.get('quantity')
+    items = data.get('items')
+
+    if not all([branch, department, description, quantity, items]):
+        return jsonify({"error": "All fields are required"}), 400
+
+    stationery = StationaryRequest(
+        officer_id=current_user.id,
+        branch=branch,
+        department=department,
+        description=description,
+        quantity=quantity,
+        items=items,
+        status="Pending"
+    )
+    db.session.add(stationery)
+    db.session.commit()
+
+    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
+    if supervisor:
+        send_email(
+            "New Stationery Request",
+            [supervisor.email],
+            f"A new stationery request has been raised by {current_user.username}."
+        )
+
+    return jsonify({"message": "Stationery request submitted successfully!", "id": stationery.id}), 201
+
+# Notifications API
+@main_blueprint.route('/notifications', methods=['GET'])
+@login_required
+def get_notifications():
+    notifications = Notification.query.filter_by(user_id=current_user.id).all()
+    return jsonify([notification.to_dict() for notification in notifications])
+
+# Error Handlers
 @main_blueprint.errorhandler(404)
 def page_not_found(e):
     return jsonify({"error": "Page not found"}), 404
 
-# Error handler for 500 errors (Internal Server Error)
 @main_blueprint.errorhandler(500)
 def internal_error(e):
-    db.session.rollback()  # Ensure any incomplete transactions are rolled back
+    db.session.rollback()
     return jsonify({"error": "Internal server error"}), 500
 
-# Route for OPEX/CAPEX/Retirement requests
-@main_blueprint.route('/opex_capex_retirement', methods=['GET', 'POST'])
-@login_required
-@csrf.exempt
-@limiter.limit("5 per minute")
-def raise_opex_capex_retirement():
-    form = OpexCapexRetirementForm()
-    if form.validate_on_submit():
-        opex_capex = OpexCapexRetirement(
-            officer_id=current_user.id,
-            branch=form.branch.data,
-            description=form.description.data,
-            invoice_amount=form.invoice_amount.data,
-            total_amount=form.total_amount.data,
-            status="Pending"
-        )
-        db.session.add(opex_capex)
-        db.session.commit()
-        flash("OPEX/CAPEX/Retirement request submitted successfully!", "success")
-        return redirect(url_for('main.dashboard'))
-    return render_template('opex_capex_retirement.html', form=form)
-
-# Route for petty cash advance requests
-@main_blueprint.route('/petty_cash_advance', methods=['GET', 'POST'])
-@login_required
-@csrf.exempt
-@limiter.limit("5 per minute")
-def raise_petty_cash_advance():
-    form = PettyCashAdvanceForm()
-    if form.validate_on_submit():
-        petty_cash_advance = PettyCashAdvance(
-            officer_id=current_user.id,
-            description=form.description.data,
-            items=form.items.data,
-            total_amount=form.total_amount.data,
-            status="Pending"
-        )
-        db.session.add(petty_cash_advance)
-        db.session.commit()
-        flash("Petty cash advance request submitted successfully!", "success")
-        return redirect(url_for('main.dashboard'))
-    return render_template('petty_cash_advance.html', form=form)
-
-# Route for petty cash retirement requests
-@main_blueprint.route('/petty_cash_retirement', methods=['GET', 'POST'])
-@login_required
-@csrf.exempt
-@limiter.limit("5 per minute")
-def raise_petty_cash_retirement():
-    form = PettyCashRetirementForm()
-    if form.validate_on_submit():
-        petty_cash_retirement = PettyCashRetirement(
-            officer_id=current_user.id,
-            description=form.description.data,
-            items=form.items.data,
-            total_amount=form.total_amount.data,
-            status="Pending"
-        )
-        db.session.add(petty_cash_retirement)
-        db.session.commit()
-        flash("Petty cash retirement request submitted successfully!", "success")
-        return redirect(url_for('main.dashboard'))
-    return render_template('petty_cash_retirement.html', form=form)
-
-# Route for stationery requests
-@main_blueprint.route('/stationery_request', methods=['GET', 'POST'])
-@login_required
-@csrf.exempt
-@limiter.limit("5 per minute")
-def raise_stationery_request():
-    form = StationaryRequestForm()
-    if form.validate_on_submit():
-        stationery_request = StationaryRequest(
-            officer_id=current_user.id,
-            branch=form.branch.data,
-            items=form.items.data,
-            status="Pending"
-        )
-        db.session.add(stationery_request)
-        db.session.commit()
-        flash("Stationery request submitted successfully!", "success")
-        return redirect(url_for('main.dashboard'))
-    return render_template('stationery_request.html', form=form)
-
-# Route for notifications (example to fetch unread notifications for a user)
-@main_blueprint.route('/notifications/<int:user_id>', methods=['GET'])
-@login_required
-def get_notifications(user_id):
-    # Ensure that the user requesting notifications is authorized to view them
-    if current_user.id != user_id:
-        flash("You are not authorized to view these notifications.", "error")
-        return redirect(url_for('main.dashboard'))
-
-    notifications = Notification.query.filter_by(user_id=user_id, is_read=False).all()
-    if notifications:
-        return jsonify([notification.to_dict() for notification in notifications])  # Assuming you have a to_dict method on Notification
-    else:
-        return jsonify({"message": "No unread notifications."})
+# Helper Functions
+def get_role_id_by_name(role_name):
+    role = Role.query.filter_by(name=role_name).first()
+    return role.id if role else None

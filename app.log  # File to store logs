@@ -1,0 +1,509 @@
+2024-12-14 14:19:09,536 - root - ERROR - SSL certificate or key file not found: C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\ssl\\cert.pem\cert.pem or C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\ssl\\key.pem\key.pem
+2024-12-14 14:21:40,826 - root - ERROR - SSL certificate or key file not found: C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\ssl\\cert.pem\cert.pem or C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\ssl\\key.pem\key.pem
+2024-12-14 14:21:42,634 - root - INFO - Redis connection successful.
+2024-12-14 14:49:04,590 - root - ERROR - SSL certificate or key file not found: C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\ssl\\cert.pem\cert.pem or C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\ssl\\key.pem\key.pem
+2024-12-14 21:26:19,169 - root - INFO - Redis connection successful.
+2024-12-14 21:29:55,622 - root - INFO - Redis connection successful.
+2024-12-14 21:36:22,717 - root - INFO - Redis connection successful.
+2024-12-14 21:42:44,634 - root - INFO - Redis connection successful.
+2024-12-14 21:44:37,801 - root - INFO - Redis connection successful.
+2024-12-14 21:48:56,908 - root - INFO - Redis connection successful.
+2024-12-14 21:50:43,027 - root - INFO - Redis connection successful.
+2024-12-14 21:53:17,640 - root - INFO - Redis connection successful.
+2024-12-14 21:57:51,304 - root - INFO - Redis connection successful.
+2024-12-14 21:57:51,698 - app - INFO - Database connection successful and tables created.
+2024-12-14 21:57:51,788 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-14 21:57:51,789 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 21:58:01,441 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 21:58:01] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-14 21:58:01,477 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 21:58:01] code 400, message Bad request version ('§\x8bÉ\x1a[)ÉëÕ\x8c£ÛrüDz¹\x02<S6\x96\x81\x81y¼ô\x82&æ5ÀaÁR\x88\x95`GËß;4')
+2024-12-14 21:58:01,479 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 21:58:01] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x98Ñ>òM\x15_î7Ö4Ä¯\x9b\x0bõ÷GZEK-üÅ±ñþ\x98Y¹\x8b\x89 c'àQM¢\x00¡A'ëÈÒÑ¹Ø\x08Àöaó×\x04-\x8d[Ö¸:\x83EV\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93êê\x00\x00\x00+\x00\x07\x06JJ\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x12\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01þ\x00 vz¥µÿKÈ¨8ôòb,Ü<Ô¶(­¶æÏ¯÷\x89÷ê(\x8cZM$\x00ðFF6\x96ÎÓ¡|·Ü9\x8a¬ÊY&>Ú\x89)\x0eÄª\x16\x0döÔ1¤õ0²Öj\x91\x01Õ|¾\x96òa\x9d\x0b¬\x84Ò>\x0eN\x10÷\x05Ía\x81\x18¶õÞ5\x8br\x05 'ã\x8dÇåx\x89~¯(<\x93UæôS\x8b\x1d3ëåé\x85\x01]a?Ì\x09[Ö\x80]~µñ\x04Ö\x80À\x97\x0bR\x0d¹\x15ö¸\x0dò¼ÑtÅl\x8d7Íór\x10tS¨Å\x9e\x16Vàç¹Ë@«\x1f\x9aïÜð\x0fÿ \x95«¤¡¿sÒtÇ}\x1dÜ\x01¬ôÃ\x90l<²AêÒ\x94È\x17Vð`¤\x83ÃÿëÍÄ°úQ½ä~ \x9a^Ês²$\x11Rn\x8d\x1f$\x94\x19,Vbr¹S*­\x92<®Y\x1eNgá\x8e¬uuÛK[\x1búÐÎ ¿:ø$Zÿ\\g\x00\x0b\x00\x02\x01\x00ÿ\x01\x00\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00#\x00\x00\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04À\x9a÷¿õÙ\x84j#z\x9c\x00j'\x18,\x98\x849w¤#\x9bùeíh«,ì\x12¼\x1c\x98ß¹[\x06µ\x18Þw\x95¸,E\x10\x9b\x91H¼7\x81\x97\x03P\x1a\x81ºDS)2 gÄUÆ\x9a\x14qq8ÔÀ3\x7f\x8a\x8a\x88#xæx}åV\x1fëQ¤Í\x142\x13\x01PéØ\x11]+Sà¨\x1fÃÒ+8\x00\x95¹S7ª\x96\x85\x9e×\x87uu\x99ÿ$zP\x17½|"KmXW$ë©¾ÆX6õ!Ó\x89ªÂ6\x01Þ\x08I\x8cU\x92ÄçM\x81PYóøhÔÙ\x0b\x8cs-1YGåL+ï°Ç\x1dû¹øÐË4\x1a]Üêr©´53\x0b·ý3OÏ¸h«\x82\x81\x8bÂy\x88'\x8b;\x8b=YY´T[ÁSKi~¬#£â\x87Å\x13¾*÷9nÐ:\x018\x86b\x99o\x0eF8\x9a«br\x82½ê §\x8bÉ\x1a[)ÉëÕ\x8c£ÛrüDz¹\x02<S6\x96\x81\x81y¼ô\x82&æ5ÀaÁR\x88\x95`GËß;4[0m" 400 -
+2024-12-14 21:58:01,493 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 21:58:01] code 400, message Bad request version ('"\x16ª\x03')
+2024-12-14 21:58:01,494 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 21:58:01] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ë\x0eóö!\x97\x90\x8a\x89ýº7e*F\x01\x1b¹\x7fj\x1dÉ\x9f\x8b\x87\x1bÊÎåY6ñ "\x16ª\x03[0m" 400 -
+2024-12-14 21:58:13,843 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 21:58:13] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00«\x01\x00\x00§\x03\x03g]ñe\x8e¡ÝncP#"')
+2024-12-14 21:58:13,844 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 21:58:13] "[31m[1m\x16\x03\x03\x00«\x01\x00\x00§\x03\x03g]ñe\x8e¡ÝncP#" 6ÉT»/\x0e\x1a\x11¾þIÄåJ\x81:õõo\x00\x00&À,À+À0À/À$À#À(À'À[0m" 400 -
+2024-12-14 22:06:48,466 - root - INFO - Redis connection successful.
+2024-12-14 22:06:48,673 - app - INFO - Database connection successful and tables created.
+2024-12-14 22:06:48,684 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-14 22:06:48,685 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-14 22:06:57,691 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:06:57] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-14 22:06:57,785 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 22:06:57] code 400, message Bad request version ('#ß7WÛºf\x00')
+2024-12-14 22:06:57,786 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:06:57] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03,«Þ¿f\x99ÃUË\x00Lqab\x09$\x11»rë\x0fn \x9f¶*a\x1ed\x88vÍ \x904µN.\x9c\x85\x139x\x89¾4S\x93\x8dò\x93pzk\x80Ñ\x0fö#«æ\x8d÷\x1f°\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÚÚ\x00\x00\x00\x12\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01g\x00 íæ\x1ez\x13ÝDîü½ZpÜ¨Ü¦\x8b¥d\x03\x15è\x81"ö3\x08VmÈ0\x1d\x00ð\x8bõ9pÍ*\x0d.÷\x19ÕùEÂ´Ä\x9aAsF."\x9dÖ°C\x14\x99\x19Å¹\x19ÙI:Y\x97÷\x94\x07]\x91\x06òM\x19Ê,'üAzõµ\x86;ÿ\x1fk\x07á@A\x00\x11\x0bØYî¨Æñd6º÷()ÎW¥ÿñT\x88+ºò\x86µü±¾\x9ahtõ±¸Q×ßbÁó\x01º\x07\x08Ëè*ê"·['\x0dØûh³\x9e\x0e\x97y\x02\x9b¦¦\x08Â\x96\x1agR2ÅûÌd¿\x97ª\x0d¤Ðá\x08©Ç\x0e\x90¡AÕØÖ\x08Y6\x176lÅ\x98\x988çùIM±\x08W\x88Ydâi´\x03ç\x9fXÔ\x9cyLc8-Ï_v>jPÔ\x9b.\x96Âå Þ\x92,3j]W\\nÙ\x18Û½2Ù\x9d\x18úHP,ññØ\x81`Ø\x85#ß7WÛºf\x00[0m" 400 -
+2024-12-14 22:06:57,791 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 22:06:57] code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+2024-12-14 22:06:57,792 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:06:57] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03;\x836\x855OQÚë/6W-\x81\x17Þ\x08Z?÷Kÿl,FÚm0Í]W" zÒ3ñ\x935[æ\x94\x80Å¼% Îru:;¿\x92>Øe,ÏgJù·\x93g\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s[0m" 400 -
+2024-12-14 22:07:02,621 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 22:07:02] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06')
+2024-12-14 22:07:02,622 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:07:02] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ìù=é.ú\x8bà²\x18N\x0c×\x10Cðo\x96Rø¤é7¥ûn¥\x95s\x89Ùâ ä\x17èCs\x0f/<Ñ¼îÀu \x1bXò\x80«Àåd;\x8añ±ç3\x18\x9fë_\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06[0m" 400 -
+2024-12-14 22:07:02,636 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 22:07:02] code 400, message Bad request version ('E.ªMWýÉoÁZ')
+2024-12-14 22:07:02,639 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:07:02] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x86\x98ý\x1b!÷L\x1d\x1eùÁ E.ªMWýÉoÁZ[0m" 400 -
+2024-12-14 22:07:02,645 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 22:07:02] code 400, message Bad request version ('4d½Á\x81<åq\x1b°;\x9452\xadð"_ÇÌ;EÀ\x95\x82K7ª%c:´.\x94Õ')
+2024-12-14 22:07:02,650 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:07:02] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03S-h\x1f\x18*Â´+ÃzK¿\x1bô\x81FÁí\x80wÛð+¾ß\x16ê,éBª \x9eÐ­X&+\x90¾\x11\x80¨r¢Ï¬\x0fy\x10\x09UÎÆ\x9c¿\x03g51OV#Ï\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SJJ\x00\x00\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x12\x00\x00\x00#\x00\x00Di\x00\x05\x00\x03\x02h2\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04À\x0eÖ³\x0bé3È¢\x8bý\x93\x1bn\x15§Ä92v).W\x96°Í\x11?ûÊ\x84t\x94\x1f\x89õ\x86\x8eæÁ\x9dIbË{l\x14\x14p\x05ù·C3(\x1f©D\x85a\x92W\x1aSµ§\x16v<sÁã\x04\x05\x9c\x9cSR'JtwÅ\x87^7Ö¯\x052\x82>\x88È\x8c\x88\x96CÂ\x7fª» ð'ÍÆ\x8aÆ7i\x86Iq\x08\x8b\x07J ædôá^Pz\x99Ui\x80O<£\x00\x05;/Æ^Û©\x8e&\x8aË\x8b\x10#Ï*\x80ZÂ\x94\x9a\x14\x08²ì\x0bõ|>´uað\x08\x7f¢\x1bÎ¤t3\x0e,FáÚÇ¹ñ\x8b>"\x0b÷\x89ÆfÁ=ÖZtWzn\x7fâ\x97\x1fÚ]z\x1cOÉü¯\x9dö\x92\x0câ\x11S[\x9dîÙ"þÙËk\\´åUf¡\x95`\x82y;-\x19<Æ»\x8e\x10\x94dù¸\x0b4d½Á\x81<åq\x1b°;\x9452­ð"_ÇÌ;EÀ\x95\x82K7ª%c:´.\x94Õ[0m" 400 -
+2024-12-14 22:07:02,650 - werkzeug - ERROR - 127.0.0.1 - - [14/Dec/2024 22:07:02] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2024-12-14 22:07:02,653 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 22:07:02] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03+|[é\x02\x95uòÅF#PÔVø$¯Ij\x1a£\x07?H\x0cÙÏ6WZÂ) ¤.àBu]mlYþ\x04J Ñ,s_\x0f\x88ìD&ß&sQ;\x00ü\x00ù\x13\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063jj\x00\x00ÿ\x01\x00\x01\x00\x00-\x00\x02\x01\x01\x00#\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2024-12-15 14:15:21,674 - werkzeug - INFO - 192.168.0.123 - - [15/Dec/2024 14:15:21] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-15 14:15:21,710 - werkzeug - ERROR - 192.168.0.123 - - [15/Dec/2024 14:15:21] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00¦\x01\x00\x00¢\x03\x03g^Öi\x17§4g¤¨Q\x84\x08»àw¥@')
+2024-12-15 14:15:21,710 - werkzeug - INFO - 192.168.0.123 - - [15/Dec/2024 14:15:21] "[31m[1m\x16\x03\x03\x00¦\x01\x00\x00¢\x03\x03g^Öi\x17§4g¤¨Q\x84\x08»àw¥@\x0b\x9c@)\\\x19Ó\x14û\x1b\x061\x84º\x00\x00*À,À+À0À/\x00\x9f\x00\x9eÀ$À#À(À'À[0m" 400 -
+2024-12-15 14:15:28,185 - werkzeug - INFO - 192.168.0.123 - - [15/Dec/2024 14:15:28] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 10:05:35,168 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 10:05:35,697 - app - INFO - Database connection successful and tables created.
+2024-12-16 10:05:35,780 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-16 10:05:35,781 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 10:05:46,360 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:05:46] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 10:05:46,450 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 10:05:46] code 400, message Bad request version ('¬\x8dïá\x93NæWh\x9b°ö_F;*\x00')
+2024-12-16 10:05:46,451 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:05:46] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x17\x1cVèøÍßÝWâ<­"¾¸M¸·þ\x17\x07<i¿\x941A^t;6\x8b \x1fm5`P:Ê9\x9b\x9a(J¶ \x0e\x13.\x14OáC\x09÷dÜ\x1eêvö`\x10w\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x9a\x9a\x00\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03ÿ\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01?\x00 k\x08ÂP\x8d\x9eÏ¨F<¾:ê\x13íÖoX\x9b\x15#°\x15jM/{ÚVJAv\x00ð¯k\x07{\x91#-¶\x95%nEcA\x11\x9bé<\x9e}=*¦Í\x9f\x86\x84v8c\x1eéÓå|A^\x8fyÆk¹\x9cG\x13#\x8f}f\x1b\x9e{\x9a(\x16¥^Eá·Jx{MÉª\x90\x8c^X\x93h£µÒ¸¤=DÁbËG\x1d\x8bðpaý>¿Û\x9a,Ùz nàËÑ:J\x8cÊÙ\x17£\x979ÚÄÿL/`\x7f ÉëðtJi\x84£\x9b0ÿ\x08\x8aÜ*¡)è\x88=2(Ùª\x99H=\x10\x99ó¶ö]?\x1a\x95ú¬¬,\x9d\x04BÖ\x16\x14-_oî\x157fà\x04Ò¨õN%ªØ%:\x05\\NJuNrr\x16O¿Î¥&Då\x97 ø{òz&£j­­\x8d6ýBV"ôëWô\x14æju\x85¬\x8dïá\x93NæWh\x9b°ö_F;*\x00[0m" 400 -
+2024-12-16 10:05:46,457 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 10:05:46] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2024-12-16 10:05:46,462 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:05:46] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03×,VÂsëÂ;YÞ.\x95³7ð/)Þ\x07\x84#\x16(ÎÍ.Ê#W{Ï\x8f ttÒ.\x9b\x17\x0e\x1f\x0foÆ\x0d÷;\x02fã\x93ðWR=b|¼qÙ©\x87xUl\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x8a\x8a\x00\x00\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2024-12-16 10:07:57,877 - root - INFO - Redis connection successful.
+2024-12-16 10:07:58,069 - app - INFO - Database connection successful and tables created.
+2024-12-16 10:07:58,080 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-16 10:07:58,081 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 10:08:03,374 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:08:03] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 10:08:03,449 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 10:08:03] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x90bó\x03nÄ5\x83')
+2024-12-16 10:08:03,451 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:08:03] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x90bó\x03nÄ5\x83 qzà4\x1b\x1bbój\x02[0m" 400 -
+2024-12-16 10:08:03,453 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 10:08:03] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+2024-12-16 10:08:03,455 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:08:03] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03e\x19ÌÁþ\x8dLþO\x1d\x11"\x13\x19\x8au\x8aúe¤\x9b\x0f~^qñ\x18¬\x16lï¿ h=è\x08ÕTþ:ëb¡:>Þ®a\x13¯k\x85\x07¨\x1fT°$Õ4u\x92å¾\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s[0m" 400 -
+2024-12-16 10:20:47,406 - root - INFO - Redis connection successful.
+2024-12-16 10:20:47,554 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.123:5000
+2024-12-16 10:20:47,555 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 10:20:53,997 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:20:53] "GET / HTTP/1.1" 200 -
+2024-12-16 10:21:32,146 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:21:32] "[31m[1mGET /api/login HTTP/1.1[0m" 405 -
+2024-12-16 10:21:32,223 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:21:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-16 10:21:57,914 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:21:57] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-16 10:22:00,322 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:22:00] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-16 10:22:01,706 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:22:01] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-16 10:28:10,278 - root - INFO - Redis connection successful.
+2024-12-16 10:31:02,180 - root - INFO - Redis connection successful.
+2024-12-16 10:31:02,317 - waitress - INFO - Serving on http://0.0.0.0:5000
+2024-12-16 10:41:15,546 - root - INFO - Redis connection successful.
+2024-12-16 10:41:15,696 - waitress - INFO - Serving on http://0.0.0.0:5000
+2024-12-16 10:44:05,190 - root - INFO - Redis connection successful.
+2024-12-16 10:44:05,331 - waitress - INFO - Serving on http://0.0.0.0:5000
+2024-12-16 10:47:09,555 - root - INFO - Redis connection successful.
+2024-12-16 10:47:10,123 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 10:47:10,123 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 10:47:10,135 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 10:47:14,564 - root - INFO - Redis connection successful.
+2024-12-16 10:47:14,756 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 10:47:14,768 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 10:47:15,029 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:47:15] "GET / HTTP/1.1" 200 -
+2024-12-16 10:47:46,125 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:47:46] "GET / HTTP/1.1" 200 -
+2024-12-16 10:48:01,194 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:48:01] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 10:48:48,555 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:48:48] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:48:51,223 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:48:51] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:48:52,079 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:48:52] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:48:52,823 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:48:52] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:48:53,423 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:48:53] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:52:21,472 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 10:52:21,754 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 10:52:26,206 - root - INFO - Redis connection successful.
+2024-12-16 10:52:26,336 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 10:52:26,347 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 10:52:37,184 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:52:37] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:52:38,015 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:52:38] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:52:38,247 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:52:38] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:52:38,974 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:52:38] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:52:39,327 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:52:39] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 10:57:55,124 - root - INFO - Redis connection successful.
+2024-12-16 10:57:55,261 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 10:57:55,262 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 10:57:55,264 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 10:58:00,270 - root - INFO - Redis connection successful.
+2024-12-16 10:58:00,399 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 10:58:00,410 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 10:58:00,629 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:58:00] "GET / HTTP/1.1" 200 -
+2024-12-16 10:58:43,562 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 10:58:43] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 11:00:59,814 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:00:59] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 11:09:01,709 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 11:09:01,983 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 11:09:07,054 - root - INFO - Redis connection successful.
+2024-12-16 11:09:07,182 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 11:09:07,192 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 11:09:22,914 - root - INFO - Redis connection successful.
+2024-12-16 11:09:23,082 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 11:09:23,082 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 11:09:23,084 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 11:09:27,537 - root - INFO - Redis connection successful.
+2024-12-16 11:09:27,726 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 11:09:27,738 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 11:09:27,980 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:09:27] "GET / HTTP/1.1" 200 -
+2024-12-16 11:09:40,816 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:09:40] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 11:09:59,949 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:09:59] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 11:10:03,725 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:10:03] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 11:10:07,413 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:10:07] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 11:38:08,152 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 11:38:08,399 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 11:39:32,953 - root - INFO - Redis connection successful.
+2024-12-16 11:39:33,130 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 11:39:33,130 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 11:39:33,132 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 11:39:37,385 - root - INFO - Redis connection successful.
+2024-12-16 11:39:37,572 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 11:39:37,584 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 11:39:37,817 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:39:37] "GET / HTTP/1.1" 200 -
+2024-12-16 11:39:50,029 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:39:50] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 11:49:46,024 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 11:49:46] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 11:50:51,123 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 11:50:51,364 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 11:50:56,129 - root - INFO - Redis connection successful.
+2024-12-16 12:27:51,060 - root - INFO - Redis connection successful.
+2024-12-16 12:27:51,676 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 12:27:51,676 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 12:27:51,692 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 12:27:56,730 - root - INFO - Redis connection successful.
+2024-12-16 12:27:56,888 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 12:27:56,898 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 12:28:01,332 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 12:28:01] "GET / HTTP/1.1" 200 -
+2024-12-16 12:28:16,699 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 12:28:16] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 14:07:56,775 - root - INFO - Redis connection successful.
+2024-12-16 14:07:56,945 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 14:07:56,946 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 16:59:33,640 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 16:59:34,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 16:59:34,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 16:59:34,137 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 16:59:37,618 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 16:59:37,735 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 16:59:37,751 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:01:14,505 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:01:14,666 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 17:01:14,666 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 17:01:14,668 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:01:18,449 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:01:18,611 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:01:18,622 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:02:09,231 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:02:09,386 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 17:02:09,387 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 17:02:09,389 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:02:13,546 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:02:13,692 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:02:13,702 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:03:10,383 - root - INFO - Redis connection successful.
+2024-12-16 17:03:10,548 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 17:03:10,549 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 17:03:10,551 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:03:15,360 - root - INFO - Redis connection successful.
+2024-12-16 17:03:15,508 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:03:15,518 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:03:18,002 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:03:18] "GET / HTTP/1.1" 200 -
+2024-12-16 17:03:36,249 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:03:36] "[32mGET /api HTTP/1.1[0m" 308 -
+2024-12-16 17:03:36,260 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:03:36] "GET /api/ HTTP/1.1" 200 -
+2024-12-16 17:03:46,671 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:03:46] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 17:03:53,767 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:03:53] "GET /api/ HTTP/1.1" 200 -
+2024-12-16 17:05:28,600 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:05:28] "[33mGET /api/auth HTTP/1.1[0m" 404 -
+2024-12-16 17:25:52,586 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 17:25:52,812 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:25:56,068 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:25:56,079 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:26:04,675 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 17:26:04,676 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 17:26:04,678 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:26:07,260 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:26:07,271 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:26:10,996 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:26:10] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-16 17:26:23,240 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:26:23] "GET /api/ HTTP/1.1" 200 -
+2024-12-16 17:26:29,675 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:26:29] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 17:26:46,872 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:26:46] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 17:30:58,871 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 17:30:59,144 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:31:04,339 - root - INFO - Redis connection successful.
+2024-12-16 17:31:04,498 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:31:04,510 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:32:21,095 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 17:32:21,300 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:32:25,747 - root - INFO - Redis connection successful.
+2024-12-16 17:37:18,822 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:37:18,984 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 17:37:18,984 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 17:37:18,986 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:37:21,715 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:37:21,883 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:37:21,894 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:37:33,978 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:37:33] "GET / HTTP/1.1" 200 -
+2024-12-16 17:37:40,919 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:37:40] "GET /api/ HTTP/1.1" 200 -
+2024-12-16 17:37:46,900 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:37:46] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 17:38:01,985 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 17:38:01] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 17:42:18,042 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 17:42:18,337 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:42:21,254 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:42:21,421 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 17:42:21,431 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 17:42:25,450 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-16 17:42:25,679 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 17:42:28,249 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 17:44:00,563 - root - ERROR - Unexpected error: Client IP address is not in the allowlist.
+2024-12-16 18:07:01,180 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:07:01,340 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 18:07:01,341 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 18:07:01,343 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 18:07:03,863 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:07:04,009 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 18:07:04,019 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 18:07:57,870 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:07:57] "GET / HTTP/1.1" 200 -
+2024-12-16 18:10:53,266 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:10:53] "GET /api/ HTTP/1.1" 200 -
+2024-12-16 18:10:59,694 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:10:59] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 18:11:04,190 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:11:04] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 18:11:05,702 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:11:05] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 18:11:06,917 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:11:06] "[33mGET /api/login HTTP/1.1[0m" 404 -
+2024-12-16 18:11:18,868 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:11:18] "[33mGET /api/petty_cash_advance HTTP/1.1[0m" 404 -
+2024-12-16 18:16:38,030 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:16:38] "[33mGET /api/auth/login HTTP/1.1[0m" 404 -
+2024-12-16 18:17:04,786 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:04] code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063')
+2024-12-16 18:17:04,787 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:04] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03é77ìvµ¾yØå%$\x8cgð\x1d\x14\x03\x14ÆÃïInî]Lû\x1d\x0b\x95b \x0c\x05\x9d»=U\x03¶üè\x0b\x8a§Y*´Ø\x04\x9eLß\x9b\x8dÂ*\x0bË8gÅ\x94L\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063[0m" 400 -
+2024-12-16 18:17:04,789 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:04] code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063')
+2024-12-16 18:17:04,791 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:04] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ÖçÕH\x16nf)Ð%ò÷\x14\x9c<®\x03\x072\x02&¨´Ì>'\x12ú\x93'd\x13 ãÖI£KÊÕ!º\x9f\x98\x14âv*¯\x00ÿÅ`Oë\x12\x97¡ðó\x97\x8eP\\Á\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063[0m" 400 -
+2024-12-16 18:17:04,806 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:04] code 400, message Bad request version ('Åò\x9b(\x80w^¾å¾¨§];\x1b[(*S99f\x81lÌú\x17\x87Ur')
+2024-12-16 18:17:04,807 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:04] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x030ãv¼ÄdO\x0d¤\x1a\x00!ÒaÌDsýøP2Oÿ\x1b\x7fË`²\x9c¶\x13ô 9M\x90a\x19\x95Å\x06Vc®ÑÃ@H\x93µ\x12\x18c\x9cdû´\x94\x7f\x02F\x1c\\\x19s\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93úú\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01L\x00 Õ¥Í\x14îü|\x9dV\x82\x01%æè1\x9eX{ÄËVÉÆúé^\x08X\x00£\x14"\x00ðé\x1eÕ\x09lÿö}\x182\x0ex\x99µà\x9fjÁ\x83\x0c8¸ª¸\x91\x7fjdÀÞ\x1bO8_Î_£\x08\\]Go5«Á¡ÔS¥4oÑÉó\x91H\x8a°I\x9aæn\x17ºgÌ\x8f\x94Ú\x84õèÀ÷ª\x0f/qh½W\x05\x814\x95¬\x85åÚ\x9ah\x89\x09Q\x96ZÀý_Î\x8a\x0f \x04qv\x03\x0es¡Wqæ\x98:Q²\x07§j\x10\x9ab:ï6\x86ÃÒÃé±\x86vÈváXðùºº\x0b¹.\x9eb\x1cÐOÁJ\x82®£±2tÏü\x99Ë\x0fº\x16\x83Úã\x18K¢\x9b\x14X\x87ºøÑ\x8b\x16`\x95\\\x10\x98äU¾\x959åkmæg\x09hìõ­\x1bT®èÝÒþ³\x82©\x83ò$VÂ\x89 ýéÂ\x93¸\x10\x15\x04\x00\x1b\x02v\x14öÁ\x00õ§\x8f³÷|}\x00\x1b\x00\x03\x02\x00\x02\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04À\x9f\x83\x95¯ÜD;\x0b_ä+0.ûBMr\x15\x94ÃA»3a\x9f\x0bÅò\x9b(\x80w^¾å¾¨§];\x1b[(*S99f\x81lÌú\x17\x87Ur[0m" 400 -
+2024-12-16 18:17:04,817 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:04] code 400, message Bad request version ('t\x1b¡fÆ\x98Ñ\x08\x8e[JË\x9fÒ\xad[,Å"H\x8f\x04\x90')
+2024-12-16 18:17:04,822 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:04] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¥Ú8\x8f\x1c1º\x10Nv$\x1dÓã:þì\x01\x13}Ã\x1d\x84\x0dçÖ\x8es°1A0 \x1b+Á\x15W·M\x12ÙÊX°ÂJ"\x11ÎOü\x18\x97\x8e\x178³\x0fJ#\x1ch¦8\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93êê\x00\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x003\x04ï\x04íªª\x00\x01\x00\x11ì\x04À¹\x13hixxðp¯\x84\x98\x82,\x91\x92G\x93¯\x8bFybx\x8bJê+\x0c0e»õNxLº\x9bc\x86Ô)^1Ø\x02\x99ê\x1c¡·\x96\\ñX>«\x06XvKlù\x14d[#,\x09`,;\x13\x82pPCt¬\x0bG\x8f$\x1a¯·)Sf\x92c¿r%Ä9Ç±\x82G\x836Nñ°`\x13å;/\x96\x87]\x96_Íá\x93ÁSfN£GÍâP.\x068ÛôF\x92¸/äÄ\x7fâè¥qÀta\x06L\x15ÔË+\x01\x8a©æ\x883ÕknI¹7\x05\x15\x84¶i­³,8v'ãq\x1cE*3\x10V\x88£5\x1c~é\x9cÛÌ·úu`\x97We\x03\x09 t\x1b¡fÆ\x98Ñ\x08\x8e[JË\x9fÒ­[,Å"H\x8f\x04\x90[0m" 400 -
+2024-12-16 18:17:11,850 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:11] code 400, message Bad request version ('ä\x92Ç\x8f')
+2024-12-16 18:17:11,853 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:11] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x9e\x91Ìy#9$-ñ6¯\x04HJÞ\x00/QôÔ\x00¼v\x9cãx};²\x92¡® ©c9\x9cÊuA#5:vå>É\x19#\x81\x8c-ÿ'¬?d=\x16*Ñ\x07\x94pâ\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00#\x00\x00þ\x0d\x00ú\x00\x00\x01\x00\x01\x90\x00 ö\x1e]Áu¼\x1a&\x84C²\x07¡O\x16W$4G9^\x92/\x1dYSè®øÚ\x9cA\x00ÐwÂ\x8a`\x9eâ\x95­W\x95!B\x1874\x18ø\x0c­É½)Å9¡\\n»\x8a7Í¶\x87Á§ð]\x02\x1e¢ð¶a æ]àý¬o\x01ö\x0c%[¸\x0d\x8d.\x9e«­"19\x01\x9c·q¼M÷ô\x8e±{|\x1a\x15\x90!{Øú\x166è\x90\x86´'\x91N\x0dçÕw\x8d\x0b\x85yñÇ%U\x08Z\x9f}5Ô1TúÈÅv(¯\x18T\x15Æx]s\x07:\x87\x08Aa«Íqôú\x08\x85\x12\x83\x19\x82\x12ô\x0f\x00\x1a«'Ö\x9c3½©@\x06c\x17ëN{ª\x8cÛE»ìà\x94¸\x0c«\x16\x7f\x81\x8400näU\x18\x92WýÔf\x05îG8P\x15¿© ä\x92Ç\x8f[0m" 400 -
+2024-12-16 18:17:11,860 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:11] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S\x9a\x9a\x00\x00ÿ\x01\x00\x01\x00Di\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+2024-12-16 18:17:11,865 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:11] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03²\x9dÆ\x1f\x93ÊHåBåW6²\x001\x1dÛ4à¹TOda\x8c`8WkÌ\x06n t\x1fÕr\x09åòVÿl;ßÂ1Þ{\x18\x08e\x89\x8f¾ B \x97\x8f\x80\x9e\x85\x8d¼\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S\x9a\x9a\x00\x00ÿ\x01\x00\x01\x00Di\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00[0m" 400 -
+2024-12-16 18:17:11,873 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:11] code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Ö±º=\x83pIæ3×ÞÜ/<\x17Ëm')
+2024-12-16 18:17:11,876 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:11] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Ö±º=\x83pIæ3×ÞÜ/<\x17Ëm[0m" 400 -
+2024-12-16 18:17:11,882 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:11] code 400, message Bad request version ('\x1a=Àå³¥L8\x98\x84FÏAfÖ·U´SÅÚ|Æ´¤[å+\x89Û÷\x83må7]Ë~·ö¸È6\x93ªel\x7f')
+2024-12-16 18:17:11,886 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:11] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03hLN'³å\x1eÑsñ\x9dÿùò×2qÐ\x90º2D]*DÕ6bo§Ñ\x8a ð\x84\x83\x9b*öÛðè\x97@×\x06ié)\x02öóäì\x07\x01\x7f\x7f\x13ãu0\x9el©\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SJJ\x00\x00\x00+\x00\x07\x06zz\x03\x04\x03\x03\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00#\x00\x00\x003\x04ï\x04í\x9a\x9a\x00\x01\x00\x11ì\x04À&Ñ\x9dY:\x9dHÚ¸Ò*\x01\x00GFwxµ|\x96)rLF_%D¦ør\x8f\x92{ó¸)Á7|aI`X³\x1e#yÈXà?×Ù8dBÇ\x82\x82%á\x85\x19\x06\x99-î\x12V\x8fçA¸÷q;»eáD{[Z}ÁÔ\x049cC\x9b\x13A`Ë¢_ñ{j\x94aýP\x10dà\x89yw§Eª>C\x93~>jÃ\x976\x17\x8d[t\x1c\x01O®ÕWQX\x7føê\x09\x7f\x98Z\x9f0g\x80l\x0e\x92B0\x96\x13\x8cõ<\x94ÆB\x9aß\x98bV$`»A,®\x81Xs\x0c¯(Åi\x90\x8c\x064\x84N<Xqj¬\x99\x0b\x1a=Àå³¥L8\x98\x84FÏAfÖ·U´SÅÚ|Æ´¤[å+\x89Û÷\x83må7]Ë~·ö¸È6\x93ªel\x7f[0m" 400 -
+2024-12-16 18:17:12,674 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:12] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+2024-12-16 18:17:12,675 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:12] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03Üù\x97,Èê\x92\x92@[0m" 400 -
+2024-12-16 18:17:12,685 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:12] code 400, message Bad request version ('^¯³\x8de±\x91CüºHÉç2')
+2024-12-16 18:17:12,688 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:12] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\x8bn\x90\x02Ã\x09¿\x0b\x80\x15Î+\x7f9w\x9aË¹j`zî\x8fâ5ú\x02)ºcMr èªÓ\x12s*µ\x94Ûëh\x8eO¸6?ÄÕÀ\x0blÙÈt!#\x982ð÷Cr\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063jj\x00\x00\x00\x12\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01>\x00 Ï\x05µì©)H\x90 \x7f=ÔÚ÷U\x93!\x92\x8d\x0e¡>iê\x92J\x1eQ=Ò#Q\x00\x90eÿwNT\x09\x12+MWÊWáîä}¸@¥ç¶\x12\x14\x1d?ð­\x1c·¿\x04à'&¬\x93=×V\x86\x96\x12£ ^¯³\x8de±\x91CüºHÉç2[0m" 400 -
+2024-12-16 18:17:12,689 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:12] code 400, message Bad request version ('ÅÂ\x07Ë\x88²\x8e)\x19Á{·Í\x06Ä')
+2024-12-16 18:17:12,691 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:12] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¸o±W\\%\x00¼OYY\x97£dÞ\x07\x1d\x902$ùdÇ¤kþ\x03¼üÏy´ '\x92½¡\x1aLW¡E»OÞø\x1aRÆ¨$[Y,\x96\x92²\x835¨$|\x7f((\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x9a\x9a\x00\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01{\x00 ?\x0bÅ\x03\x829\x9bµ\x8aÙóÒdP·\x8fêù¾\x9b\x87.ÈÞäX\x1e\x88E\x9d\x08T\x00ð]\x0c\x8f\x14\x14\x94ý\x84è/Ü5È9VÇIjL\x92,öå`\x1bì!³\x97CÑ¢þ3\\0Ólxx3\\JÍ5JË3ãÿó}+(Âh ñ\x0dQÿªq¡\x92Ä­Ôa`Hª.\\Ó R©\x04ý o#\x85\x1bD²üM\x91å{ÿ]¡¸óM.ÊhÓl/\x17õ³\x9a\x88\x963l{Þ\x8c\x95½\x81\x83/\x10Ãñó\x82:uE\x1a*]¢{0)\x1fg\x00R×Ï¿)\x88\x88DSíÖâðÈ\x90[Zª\x1d"1~\x19\x0e%J`å*\x91^½p´\x8fkÈ}Ð\x8c\x9fÁ?\x8f\x12'?Ú\x88´\x0b\x0eNrñ\x85Qþhl\x97>L\x1b\x93\x1f\x1b+\x08ÃPzª\x84Z:¡CH=Ab£^\x7f\x02UX "\x94ýPÆÂf\x1b;\x0fÊÑÚ\x00-\x00\x02\x01\x01\x003\x04ï\x04í\x1a\x1a\x00\x01\x00\x11ì\x04À\x8f³OU·\x07;\x958\x81C$gGX\x8eÃ:e\x99½¡áZ*2k\x1dAdð\x8aÂþ\x90¦Lìdå(µ¡\x81¹pd=YJ³\x8f\x0cÆjõHr:4©ª+\x85ÃÄ\x9bµ±÷á#â@\x8c?#\x98HRs-á«\x9düh¥@MXò\x14\x89|©Ê\\t»\x00qù\x135º±\x1b\x1f·Ìu\x97&ðó\x1a\x93r·öY\x95\x7f©È\x0b\x80\x07þÖ7×\x17F®\x89\x8c\x8f\x97\x1e×y\x8ef6\x95ú ÅÂ\x07Ë\x88²\x8e)\x19Á{·Í\x06Ä[0m" 400 -
+2024-12-16 18:17:12,704 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:12] code 400, message Bad request version ('J\x9d¼\x01\x89£å_g7=Ü\x87±]Ó\x80l1\x98æ')
+2024-12-16 18:17:12,730 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:12] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03-<Ú?%\x19ÛØ\x8bzyêÜ§\x06®\x83J~=\x134w=\x05FtæNã\x96× Ù\x1d\x042ß½bò1\x06¢Í¿\x8c¬Þ§¾è\\á¾Å!\x0c£[Ô&¨\x1eM\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sªª\x00\x00\x00+\x00\x07\x06\x8a\x8a\x03\x04\x03\x03\x003\x04ï\x04íºº\x00\x01\x00\x11ì\x04À/\x94\x80\x1f\x0bk\x1eS\x1dà¥\x8a5Á}\x1b\x89wþ'ku\x01Á\\e åF\x84ei/\x0dJ\x9d¼\x01\x89£å_g7=Ü\x87±]Ó\x80l1\x98æ[0m" 400 -
+2024-12-16 18:17:13,610 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('\x19\x86\x83\x0e\x12û\x01;\xad\x86nã')
+2024-12-16 18:17:13,613 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03#\x09j\x97Æí$\x1f\x12DÝ\x86Kü:~cÎVFÅ÷{\x90®CFwtd¡\x14 \x13\\AÎå\x9dN\x1dvÝHSKXxÂXÿYÿ&\x97éÈFûBÑV\x0fþ-\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00\x00\x17\x00\x00Di\x00\x05\x00\x03\x02h2þ\x0d\x00º\x00\x00\x01\x00\x01\x9f\x00 \x86ñ´9ï\x1eN\x10\x95Ó#J}î.\x8b¥~8\x89çØ\x81_:ð×Ã"_p\x1b\x00\x90¶·È\x87óé@\x97ö\x81ªø\x1f\x03\x14<J=>×£¥^¾<V\x9fåÖz\x16\x91Zô\x05\x07\x8b)qM@,^85\x81\x8a\x817\x1e\x19\x86\x83\x0e\x12û\x01;­\x86nã[0m" 400 -
+2024-12-16 18:17:13,624 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('b;\x80Æ[\x19s')
+2024-12-16 18:17:13,624 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03« !=\x8e®à\x1dU5\x15V\x9e+\x92¬ØËJ\x19Ø²g\x8f6Õ}+B\x14\x8b\x82 \x9aC¾\x963\x8c\x99ÏUÕÉCl(©\x8ef\x14uÚ\x12ÕÚ®A\x13\x10Â\x0d\x81q\x1b\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00+\x00\x07\x06ªª\x03\x04\x03\x03ÿ\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02þ\x0d\x00º\x00\x00\x01\x00\x01Á\x00 ?¦gJq%ß®qÐÙÙ&è7\x03ò\x92\x83\x0db;\x80Æ[\x19s[0m" 400 -
+2024-12-16 18:17:13,667 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('£¨JïLr¶y\x19BX}íà\x8bÞ\x0f\x04E±\x06Hë\x15\x00')
+2024-12-16 18:17:13,669 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ü\x8a\\m\x9a`f\x9b(s¡\x94\x09ÊOR=*ò§g\x13x\x8c\x96¶mZ\x15î\x81\x16 K:¸á\x9d\x14Y\x1c£¨JïLr¶y\x19BX}íà\x8bÞ\x0f\x04E±\x06Hë\x15\x00 [0m" 400 -
+2024-12-16 18:17:13,672 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('\x00\x02\x01\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00')
+2024-12-16 18:17:13,673 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03Y;S×¬z0{¨ìf5¿$Æ\x1e4\x15ßÁPõø\x0d\x9f2ºð*N;Ï Æ}\x11O»ò%õ)e½\x04ËÃ ÿM2àâ\x04½\x96gÞ\x8bW°\x9c\x1c\x81\x02\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ªª\x00\x00\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01þ\x0d\x00º\x00\x00\x01\x00\x01Ó\x00 \x96\\\x1e\x0b êÕ¤Þ\x9d\x15`äè~\x85¹óU0\x0fü\x16õO®³¤\x9c¿OQ\x00\x90¬OÞÞÿÈï\x19\x01ü#æÇ`®i\x1395çù+\x02!-/\x19÷©ÓH~X¨Ád£\x0dìO \x88\x0d^('æÀÙÕìó\x95Ò_`?H¸#Ó\x0dLO;öÒ\x99\x1fs w\x92i\x1d/Ò\x9d·\x8b\x8b%h\x1ckLYö1\x91·©¥$Æ,È$§iÍ»¤\x85}\x04¯Ð§F­\x12K7\x1e½nu\x86SSÑ6\x7fE-Ó\x80MôApTDJÖ\x82º|<àYi\x8e\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00[0m" 400 -
+2024-12-16 18:17:13,801 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+2024-12-16 18:17:13,803 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03¥\x90Ñ\x84¼\x1a\x8f¤Qø£}1pÑ\x11?Ö\x9d\x92Ö2*Ãâq~¼î2xÊ ó5\x98eéN\x93Í´\x91\x19Ä´´àÚ\x1d\x89¿]ÉúÂ×\x05\x16þI\x1cIz#\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Di\x00\x05\x00\x03\x02h2\x00-\x00\x02\x01\x01\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00[0m" 400 -
+2024-12-16 18:17:13,824 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¢£')
+2024-12-16 18:17:13,824 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¢£\x0bäO$±=\x1aÏ4\x81lÅT\x9a\x97ºd-\x15Á«>Ò\x92\x18\x18Ä¯[0m" 400 -
+2024-12-16 18:17:13,826 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('\x02h2\x08http/1.1\x003\x04ï\x04í')
+2024-12-16 18:17:13,826 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03*\x88Á\x0d®â\x18¿^Ù\x9d\x8ct\x80(!Çjx>ém\x18>â\x92oé\x12ã«ß ùÀ/5\x0eê_é°ìôO\x1b¡+<D¨\x98G\x1cO¶ÔòÔó(*\x15C\x9c\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93zz\x00\x00\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x003\x04ï\x04í[0m" 400 -
+2024-12-16 18:17:13,833 - werkzeug - ERROR - 127.0.0.1 - - [16/Dec/2024 18:17:13] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Súú\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ªª\x03\x04\x03\x03Di\x00\x05\x00\x03\x02h2\x00\x1b\x00\x03\x02\x00\x02\x003\x04ï\x04í\x9a\x9a\x00\x01\x00\x11ì\x04À.Ws÷×\x9cÍsÂq«U(*;x\x84gå\x83]f\x16\x8dD\x13w')
+2024-12-16 18:17:13,839 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:17:13] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03þ\x93\x16 ñð3v"\x0dÐæ\\\x1fTX\x04X\x08\x94\x85ºå§Ë\x06\x91ÉL«\x068 \x93í¡þË\x89»O6W\x1b\x0fzjÞL\x06­öei_\x07a±-\x92©ÝiÇè\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Súú\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ªª\x03\x04\x03\x03Di\x00\x05\x00\x03\x02h2\x00\x1b\x00\x03\x02\x00\x02\x003\x04ï\x04í\x9a\x9a\x00\x01\x00\x11ì\x04À.Ws÷×\x9cÍsÂq«U(*;x\x84gå\x83]f\x16\x8dD\x13w[0m" 400 -
+2024-12-16 18:45:00,311 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:45:00,444 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 18:45:00,445 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 18:45:00,448 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 18:45:03,783 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:45:03,945 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 18:45:03,957 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 18:45:40,900 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:45:40] "[31m[1mGET /api/api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-16 18:45:41,001 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:45:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-16 18:47:05,175 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:05] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:47:07,096 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:07] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:47:10,385 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:10] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:47:11,528 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:11] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:47:12,161 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:12] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:47:12,408 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:12] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:47:17,783 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:17] "GET / HTTP/1.1" 200 -
+2024-12-16 18:47:22,018 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 18:47:22] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 18:53:45,663 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 18:53:45,909 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 18:53:49,987 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:53:50,139 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 18:53:50,150 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 18:53:55,606 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 18:53:55,872 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 18:54:01,871 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:54:02,022 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 18:54:02,033 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 18:54:04,801 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 18:54:05,016 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 18:54:09,496 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 18:54:09,658 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 18:54:09,670 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:02:03,594 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:02:03,813 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:02:07,998 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:02:08,150 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:02:08,162 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:02:12,316 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:02:12,537 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:02:16,274 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:02:16,418 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:02:16,429 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:02:19,233 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:02:19,461 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:02:22,819 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:02:22,964 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:02:22,976 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:02:24,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:02:24,818 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:02:28,192 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:02:28,321 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:02:28,331 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:04:46,773 - werkzeug - INFO -  * Detected change in 'C:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:04:47,093 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:05:24,299 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:05:24,456 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 19:05:24,457 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 19:05:24,460 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:05:27,764 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:05:27,926 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:05:27,937 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:07:23,640 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:07:23] "GET / HTTP/1.1" 200 -
+2024-12-16 19:07:48,867 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:07:48] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-16 19:44:46,219 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:44:46] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 19:44:48,389 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:44:48] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 19:44:48,917 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:44:48] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 19:44:49,357 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:44:49] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 405 -
+2024-12-16 19:49:40,911 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:49:41,151 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:49:46,074 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:49:46,212 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:49:46,224 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:49:53,990 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:49:54,216 - werkzeug - INFO -  * Restarting with stat
+2024-12-16 19:49:58,160 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-16 19:49:58,328 - werkzeug - WARNING -  * Debugger is active!
+2024-12-16 19:49:58,340 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-16 19:50:12,705 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:50:12] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 415 -
+2024-12-16 19:50:18,076 - werkzeug - INFO - 127.0.0.1 - - [16/Dec/2024 19:50:18] "[31m[1mGET /api/auth/login HTTP/1.1[0m" 415 -
+2024-12-16 19:52:21,049 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-16 19:52:21,263 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:02:21,114 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:02:21,308 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 09:02:21,309 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 09:02:21,312 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:02:25,473 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:02:25,631 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:02:25,643 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:02:47,917 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:02:47] "GET / HTTP/1.1" 200 -
+2024-12-17 09:02:53,146 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:02:53] "GET /api/ HTTP/1.1" 200 -
+2024-12-17 09:03:08,064 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:03:08] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:09:27,535 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-17 09:09:27,760 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:09:48,048 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:09:48,209 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 09:09:48,210 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 09:09:48,213 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:09:51,935 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:09:52,096 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:09:52,107 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:09:58,061 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:09:58] "GET / HTTP/1.1" 200 -
+2024-12-17 09:10:15,232 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:10:15] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:10:20,661 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:10:20] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:10:36,976 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-17 09:10:37,192 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:10:41,212 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:10:41,377 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:10:41,388 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:14:12,299 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-17 09:14:12,521 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:15:24,132 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:15:24,263 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 09:15:24,264 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 09:15:24,266 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:15:27,764 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:15:27,914 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:15:27,925 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:15:28,848 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:15:28] "GET / HTTP/1.1" 200 -
+2024-12-17 09:15:47,751 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:15:47] "[35m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 500 -
+2024-12-17 09:15:48,129 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:15:48] "GET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-17 09:15:48,248 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:15:48] "GET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-17 09:15:48,281 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:15:48] "GET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=console.png&s=SBOTNqOzaPVCynDj0w5P HTTP/1.1" 200 -
+2024-12-17 09:15:48,351 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:15:48] "GET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-17 09:23:08,058 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-17 09:23:08,310 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:23:12,237 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:23:12,401 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:23:12,414 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:23:14,008 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-17 09:23:14,229 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:23:18,673 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:24:22,870 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:24:23,065 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 09:24:23,066 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 09:24:23,069 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:24:26,578 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:24:26,739 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:24:26,750 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:24:31,663 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:24:31] "GET / HTTP/1.1" 200 -
+2024-12-17 09:24:47,505 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:24:47] "[35m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 500 -
+2024-12-17 09:24:47,842 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:24:47] "[36mGET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-17 09:24:47,935 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:24:47] "[36mGET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-17 09:24:47,996 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:24:47] "GET /api/petty_cash_advance?__debugger__=yes&cmd=resource&f=console.png&s=aJRtmn9fxl2d09DnXlSt HTTP/1.1" 200 -
+2024-12-17 09:25:32,230 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-17 09:25:32,512 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:25:35,917 - root - ERROR - Unexpected Redis error: Client IP address is not in the allowlist.
+2024-12-17 09:29:13,269 - root - ERROR - Redis connection failed: Client IP address is not in the allowlist.
+2024-12-17 09:29:13,447 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 09:29:13,447 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 09:29:13,450 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:29:17,278 - root - ERROR - Redis connection failed: Client IP address is not in the allowlist.
+2024-12-17 09:29:17,417 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:29:17,428 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:29:20,523 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:29:20] "GET / HTTP/1.1" 200 -
+2024-12-17 09:29:47,935 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:29:47] "[32mGET /api/petty_cash_advance HTTP/1.1[0m" 302 -
+2024-12-17 09:29:47,946 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:29:47] "[31m[1mGET /api/auth/login?next=/api/petty_cash_advance HTTP/1.1[0m" 415 -
+2024-12-17 09:31:23,757 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:31:23] "[32mGET /api/petty_cash_advance HTTP/1.1[0m" 302 -
+2024-12-17 09:31:23,767 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:31:23] "[31m[1mGET /api/auth/login?next=/api/petty_cash_advance HTTP/1.1[0m" 415 -
+2024-12-17 09:34:28,145 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\routes.py', reloading
+2024-12-17 09:34:28,391 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:34:47,544 - root - ERROR - Redis connection failed: Client IP address is not in the allowlist.
+2024-12-17 09:34:47,716 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 09:34:47,717 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 09:34:47,719 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 09:34:51,048 - root - ERROR - Redis connection failed: Client IP address is not in the allowlist.
+2024-12-17 09:34:51,191 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 09:34:51,201 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 09:34:51,477 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:34:51] "GET / HTTP/1.1" 200 -
+2024-12-17 09:35:06,308 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:35:06] "[31m[1mGET /api/petty_cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:35:40,913 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:35:40] "[31m[1mGET /api/petty_cash_retirement HTTP/1.1[0m" 405 -
+2024-12-17 09:36:01,612 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:36:01] "[31m[1mGET /api/cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:36:03,834 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:36:03] "[31m[1mGET /api/cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:36:04,362 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:36:04] "[31m[1mGET /api/cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:36:04,567 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:36:04] "[31m[1mGET /api/cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:36:04,739 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:36:04] "[31m[1mGET /api/cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 09:36:31,070 - werkzeug - INFO - 127.0.0.1 - - [17/Dec/2024 09:36:31] "[31m[1mGET /api/cash_advance HTTP/1.1[0m" 405 -
+2024-12-17 10:53:21,156 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-17 10:53:21,375 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 10:53:24,752 - root - ERROR - Redis connection failed: AbstractConnection.__init__() got an unexpected keyword argument 'ssl'
+2024-12-17 10:53:24,877 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 10:53:24,888 - werkzeug - INFO -  * Debugger PIN: 152-410-775
+2024-12-17 10:58:05,977 - werkzeug - INFO -  * Detected change in 'c:\\Users\\IT\\PycharmProjects\\ekondo_expense_mgt\\app.py', reloading
+2024-12-17 10:58:06,231 - werkzeug - INFO -  * Restarting with stat
+2024-12-17 10:58:10,298 - root - ERROR - Redis connection failed: Client IP address is not in the allowlist.
+2024-12-17 10:58:10,462 - werkzeug - WARNING -  * Debugger is active!
+2024-12-17 10:58:10,473 - werkzeug - INFO -  * Debugger PIN: 152-410-775
