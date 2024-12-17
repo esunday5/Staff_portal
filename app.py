@@ -119,11 +119,8 @@ def create_app():
 
     return app
 
+app = create_app()  # Expose app globally for Gunicorn
+
 if __name__ == "__main__":
-    app = create_app()
+        app.run(host='127.0.0.1', port=5000, debug=True)
 
-    # Debug the URL map
-    print(app.url_map)
-
-    # Use gunicorn for production deployment; development server for local testing
-    app.run(host='127.0.0.1', port=5000, debug=True)
