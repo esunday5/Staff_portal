@@ -53,10 +53,15 @@ def login_user_api():
     return jsonify({"error": "Invalid login credentials"}), 401
 
 # Petty Cash Advance Request
-@main_blueprint.route('/petty_cash_advance', methods=['POST'])
+@main_blueprint.route('/api/petty_cash_advance', methods=['POST'])
 @login_required
 @csrf.exempt
 def petty_cash_advance():
+    # Check if Content-Type is 'application/json'
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be 'application/json'"}), 415
+
+    # Parse JSON data
     data = request.get_json()
     branch = data.get('branch')
     department = data.get('department')
@@ -66,9 +71,11 @@ def petty_cash_advance():
     description = data.get('description')
     total_amount = data.get('total_amount')
 
+    # Validate required fields
     if not all([branch, department, name, account, items, description, total_amount]):
         return jsonify({"error": "All fields are required"}), 400
 
+    # Save petty cash advance request
     petty_cash = PettyCashAdvance(
         officer_id=current_user.id,
         branch=branch,
@@ -83,6 +90,7 @@ def petty_cash_advance():
     db.session.add(petty_cash)
     db.session.commit()
 
+    # Notify supervisor (optional)
     supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
     if supervisor:
         send_email(
@@ -90,8 +98,9 @@ def petty_cash_advance():
             [supervisor.email],
             f"A new petty cash advance request has been raised by {current_user.username}."
         )
-    
+
     return jsonify({"message": "Petty cash advance request submitted successfully!", "id": petty_cash.id}), 201
+
 
 # Petty Cash Retirement Request
 @main_blueprint.route('/petty_cash_retirement', methods=['POST'])
