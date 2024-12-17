@@ -11,7 +11,6 @@ from flasgger import Swagger
 from flask_swagger_ui import get_swaggerui_blueprint
 from flask_migrate import Migrate
 from dotenv import load_dotenv
-from config import Config
 from extensions import db, migrate, csrf
 from routes import main_blueprint, auth_blueprint
 from redis import Redis
@@ -19,7 +18,7 @@ from limits.storage import RedisStorage
 import redis
 from waitress import serve
 from models import (
-    User, Branch, Department, Role, Expense, User, CashAdvance, OpexCapexRetirement,
+    User, Branch, Department, Role, Expense, CashAdvance, OpexCapexRetirement,
     PettyCashAdvance, PettyCashRetirement, StationaryRequest, Notification,
     DocumentUploads, Transaction, RequestHistory, NotificationSettings,
     FileMetadata, ExpenseApprovalWorkflow, AuditLog
@@ -31,11 +30,15 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 # Load environment variables
 load_dotenv()
 
-# Redis connection initialization
+# Redis connection initialization (no forced SSL replacement)
 def create_redis_client(url, decode_responses=True):
-    return Redis.from_url(url, decode_responses=decode_responses)  # Without SSL
+    """
+    Redis connection setup without SSL enforcement.
+    """
+    return Redis.from_url(url, decode_responses=decode_responses)
 
-redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")  # Default to local Redis
+# Load Redis URL from environment variable
+redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")  # Default to local Redis if not set
 
 try:
     redis_client = create_redis_client(redis_url)
@@ -112,6 +115,21 @@ def create_app():
         db.session.rollback()
         return jsonify({"error": "Internal server error"}), 500
 
+    # Healthcheck Endpoint
+    @app.route('/healthcheck')
+    def healthcheck():
+        """
+        Healthcheck endpoint to test Redis and Database connectivity.
+        """
+        try:
+            # Test database connection
+            db.session.execute('SELECT 1')
+            # Test Redis connection
+            redis_client.ping()
+            return {"status": "healthy"}, 200
+        except Exception as e:
+            return {"error": str(e)}, 500
+
     # Home route
     @app.route('/')
     def home():
@@ -119,8 +137,8 @@ def create_app():
 
     return app
 
-app = create_app()  # Expose app globally for Gunicorn
+# Expose the app globally for Gunicorn
+app = create_app()
 
 if __name__ == "__main__":
-        app.run(host='127.0.0.1', port=5000, debug=True)
-
+    app.run(host='127.0.0.1', port=5000, debug=True)

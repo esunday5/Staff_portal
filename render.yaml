@@ -9,3 +9,9 @@ services:
         value: app.py
       - key: FLASK_ENV
         value: production
+      - key: DATABASE_URL
+        value: "mysql+pymysql://Super_Admin:Emmanate1$$@localhost/ekondo_db"
+      - key: REDIS_URL
+        value: "rediss://red-cte9cp5umphs73bb5us0:ALDTjn1BkqqHvAJ2AufpB5JBoldkuAc7@oregon-redis.render.com:6379"
+      - key: SECRET_KEY
+        value: "eKM_5eCur3t-K3y#2024!"
