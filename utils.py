@@ -6,7 +6,8 @@ from flask_caching import Cache
 from PIL import Image
 import pdf2image
 import os
-from extensions import db  # Import db from extensions.py
+from flask_mail import Message  
+from extensions import db, mail  # Import db from extensions.py
 from models import User  # Only import models you need
 
 
@@ -44,6 +45,22 @@ def resize_image(image_path, max_size=(800, 800)):
     except Exception as e:
         logging.error(f"Error resizing image: {e}")
         raise
+
+
+def send_email(subject, recipients, body):
+    """Send an email notification."""
+    try:
+        msg = Message(subject, recipients=recipients, body=body)
+        mail.send(msg)
+    except Exception as e:
+        print(f"Error sending email: {e}")
+
+
+def get_role_id_by_name(role_name):
+    """Fetch the role ID based on the role name."""
+    role = Role.query.filter_by(name=role_name).first()
+    return role.id if role else None
+
 
 @cache.cached(timeout=60, key_prefix='supervisor_by_department')
 def get_supervisor(department_id):
