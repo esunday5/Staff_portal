@@ -8,6 +8,7 @@ from models import (
     PettyCashRetirement, StationaryRequest, Notification, Role
 )
 from werkzeug.utils import secure_filename
+from utils import send_email, get_role_id_by_name
 from utils import convert_pdf_to_image, allowed_file, resize_image, populate_branches_and_departments  # Import utility functions
 # Import forms
 from forms import (
@@ -36,32 +37,41 @@ def send_email(subject, recipients, body):
 main_blueprint = Blueprint('main', __name__)
 auth_blueprint = Blueprint('auth', __name__)
 
+# Home Route
 @main_blueprint.route('/')
 def home():
-    return jsonify({"message": "Welcome to the Expense Management System"})
+    return jsonify({"message": "Welcome to the Expense Management System!"})
 
-@auth_blueprint.route('/login', methods=['POST', 'GET'])  # Removed extra '/api'
+# Login API
+@auth_blueprint.route('/login', methods=['POST'])
+@csrf.exempt  # Disable CSRF for testing purposes (remove in production)
 def login_user_api():
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be 'application/json'"}), 415
+
     data = request.get_json()
     login_input = data.get('login')  # Can be username or email
     password = data.get('password')
 
+    if not login_input or not password:
+        return jsonify({"error": "Login and password are required"}), 400
+
     user = User.query.filter((User.username == login_input) | (User.email == login_input)).first()
     if user and check_password_hash(user.password, password):
         login_user(user)
-        return jsonify({"message": "Login successful", "user": {"username": user.username, "email": user.email, "role": user.role.name}}), 200
+        return jsonify({
+            "message": "Login successful",
+            "user": {"username": user.username, "email": user.email, "role": user.role.name}
+        }), 200
     return jsonify({"error": "Invalid login credentials"}), 401
 
-# Petty Cash Advance Request
+# Petty Cash Advance API
 @main_blueprint.route('/api/petty_cash_advance', methods=['POST'])
-@login_required
-@csrf.exempt
+@csrf.exempt  # Disable CSRF for testing purposes (remove in production)
 def petty_cash_advance():
-    # Check if Content-Type is 'application/json'
     if not request.is_json:
         return jsonify({"error": "Content-Type must be 'application/json'"}), 415
 
-    # Parse JSON data
     data = request.get_json()
     branch = data.get('branch')
     department = data.get('department')
@@ -71,13 +81,11 @@ def petty_cash_advance():
     description = data.get('description')
     total_amount = data.get('total_amount')
 
-    # Validate required fields
     if not all([branch, department, name, account, items, description, total_amount]):
         return jsonify({"error": "All fields are required"}), 400
 
-    # Save petty cash advance request
     petty_cash = PettyCashAdvance(
-        officer_id=current_user.id,
+        officer_id=1,  # Replace this with current_user.id if using Flask-Login
         branch=branch,
         department=department,
         name=name,
@@ -90,13 +98,13 @@ def petty_cash_advance():
     db.session.add(petty_cash)
     db.session.commit()
 
-    # Notify supervisor (optional)
-    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor'), department_id=current_user.department_id).first()
+    # Notify supervisor
+    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor')).first()
     if supervisor:
         send_email(
             "New Petty Cash Advance Request",
             [supervisor.email],
-            f"A new petty cash advance request has been raised by {current_user.username}."
+            f"A new petty cash advance request has been raised by {name}."
         )
 
     return jsonify({"message": "Petty cash advance request submitted successfully!", "id": petty_cash.id}), 201
