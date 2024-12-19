@@ -94,7 +94,7 @@ def create_app():
         return User.query.get(int(user_id))
 
     # Register blueprints
-    app.register_blueprint(main_blueprint, url_prefix='/api')
+    app.register_blueprint(main_blueprint, url_prefix='/main')
     app.register_blueprint(auth_blueprint, url_prefix='/api/auth')
 
     # Swagger setup

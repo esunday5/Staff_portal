@@ -161,7 +161,6 @@ def petty_cash_retirement():
 
 # Cash Advance Request
 @main_blueprint.route('/cash_advance', methods=['POST'])
-@login_required
 @csrf.exempt
 def cash_advance_request():
     # Check if the form data exists
