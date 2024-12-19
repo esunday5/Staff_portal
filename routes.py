@@ -164,6 +164,10 @@ def petty_cash_retirement():
 @login_required
 @csrf.exempt
 def cash_advance_request():
+    # Check if the form data exists
+    if not request.form or not request.files:
+        return jsonify({"error": "Form data or files missing"}), 400
+
     data = request.form
     branch = data.get('branch')
     department = data.get('department')
@@ -171,7 +175,7 @@ def cash_advance_request():
     account = data.get('account')
     invoice_amount = data.get('invoice_amount')
     cash_advance = data.get('cash_advance')
-    narration = data.get('narration')
+    narration = data.get('narration')   
     less_what = data.get('less_what')
     amount = data.get('amount')
     management_board_approval = request.files.get('management_board_approval')

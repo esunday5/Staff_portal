@@ -10,6 +10,7 @@ from flask_talisman import Talisman
 from flasgger import Swagger
 from flask_swagger_ui import get_swaggerui_blueprint
 from flask_migrate import Migrate
+from flask_mail import Mail, Message 
 from dotenv import load_dotenv
 from extensions import db, migrate, csrf
 from routes import main_blueprint, auth_blueprint
