@@ -67,49 +67,55 @@ def login_user_api():
         }), 200
     return jsonify({"error": "Invalid login credentials"}), 401
 
-# Petty Cash Advance API
 @main_blueprint.route('/petty_cash_advance', methods=['POST'])
-@csrf.exempt  # Disable CSRF for testing purposes (remove in production)
+@csrf.exempt
 def petty_cash_advance():
-    if not request.is_json:
-        return jsonify({"error": "Content-Type must be 'application/json'"}), 415
+    try:
+        if not request.is_json:
+            return jsonify({"error": "Content-Type must be 'application/json'"}), 415
 
-    data = request.get_json()
-    branch = data.get('branch')
-    department = data.get('department')
-    name = data.get('name')
-    account = data.get('account')
-    items = data.get('items')
-    description = data.get('description')
-    total_amount = data.get('total_amount')
+        data = request.get_json()
+        branch = data.get('branch')
+        department = data.get('department')
+        name = data.get('name')
+        account = data.get('account')
+        items = data.get('items')
+        description = data.get('description')
+        total_amount = data.get('total_amount')
 
-    if not all([branch, department, name, account, items, description, total_amount]):
-        return jsonify({"error": "All fields are required"}), 400
+        if not all([branch, department, name, account, items, description, total_amount]):
+            return jsonify({"error": "All fields are required"}), 400
 
-    petty_cash = PettyCashAdvance(
-        officer_id=1,  # Replace this with current_user.id if using Flask-Login
-        branch=branch,
-        department=department,
-        name=name,
-        account=account,
-        items=items,
-        description=description,
-        total_amount=total_amount,
-        status="Pending"
-    )
-    db.session.add(petty_cash)
-    db.session.commit()
-
-    # Notify supervisor
-    supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor')).first()
-    if supervisor:
-        send_email(
-            "New Petty Cash Advance Request",
-            [supervisor.email],
-            f"A new petty cash advance request has been raised by {name}."
+        petty_cash = PettyCashAdvance(
+            officer_id=1,  # Replace this with current_user.id if using Flask-Login
+            branch=branch,
+            department=department,
+            name=name,
+            account=account,
+            items=items,
+            description=description,
+            total_amount=total_amount,
+            status="Pending"
         )
+        db.session.add(petty_cash)
+        db.session.commit()
 
-    return jsonify({"message": "Petty cash advance request submitted successfully!", "id": petty_cash.id}), 201
+        # Notify supervisor
+        supervisor = User.query.filter_by(role_id=get_role_id_by_name('Supervisor')).first()
+        if supervisor:
+            send_email(
+                "New Petty Cash Advance Request",
+                [supervisor.email],
+                f"A new petty cash advance request has been raised by {name}."
+            )
+
+        return jsonify({"message": "Petty cash advance request submitted successfully!", "id": petty_cash.id}), 201
+
+    except Exception as e:
+        # Log the error for debugging
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": "Internal server error", "details": str(e)}), 500
 
 
 # Petty Cash Retirement Request
