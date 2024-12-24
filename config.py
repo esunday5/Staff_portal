@@ -9,7 +9,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'eKM_5eCur3t-K3y#2024!')
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         'DATABASE_URL',
-        'mysql+pymysql://Super_Admin:Emmanate1$$@localhost/ekondo_db'
+        'postgresql+pg8000://ekondo_db_928i_user:mZYdsPY2wTfgkaNbOnUgoWTPI72kdc5k@dpg-ctjc7ed2ng1s73bidflg-a.oregon-postgres.render.com/ekondo_db_928i'
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     CSRF_ENABLED = True

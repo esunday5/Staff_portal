@@ -10,7 +10,7 @@ services:
       - key: FLASK_ENV
         value: production
       - key: DATABASE_URL
-        value: "mysql+pymysql://Super_Admin:Emmanate1$$@localhost/ekondo_db"
+        value: "postgresql+pg8000://ekondo_db_928i_user:mZYdsPY2wTfgkaNbOnUgoWTPI72kdc5k@dpg-ctjc7ed2ng1s73bidflg-a.oregon-postgres.render.com/ekondo_db_928i"  # PostgreSQL database URI
       - key: REDIS_URL
         value: "rediss://red-cte9cp5umphs73bb5us0:ALDTjn1BkqqHvAJ2AufpB5JBoldkuAc7@oregon-redis.render.com:6379"
       - key: SECRET_KEY

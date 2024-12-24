@@ -68,7 +68,7 @@ def login_user_api():
     return jsonify({"error": "Invalid login credentials"}), 401
 
 # Petty Cash Advance API
-@main_blueprint.route('/api/petty_cash_advance', methods=['POST'])
+@main_blueprint.route('/petty_cash_advance', methods=['POST'])
 @csrf.exempt  # Disable CSRF for testing purposes (remove in production)
 def petty_cash_advance():
     if not request.is_json:
@@ -323,3 +323,86 @@ def internal_error(e):
 def get_role_id_by_name(role_name):
     role = Role.query.filter_by(name=role_name).first()
     return role.id if role else None
+
+# Users API
+@auth_blueprint.route('/users', methods=['GET'])
+@login_required
+def get_all_users():
+    """Get all registered users. Accessible by Admin/Super Admin."""
+    if current_user.role.name not in ['Admin', 'Super Admin']:
+        return jsonify({"error": "Unauthorized access"}), 403
+
+    users = User.query.all()
+    return jsonify([user.to_dict() for user in users]), 200
+
+
+@auth_blueprint.route('/users/<int:user_id>', methods=['GET'])
+@login_required
+def get_user_details(user_id):
+    """Get details of a specific user."""
+    if current_user.role.name not in ['Admin', 'Super Admin']:
+        return jsonify({"error": "Unauthorized access"}), 403
+
+    user = User.query.get(user_id)
+    if not user:
+        return jsonify({"error": "User not found"}), 404
+
+    return jsonify(user.to_dict()), 200
+
+
+# Review Request API
+@main_blueprint.route('/review_requests', methods=['GET'])
+@login_required
+def review_requests():
+    """Get all requests for review based on user role."""
+    if current_user.role.name not in ['Supervisor', 'Reviewer', 'Approver']:
+        return jsonify({"error": "Unauthorized access"}), 403
+
+    requests = []
+    if current_user.role.name == 'Supervisor':
+        requests = CashAdvance.query.filter_by(status="Pending", department_id=current_user.department_id).all()
+    elif current_user.role.name == 'Reviewer':
+        requests = OpexCapexRetirement.query.filter_by(status="Pending", department_id=current_user.department_id).all()
+    elif current_user.role.name == 'Approver':
+        requests = PettyCashAdvance.query.filter_by(status="Pending").all()
+
+    return jsonify([req.to_dict() for req in requests]), 200
+
+
+@main_blueprint.route('/review_requests/<int:request_id>', methods=['PUT'])
+@login_required
+def update_request_status(request_id):
+    """Update the status of a request."""
+    if current_user.role.name not in ['Supervisor', 'Reviewer', 'Approver']:
+        return jsonify({"error": "Unauthorized access"}), 403
+
+    data = request.get_json()
+    new_status = data.get('status')
+
+    if not new_status or new_status not in ["Approved", "Rejected"]:
+        return jsonify({"error": "Invalid status"}), 400
+
+    request_to_review = None
+    if current_user.role.name == 'Supervisor':
+        request_to_review = CashAdvance.query.get(request_id)
+    elif current_user.role.name == 'Reviewer':
+        request_to_review = OpexCapexRetirement.query.get(request_id)
+    elif current_user.role.name == 'Approver':
+        request_to_review = PettyCashAdvance.query.get(request_id)
+
+    if not request_to_review:
+        return jsonify({"error": "Request not found"}), 404
+
+    request_to_review.status = new_status
+    db.session.commit()
+
+    # Notify the requester about the status update
+    requester = User.query.get(request_to_review.officer_id)
+    if requester:
+        send_email(
+            "Request Status Updated",
+            [requester.email],
+            f"Your request (ID: {request_id}) has been {new_status} by {current_user.role.name}."
+        )
+
+    return jsonify({"message": f"Request ID {request_id} has been updated to {new_status}."}), 200

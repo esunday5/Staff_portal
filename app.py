@@ -64,12 +64,14 @@ limiter = Limiter(key_func=get_remote_address, storage_uri=redis_url)
 def create_app():
     app = Flask(__name__)
 
-    # App configuration
+# App configuration
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-        'DATABASE_URL', 'mysql+pymysql://Super_Admin:Emmanate1$$@localhost/ekondo_db'
+    'DATABASE_URL',
+    'postgresql+pg8000://ekondo_db_928i_user:mZYdsPY2wTfgkaNbOnUgoWTPI72kdc5k@dpg-ctjc7ed2ng1s73bidflg-a.oregon-postgres.render.com/ekondo_db_928i'
     )
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'eKM_5eCur3t-K3y#2024!')
+
 
     # Ensure directories exist
     ensure_directory_exists("uploads/receipts")
@@ -79,7 +81,7 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
     csrf.init_app(app)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": "*"}})
     limiter.init_app(app)
 
     # Initialize LoginManager
@@ -92,6 +94,12 @@ def create_app():
     def load_user(user_id):
         """Load user by user_id."""
         return User.query.get(int(user_id))
+    
+         # User loader for Flask-Login
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
 
     # Register blueprints
     app.register_blueprint(main_blueprint, url_prefix='/main')
