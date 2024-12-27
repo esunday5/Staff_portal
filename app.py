@@ -67,8 +67,6 @@ limiter = Limiter(key_func=get_remote_address, storage_uri=redis_url)
 def create_app():
     app = Flask(__name__)
 
-    csrf = SeaSurf(app)
-
 # App configuration
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
     'DATABASE_URL',
@@ -86,7 +84,8 @@ def create_app():
     db.init_app(app)
     init_session(app)
     migrate.init_app(app, db)
-    csrf.init_app(app)
+    csrf = SeaSurf(app)
+    csrf.init_app(app, referer_check=False)
     CORS(app, resources={r"/*": {"origins": "*"}})
     limiter.init_app(app)
 
