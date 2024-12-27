@@ -3,7 +3,6 @@ from flask_login import login_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_mail import Mail, Message
 from extensions import db, csrf, limiter, mail
-from flask_seasurf import SeaSurf
 from models import (
     User, CashAdvance, OpexCapexRetirement, PettyCashAdvance, 
     PettyCashRetirement, StationaryRequest, Notification, Role
@@ -27,9 +26,6 @@ from forms import (
 from PIL import Image
 import os
 import logging
-
-csrf = SeaSurf()
-csrf.init_app(app)
 
 def send_email(subject, recipients, body):
     """Send an email notification."""

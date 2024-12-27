@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flasgger import Swagger
-from flask_wtf.csrf import CSRFProtect
+from flask_seasurf import SeaSurf
 from flask_session import Session
 
 # Initialize extensions
@@ -14,11 +14,11 @@ db = SQLAlchemy()
 login_manager = LoginManager()
 migrate = Migrate()
 mail = Mail()
+csrf = SeaSurf(app)
 
 def init_app(app):
     db.init_app(app)
     migrate.init_app(app, db)
-    csrf.init_app(app)
     limiter.init_app(app)
     mail.init_app(app)
 

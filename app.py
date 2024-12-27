@@ -13,12 +13,11 @@ from flask_swagger_ui import get_swaggerui_blueprint
 from flask_migrate import Migrate
 from flask_mail import Mail, Message 
 from dotenv import load_dotenv
-from extensions import db, migrate, csrf
+from extensions import db, migrate, csrf 
 from routes import main_blueprint, auth_blueprint
 from redis import Redis
 from limits.storage import RedisStorage
 from extensions import init_session
-from flask_seasurf import SeaSurf
 import redis
 from waitress import serve
 from models import (
@@ -84,7 +83,6 @@ def create_app():
     db.init_app(app)
     init_session(app)
     migrate.init_app(app, db)
-    csrf = SeaSurf(app)
     csrf.init_app(app)
     CORS(app, resources={r"/*": {"origins": "*"}})
     limiter.init_app(app)
