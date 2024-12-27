@@ -29,6 +29,7 @@ import os
 import logging
 
 csrf = SeaSurf()
+csrf.init_app(app)
 
 def send_email(subject, recipients, body):
     """Send an email notification."""
