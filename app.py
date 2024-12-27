@@ -85,7 +85,7 @@ def create_app():
     init_session(app)
     migrate.init_app(app, db)
     csrf = SeaSurf(app)
-    csrf.init_app(app, referer_check=False)
+    csrf.init_app(app)
     CORS(app, resources={r"/*": {"origins": "*"}})
     limiter.init_app(app)
 
