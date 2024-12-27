@@ -14,6 +14,7 @@ db = SQLAlchemy()
 login_manager = LoginManager()
 migrate = Migrate()
 mail = Mail()
+csrf = CSRFProtect()
 csrf = SeaSurf()
 
 def init_app(app):
