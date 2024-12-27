@@ -7,6 +7,7 @@ from extensions import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
+
 # Define status enum for Expense
 class ExpenseStatus(enum.Enum):
     PENDING = 'Pending'
@@ -91,7 +92,7 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(100), nullable=False)
     last_name = db.Column(db.String(100), nullable=False)
     password = db.Column(db.String(255), nullable=False)
-    role_id = db.Column(db.Integer, db.ForeignKey('role.id'), nullable=True)
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'), nullable=True)
     department_id = db.Column(db.Integer, db.ForeignKey('departments.id'), nullable=True)
     is_active = db.Column(db.Boolean, default=True)
     email_verified = db.Column(db.Boolean, default=False)
@@ -99,12 +100,20 @@ class User(db.Model, UserMixin):
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     updated_at = db.Column(db.DateTime, default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
 
+    # Relationships
     role = db.relationship('Role', back_populates='users')
     department = db.relationship('Department', back_populates='users')
-
-    # Relationship to notifications
     notifications = db.relationship('Notification', backref='user', lazy=True)
-    expenses_created = db.relationship('Expense', backref='created_by_user', foreign_keys=[Expense.created_by]) 
+    expenses_created = db.relationship('Expense', backref='created_by_user', foreign_keys="[Expense.created_by]")
+
+    def __init__(self, username, email, password, first_name, last_name, role_id=None, department_id=None):
+        self.username = username
+        self.email = email
+        self.first_name = first_name
+        self.last_name = last_name
+        self.role_id = role_id
+        self.department_id = department_id
+        self.set_password(password)
 
     def __repr__(self):
         return f"<User {self.username}>"

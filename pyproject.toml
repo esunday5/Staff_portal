@@ -6,7 +6,6 @@ authors = ["esunday5 <emmyblaq3@gmail.com>"]
 license = "MIT"
 package-mode = false
 
-
 [tool.poetry.dependencies]
 python = "^3.11"
 flask = "2.3.3"
@@ -92,5 +91,5 @@ pdf2image = "^1.17.0"
 pymysql = "^1.1.1"
 
 [build-system]
-requires = ["poetry-core>=1.5.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

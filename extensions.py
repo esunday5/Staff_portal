@@ -7,6 +7,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flasgger import Swagger
 from flask_wtf.csrf import CSRFProtect
+from flask_session import Session
 
 # Initialize extensions
 db = SQLAlchemy()
@@ -20,6 +21,11 @@ def init_app(app):
     csrf.init_app(app)
     limiter.init_app(app)
     mail.init_app(app)
+
+def init_session(app):
+    app.config['SESSION_TYPE'] = 'filesystem'
+    app.config['SESSION_PERMANENT'] = False
+    Session(app)
 
 limiter = Limiter(
     key_func=get_remote_address,  # Use IP address for rate-limiting

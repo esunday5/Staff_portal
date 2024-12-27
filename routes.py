@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, make_response, session
 from flask_login import login_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_mail import Mail, Message
@@ -7,6 +7,8 @@ from models import (
     User, CashAdvance, OpexCapexRetirement, PettyCashAdvance, 
     PettyCashRetirement, StationaryRequest, Notification, Role
 )
+from functools import wraps
+import datetime
 from werkzeug.utils import secure_filename
 from utils import send_email, get_role_id_by_name
 from utils import convert_pdf_to_image, allowed_file, resize_image, populate_branches_and_departments  # Import utility functions
@@ -42,9 +44,23 @@ auth_blueprint = Blueprint('auth', __name__)
 def home():
     return jsonify({"message": "Welcome to the Expense Management System!"})
 
+@main_blueprint.route('/protected', methods=['GET'])
+@login_required
+def protected():
+    return jsonify({"message": "Access granted!"}), 200
+
 # Login API
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        user_id = session.get('user_id')
+        if not user_id:
+            return jsonify({"error": "Unauthorized access. Please login."}), 401
+        return f(*args, **kwargs)
+    return decorated_function
+
+# Authentication service: Login route
 @auth_blueprint.route('/login', methods=['POST'])
-@csrf.exempt  # Disable CSRF for testing purposes (remove in production)
 def login_user_api():
     if not request.is_json:
         return jsonify({"error": "Content-Type must be 'application/json'"}), 415
@@ -52,20 +68,37 @@ def login_user_api():
     data = request.get_json()
     login_input = data.get('login')  # Can be username or email
     password = data.get('password')
-    if password and login_input:
-        return jsonify({"Login successful"})
 
+    # Validate input
     if not login_input or not password:
         return jsonify({"error": "Login and password are required"}), 400
 
+    # Verify user credentials
     user = User.query.filter((User.username == login_input) | (User.email == login_input)).first()
-    if user and check_password_hash(user.password, password):
-        login_user(user)
-        return jsonify({
-            "message": "Login successful",
-            "user": {"username": user.username, "email": user.email, "role": user.role.name}
-        }), 200
-    return jsonify({"error": "Invalid login credentials"}), 401
+    if not user or not check_password_hash(user.password, password):
+        return jsonify({"error": "Invalid login credentials"}), 401
+
+    # Set session and login user
+    session['user_id'] = user.id
+    session['username'] = user.username
+    session.permanent = True  # Enable session expiration
+    login_user(user)
+
+    # Optional: Set session expiration
+    session_lifetime = datetime.timedelta(minutes=30)
+    session.permanent_session_lifetime = session_lifetime
+
+    return jsonify({
+        "message": "Login successful",
+        "user": {"username": user.username, "email": user.email, "role": user.role.name}
+    }), 200
+
+# Logout route to clear session
+@auth_blueprint.route('/logout', methods=['POST'])
+@login_required
+def logout():
+    session.clear()
+    return jsonify({"message": "Logged out successfully."}), 200
 
 @main_blueprint.route('/petty_cash_advance', methods=['POST'])
 @csrf.exempt

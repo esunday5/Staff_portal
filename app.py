@@ -1,4 +1,5 @@
 import os
+import msgspec
 import logging
 from flask import Flask, jsonify
 from flask_login import LoginManager
@@ -16,6 +17,7 @@ from extensions import db, migrate, csrf
 from routes import main_blueprint, auth_blueprint
 from redis import Redis
 from limits.storage import RedisStorage
+from extensions import init_session
 import redis
 from waitress import serve
 from models import (
@@ -79,6 +81,7 @@ def create_app():
 
     # Initialize extensions
     db.init_app(app)
+    init_session(app)
     migrate.init_app(app, db)
     csrf.init_app(app)
     CORS(app, resources={r"/*": {"origins": "*"}})
