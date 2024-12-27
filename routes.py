@@ -3,7 +3,7 @@ from flask_login import login_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_mail import Mail, Message
 from extensions import db, csrf, limiter, mail
-from flask_wtf.csrf import csrf_exempt
+from flask_seasurf import SeaSurf
 from models import (
     User, CashAdvance, OpexCapexRetirement, PettyCashAdvance, 
     PettyCashRetirement, StationaryRequest, Notification, Role
@@ -27,6 +27,8 @@ from forms import (
 from PIL import Image
 import os
 import logging
+
+csrf = SeaSurf()
 
 def send_email(subject, recipients, body):
     """Send an email notification."""
@@ -62,7 +64,7 @@ def login_required(f):
 
 # Authentication service: Login route
 @auth_blueprint.route('/login', methods=['POST'])
-@csrf_exempt
+@csrf.exempt
 def login_user_api():
     if not request.is_json:
         return jsonify({"error": "Content-Type must be 'application/json'"}), 415
@@ -98,7 +100,7 @@ def login_user_api():
 # Logout route to clear session
 @auth_blueprint.route('/logout', methods=['POST'])
 @login_required
-@csrf_exempt
+@csrf.exempt
 def logout():
     session.clear()
     return jsonify({"message": "Logged out successfully."}), 200

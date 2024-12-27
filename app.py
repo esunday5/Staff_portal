@@ -18,6 +18,7 @@ from routes import main_blueprint, auth_blueprint
 from redis import Redis
 from limits.storage import RedisStorage
 from extensions import init_session
+from flask_seasurf import SeaSurf
 import redis
 from waitress import serve
 from models import (
@@ -65,6 +66,8 @@ limiter = Limiter(key_func=get_remote_address, storage_uri=redis_url)
 
 def create_app():
     app = Flask(__name__)
+
+    csrf = SeaSurf(app)
 
 # App configuration
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
