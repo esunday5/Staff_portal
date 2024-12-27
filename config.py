@@ -15,6 +15,7 @@ class Config:
     CSRF_ENABLED = True
     CORS_HEADERS = 'Content-Type'
     UPLOAD_FOLDER = os.path.abspath(os.path.join(os.getcwd(), 'uploads'))
+    WTF_CSRF_ENABLED = False
 
     # Logging configuration
     LOGGING_LEVEL = os.environ.get('LOGGING_LEVEL', 'INFO').split('#')[0].strip().upper()
