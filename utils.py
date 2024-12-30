@@ -9,6 +9,7 @@ import os
 from flask_mail import Message  
 from extensions import db, mail  # Import db from extensions.py
 from models import User  # Only import models you need
+from flask import request, jsonify
 
 
 # Configure logging
@@ -187,3 +188,15 @@ def populate_branches_and_departments():
             db.session.add(department)
 
         db.session.commit()
+
+def validate_json(required_fields):
+    """Validate incoming JSON payloads."""
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "Invalid JSON"}), 400
+
+    missing_fields = [field for field in required_fields if field not in data]
+    if missing_fields:
+        return jsonify({"error": f"Missing fields: {', '.join(missing_fields)}"}), 400
+
+    return data

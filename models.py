@@ -265,16 +265,40 @@ class Transaction(db.Model):
 
 
 # Request History Model
-class RequestHistory(db.Model):
+class Request(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    request_type = db.Column(db.String(50), nullable=False)  # E.g., 'cash advance', 'expense'
-    status = db.Column(db.String(50), nullable=False)  # E.g., 'approved', 'pending'
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    officer_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)  # Linked to User model
+    officer = db.relationship('User', backref='requests')  # Linking to User
+    branch = db.Column(db.String(100), nullable=False)
+    department_id = db.Column(db.Integer, db.ForeignKey('departments.id'), nullable=False)  # Linking to Department
+    department = db.relationship('Department', backref='requests')  # Linking to Department
+    description = db.Column(db.String(500), nullable=False)
+    quantity = db.Column(db.Integer, nullable=False)
+    items = db.Column(db.String(1000), nullable=False)
+    status = db.Column(db.String(50), default="Pending", nullable=False)
+    status_history = db.relationship('RequestHistory', backref='request', lazy=True)  # Storing history in a separate model
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    user = db.relationship('User', backref='request_histories')
+
+    @validates('quantity')
+    def validate_quantity(self, key, quantity):
+        if quantity <= 0:
+            raise ValueError("Quantity must be a positive number.")
+        return quantity
 
     def __repr__(self):
-        return f"<RequestHistory {self.request_type}, Status: {self.status}>"
+        return f"<Request {self.id}, Status: {self.status}>"
+
+# Request History Model to track status changes
+class RequestHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    request_id = db.Column(db.Integer, db.ForeignKey('request.id'), nullable=False)
+    status = db.Column(db.String(50), nullable=False)
+    changed_by_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)  # Who changed the status
+    changed_by = db.relationship('User', backref='status_changes')  # Linking to User
+    changed_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f"<RequestHistory Request ID: {self.request_id}, Status: {self.status}, Changed by: {self.changed_by.username}>"
 
 
 # Notification Settings Model
